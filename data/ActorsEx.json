@@ -1,0 +1,16 @@
+{
+    "1":{
+        "name": "托莉托",
+        "iname": "TORITO",
+        "tags": ["human", "female"],
+        "curve": "Normal",
+        "params": {
+            "STR": [26, 612],
+            "FIN": [25, 550],
+            "CON": [23, 435],
+            "INT": [21, 526],
+            "WIL": [22, 460],
+            "WIT": [19, 424]
+        }
+    }
+}

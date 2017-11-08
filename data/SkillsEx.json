@@ -1,0 +1,91 @@
+{
+    "1": {
+        "name": "攻击",
+        "iname": "NORMAL_ATTACK",
+        "damages": [
+            {
+                "base": "this.pdm",
+                "rate": 0,
+                "type": "phy",
+                "hittype": "blow",
+                "element": null
+            }
+        ]
+    },
+    "3": {
+        "name": "测试技能",
+        "iname": "TEST_SKILL",
+        "description": "指定敌方造成20%~50%火属性打击物理伤害 + 20%~50%水属性打击物理伤害的混合伤害。",
+        "flavour": "测试用的技能，没啥背景故事。",
+        "types": ["physical", "blow", "pyros", "hydor"],
+        "damages": [
+            {
+                "base": "this.pdm",
+                "rate": [-80, -50],
+                "type": "phy",
+                "hittype": "blow",
+                "element": "pyros"
+            },
+            {
+                "base": "this.pdm",
+                "rate": [-80, -50],
+                "type": "phy",
+                "hittype": "blow",
+                "element": "hydor"
+            }
+        ]
+    },
+    "4": {
+        "name": "圣战福音",
+        "iname": "TEMPLAR_KNIGHT_PAS_1",
+        "icon": "jbe_templar_knight",
+        "description": "自身斩击伤害提高10% ~ 30%\n 暗属性抗性提高 10% ~ 30%",
+        "flavour": "每位神殿骑士就职时都会受到此祝福。",
+        "types": [],
+        "adds": {
+            "slash_assist": [10, 30],
+            "erebus_resist": [10, 30]
+        }
+    },
+    "5": {
+        "name": "阳炎剑",
+        "iname": "TEMPLAR_KNIGHT_ACT_1",
+        "icon": "jbe_templar_knight",
+        "description": "指定敌人 115% ~ 150% 光属性斩击物理伤害、赋予3回合死亡宣告效果。",
+        "flavour": "",
+        "types": ["physical","slash","phos"],
+        "damages": [
+            {
+                "base": "this.pdm",
+                "rate": [15, 50],
+                "type": "phy",
+                "hittype": "slash",
+                "element": "phos"
+            }
+        ],
+        "enchants": [
+            {"iname": "PDM_UP", "turns": "3", "param":{
+                "adds":{
+                    "pdm": [200, 5000]
+                }
+            }}
+        ]
+    },
+    "8": {
+        "name": "测试：治疗",
+        "iname": "TEST_HEAL",
+        "types": ["heal"],
+        "cap": 10,
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [0, 180],
+            "type": "heal",
+            "hittyp": null,
+            "element": null
+        }]
+    },
+	"10": {
+		"name": "火花",
+		"iname": "TEST_SPARK"
+	}
+}

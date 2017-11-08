@@ -1,0 +1,16 @@
+{
+    "1": {
+        "name": "剑",
+        "rarity": "golden",
+        "slot": "weapon",
+        "etype": "剑",
+        "description": "力量+15、力量+20%",
+        "flavour": "从下水道中捡起来的剑，散发着一股恶臭。",
+        "adds": {
+            "STR": 15
+        },
+        "mults": {
+            "STR": 20
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "1":{
+        "name": "战士(测试职业)",
+        "iname": "WARRIOR",
+        "icon": "jb_warrior",
+        "paramRates": {
+            "STR": 10,
+            "CON": 20,
+            "INT": -5,
+            "WIL": 10,
+            "WIT": -20,
+            
+            "mmp": -60
+        },
+        "equipables": ["剑", "重甲", "轻甲", "饰品"]
+    },
+    "2": {
+        "name": "神殿骑士",
+        "iname": "TEMPLAR_KNIGHT",
+        "icon": "jb_templar_knight",
+        "paramRates": {
+            "STR": 8,
+            "CON": 25,
+            "INT": 8,
+            "WIL": 8,
+            "WIT": -5,
+            
+            "mhp": -5,
+            "mmp": -30
+        },
+        "equipables": ["剑", "重甲", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.pdm",
+                "rate": 0,
+                "type": "phy",
+                "hittype": "slash",
+                "element": null
+            }
+        ]
+    }
+}

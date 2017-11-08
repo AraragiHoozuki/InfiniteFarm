@@ -1,0 +1,7 @@
+{
+    "2":{
+        "name": "魔法药水",
+        "type": "special",
+        "types": ["heal"]
+    }
+}

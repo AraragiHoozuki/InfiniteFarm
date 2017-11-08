@@ -1,0 +1,16 @@
+{
+    "2": {
+        "name": "死亡宣告",
+        "iname": "DEATH_SENTENCE",
+        "icon": "state_death_sentence",
+        "rule": "unique",
+        "obstinacy": "2"
+    },
+    "2": {
+        "name": "物理攻击提升",
+        "iname": "PDM_UP",
+        "icon": "",
+        "rule": "multi",
+        "obstinacy": "0"
+    }
+}
