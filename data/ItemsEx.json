@@ -1,7 +1,74 @@
 {
-    "2":{
-        "name": "魔法药水",
+    "1": {
+        "name": "合成器",
+        "iname": "SP_SYNTHESIZER",
+        "icon": "it_sp_synthesizer",
+        "rarity": "legendary",
+        "description": "进行物品合成必备的器具。",
+        "type": "special"
+    },
+    "2": {
+        "name": "治疗药剂",
+        "iname": "IT_HEAL_POTION",
+        "icon": "it_heal_potion",
+        "rarity": "bronze",
+        "description": "回复目标500点生命值",
+        "damages": [{
+            "base": "500",
+            "rate": 0,
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "3": {
+        "name": "魔法药剂",
+        "iname": "IT_MANA_POTION",
+        "icon": "it_mana_potion",
+        "rarity": "bronze",
+        "description": "回复目标240点法力",
+        "damages": [{
+            "base": "240",
+            "rate": 0,
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "4": {
+        "name": "技能书:阳炎剑",
+        "iname": "IT_SCROLL_TEMPLAR_KNIGHT_ACT_1",
+        "icon": "it_sk_templar_knight",
+        "rarity": "silver",
         "type": "special",
-        "types": ["heal"]
+        "description": "习得/升级神殿骑士技能：阳炎剑。",
+        "script": "subject.learnSkill('TEMPLAR_KNIGHT_ACT_1');"
+    },
+    "5": {
+        "name": "阳剑：卡玛尔碎片",
+        "iname": "IT_PIECE_SWORD_SOLAR_SWORD_QAMAR",
+        "icon": "it_wp_silver_sword",
+        "rarity": "bronze",
+        "type": "material",
+        "piece": true,
+        "description": "合成素材。"
+    },
+    "6": {
+        "name": "灵魂碎片：罗菲娅",
+        "iname": "IT_PIECE_ROPHIA",
+        "icon": "it_pi_rophia",
+        "rarity": "silver",
+        "type": "material",
+        "piece": true,
+        "description": "集齐100个可以召唤罗菲娅。"
+    },
+    "7": {
+        "name": "灵魂召唤：罗菲娅",
+        "iname": "IT_SOUL_SUMMON_ROPHIA",
+        "icon": "it_pi_rophia",
+        "rarity": "silver",
+        "type": "material",
+        "soulSummon": "ROPHIA",
+        "description": "集齐100个可以召唤罗菲娅。"
     }
 }

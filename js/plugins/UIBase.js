@@ -59,7 +59,7 @@ Window_Selectable.prototype.onTouch = function(triggered) {
     var y = this.canvasToLocalY(TouchInput.y);
     var hitIndex = this.hitTest(x, y);
     if (hitIndex >= 0) {
-        if (hitIndex != this.index()) {
+        if (hitIndex !== this.index()) {
             this.select(hitIndex);
         }
         if (triggered && this.isTouchOkEnabled()) {
@@ -83,7 +83,7 @@ Window_Selectable.prototype.processMove = function() {
             var x = this.canvasToLocalX(TouchInput.x);
             var y = this.canvasToLocalY(TouchInput.y);
             var hitIndex = this.hitTest(x, y);
-            if (hitIndex != this.index()) {
+            if (hitIndex !== this.index()) {
                 this.select(hitIndex);
             }
         }
@@ -101,7 +101,7 @@ Window_Selectable.prototype.updateHelpWindow = function() {
 };
 
 Window_Selectable.prototype.setHelpWindowItem = function(item) {
-    if ((!item)||this._index==-1||(!this.active)) {this._helpWindow.hide();} else {this._helpWindow.show();}
+    if ((!item)||this._index===-1||(!this.active)) {this._helpWindow.hide();} else {this._helpWindow.show();}
     if (this._helpWindow) {
         var x = TouchInput.x;
         var y = TouchInput.y;
@@ -161,9 +161,9 @@ Window_ItemList.prototype.includes = function(item) {
     case 'armor':
         return DataManager.isArmor(item);
     case 'material':
-        return item && item.type == 'material';
+        return item && item.type === 'material';
     case 'special':
-        return item && item.type == 'special';
+        return item && item.type === 'special';
     case 'keyItem':
         return DataManager.isItem(item) && item.itypeId === 2;
     default:
@@ -264,7 +264,7 @@ Window_Help.prototype.setItem = function(item) {
     var rarity = item.rarity || 'bronze';
     
     var name;
-    if (typeof(item.name)=='string') {name = item.name;} else {name = item.name(); }
+    if (typeof(item.name)==='string') {name = item.name;} else {name = item.name(); }
     text = text + '\\C[' + Window_Base.prototype.RarityColors[rarity] + ']' + name + '\\C[0]' + '\n';
     
     if(DataManager.isSkill(item)&&this._actor) {
@@ -299,8 +299,28 @@ Window_Help.prototype.setItem = function(item) {
         text = text + item.description + '\n';
     }
     
+    if(item instanceof Game_Battler) {
+        text += '物理攻击: ' + Math.round(item.pdm) +'\n';
+        text += '魔法攻击: ' + Math.round(item.mdm) +'\n';
+        text += '物理防御: ' + Math.round(item.pdf) +'\n';
+        text += '魔法防御: ' + Math.round(item.mdf) +'\n';
+    }
+    
     var flavour = item.flavour || '';
     text = text + '\\C[8]' + flavour + '\\C[0]' + '\n';
+    
+    //equip jobs
+    if(item.etype) {
+        text += '可用职业: '
+        var jobs = $dataClasses.filter(function(job) {
+            return job&&job.equipables.contains(item.etype);
+        });
+        jobs.forEach(function(job) {
+            text += '\\I[' + job.icon + ']';
+        });
+        text += '\n';
+    }
+    
     this.setText(text);
 };
 
@@ -396,7 +416,11 @@ Window_MenuStatus.prototype.itemWidth = function() {
 };
 
 Window_MenuStatus.prototype.itemHeight = function() {
-    return 210;
+    return 240;
+};
+
+Window_MenuStatus.prototype.maxCols = function() {
+    return Math.floor(this._width / (this.itemWidth() + this.spacing()));
 };
 
 Window_MenuStatus.prototype.drawItem = function(index) {
@@ -496,6 +520,27 @@ Window_EquipStatus.prototype.drawNewParam = function(x, y, statusIndex) {
     var diffvalue = newValue - this._actor[this.statusList()[statusIndex]];
     this.changeTextColor(this.paramchangeTextColor(diffvalue));
     this.drawText(Math.round(newValue), x, y, 48, 'right');
+};
+
+// Window_ActorCommand =========================================================================================
+Window_ActorCommand.prototype.makeCommandList = function() {
+    if (this._actor) {
+        this.addAttackCommand();
+        this.addSkillCommands();
+        //this.addGuardCommand(); delete guard command
+        this.addItemCommand();
+    }
+};
+
+Window_ActorCommand.prototype.addSkillCommands = function() {
+    var skillTypes = this._actor.addedSkillTypes();
+    skillTypes.sort(function(a, b) {
+        return a - b;
+    });
+    skillTypes.forEach(function(stypeId) {
+        var name = $dataSystem.skillTypes[stypeId];
+        if (name !== '被动') this.addCommand(name, 'skill', true, stypeId);
+    }, this);
 };
 
 //Scene_Skill ===============================================================================================================
@@ -668,6 +713,7 @@ Scene_MenuBase.prototype.createHelpWindow = function() {
     this.addWindow(this._helpWindow);
     if(this._itemWindow) {this._itemWindow.setHelpWindow(this._helpWindow);}
     if(this._slotWindow) {this._slotWindow.setHelpWindow(this._helpWindow);}
+    if(this._listWindow) {this._listWindow.setHelpWindow(this._helpWindow);}
 };
 
 // Scene_Title =========================================================================================

@@ -4,13 +4,71 @@
         "iname": "DEATH_SENTENCE",
         "icon": "state_death_sentence",
         "rule": "unique",
-        "obstinacy": "2"
+        "negative": true,
+        "obstinacy": 2
     },
-    "2": {
-        "name": "物理攻击提升",
+    "4": {
+        "name": "失明",
+        "iname": "BLIND",
+        "icon": "state_blind",
+        "rule": "unique",
+        "negative": true,
+        "obstinacy": 0,
+        "mults": {
+            "hit": -50
+        }
+    },
+    "21": {
+        "name": "物理攻击+",
         "iname": "PDM_UP",
-        "icon": "",
+        "icon": "state_pdm_up",
         "rule": "multi",
-        "obstinacy": "0"
+        "obstinacy": 0
+    },
+    "22": {
+        "name": "魔法攻击+",
+        "iname": "MDM_UP",
+        "icon": "state_mdm_up",
+        "rule": "multi",
+        "obstinacy": 0
+    },
+    "31": {
+        "name": "物理防御-",
+        "iname": "PDF_DOWN",
+        "icon": "state_pdf_down",
+        "rule": "multi",
+        "negative": true,
+        "obstinacy": 0
+    },
+    "32": {
+        "name": "魔法防御-",
+        "iname": "MDF_DOWN",
+        "icon": "state_mdf_down",
+        "rule": "multi",
+        "negative": true,
+        "obstinacy": 0
+    },
+    "37": {
+        "name": "斩击+",
+        "iname": "SLASH_ASSIST_UP",
+        "icon": "state_slash_assist_up",
+        "rule": "multi",
+        "obstinacy": 0
+    },
+    "121": {
+        "name": "魔法屏障",
+        "iname": "TEMPLAR_KNIGHT_ACT_3_BUFF",
+        "icon": "state_shield",
+        "rule": "unique",
+        "obstinacy": 1,
+        "onDamage": "if(action.hasMagicDamage()) {b.getStateById(121).turnProgress();}"
+    },
+    "122": {
+        "name": "次元超越",
+        "iname": "BOSS_TRICKER_PAS_1",
+        "icon": "jb_tricker",
+        "rule": "unique",
+        "obstinacy": 3,
+        "onActionEnd": "if(action.hasMagicDamage() && Math.random*100 <= 40 && this.mp >= acton.item().mpCost) {this.instantAction(action.item().id, target);}"
     }
 }

@@ -1,7 +1,8 @@
 // Event Responses
+var EventResponseData = EventResponseData || {};
 
 //on pre damage
-Game_Battler.prototype.onPreDamage = function (value, source, skill) {
+Game_Battler.prototype.onPreDamage = function (value, source, action) {
 	var dmg = value;
     var states = this._states;
 
@@ -77,6 +78,14 @@ Game_Battler.prototype.onTurnStart = function() {
     //=======================================================================================
     var states = this._states;
     var a = this;
+
+    // resolve state resist
+    for (var i = 0; i < states.length; i++) {
+        if (this[states[i].iname + '_resist']&&Math.random() * 100 <= this[states[i].inaem + 'resist']) {
+            states[i].remove();
+        }
+    }
+
 
     for (var i = 0; i < states.length; i++){
         var masterState = states[i];
@@ -162,4 +171,44 @@ Game_Battler.prototype.onEvasion = function(action) {
             eval(skill.onEvasion);
         }
     }
-}
+};
+
+//OnActionEnd
+
+BattleManager.updateAction = function() {
+    var target = this._targets.shift();
+    if (target) {
+        this.invokeAction(this._subject, target);
+    } else {
+        this.endAction();
+    }
+};
+
+BattleManager.endAction = function() {
+    this._logWindow.endAction(this._subject);
+    this._subject.onActionEnd(this._action, this._subject._lastTargetIndex);
+    this._phase = 'turn';
+};
+
+Game_Battler.prototype.onActionEnd = function(action, target) {
+
+    var states = this._states;
+    for (var i = 0; i < states.length; i++){
+        var masterState = states[i];
+        if (masterState.onActionEnd) {
+            eval(masterState.onActionEnd);
+        }
+    }
+
+    if(!this.isActor()){return;}
+
+    var skills = this.skills();
+    var equips = this.equips();
+
+    for (var i = 0; i < skills.length; i++){
+        var skill = skills[i];
+        if (skill.onActionEnd){
+            eval(skill.onActionEnd);
+        }
+    }
+};

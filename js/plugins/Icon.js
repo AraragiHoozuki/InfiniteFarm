@@ -2,8 +2,8 @@
 //also manipulate item rarity and name showing
 
 Window_Base.prototype.drawIcon = function(iconName, x, y, w, h) {
-    h = h||64;
-    w = h||64;
+    h = h||this.lineHeight();
+    w = h||this.lineHeight();
     var bitmap = ImageManager.loadBitmap('img/icons/', iconName,0,true);
     var pw = bitmap.width;
     var ph = bitmap.height;
@@ -26,15 +26,20 @@ Window_Base.prototype.drawItemName = function(item, x, y, width, withText) {
 	width = width || 312;
 	if (item) {
 		var h = this instanceof Window_Selectable?this.itemWidth()-9:this.lineHeight()-9;
+		if (h >= 300) h = this.lineHeight() - 4;
 		this.resetTextColor();
-        var rarity = item.rarity || 'bronze'
-		this.drawIcon('item_frame_' + rarity, x+3, y+6, h, h);
-		this.drawIcon(item.icon || 'default_unkown', x+3, y +6, h, h);
+        var rarity = item.rarity || 'bronze';
+        var prefix = item.piece ? 'piece_' : 'item_';
+		this.drawIcon(prefix + 'frame_' + rarity, x+3, y+6, h, h);
+		this.drawIcon(item.icon || 'default_unknown', x+3, y +6, h, h);
 		if (withText) {
 			if (DataManager.isItem(item)||DataManager.isWeapon(item)||DataManager.isArmor(item)) {
 				this.changeTextColor(this.textColor(Window_Base.prototype.RarityColors[rarity]));
 			}
-			//this.drawText(item.name, x + h + 24, y, width - h);
+            if(!(this instanceof Window_Selectable)) {
+                this.drawText(item.name, x + h + 24, y, width - h);
+            }
+			
 		}
 	}
 };

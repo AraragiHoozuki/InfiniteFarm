@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5241,        123]
-NotebookOptionsPosition[      4544,        104]
-NotebookOutlinePosition[      5066,        121]
-CellTagsIndexPosition[      5023,        118]
+NotebookDataLength[      3807,        102]
+NotebookOptionsPosition[      3205,         84]
+NotebookOutlinePosition[      3728,        101]
+CellTagsIndexPosition[      3685,         98]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -46,15 +46,16 @@ Cell[BoxData[{
     RowBox[{"StringRiffle", "[", 
      RowBox[{"list", ",", "\"\<\\\",\\\"\>\""}], "]"}], "<>", 
     "\"\<\\\"]\>\""}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"js", "=", 
-  RowBox[{
-  "\"\<var Scene_Boot_loadSystemImages = Scene_Boot.loadSystemImages;\n\
+ RowBox[{
+  RowBox[{"js", "=", 
+   RowBox[{
+   "\"\<var Scene_Boot_loadSystemImages = Scene_Boot.loadSystemImages;\n\
 Scene_Boot.loadSystemImages = function() {\n    \
 Scene_Boot_loadSystemImages.call(this);\n    var iconList = \>\"", "<>", 
-   "liststr", "<>", 
-   "\"\<;\n    iconList.map(function(iconName) {\n        \
-ImageManager.reserveBitmap('img/icons/', iconName);\n    });\n};\>\""}]}], "\
-\[IndentingNewLine]", 
+    "liststr", "<>", 
+    "\"\<;\n    iconList.map(function(iconName) {\n        \
+ImageManager.reserveBitmap('img/icons/', iconName);\n    });\n};\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<D:\\\\RMGames\\\\InfiniteFarm\\\\js\\\\plugins\\\\iconReserve.js\>\"", 
@@ -66,44 +67,23 @@ ImageManager.reserveBitmap('img/icons/', iconName);\n    });\n};\>\""}]}], "\
    3.713609132181636*^9, 3.713609164783146*^9}, {3.7136093596388264`*^9, 
    3.713609373505473*^9}, 3.7168706831912932`*^9, 3.719120566838292*^9, {
    3.7191208169513545`*^9, 3.7191208915633383`*^9}, {3.71912093210705*^9, 
-   3.7191209369801073`*^9}},ExpressionUUID->"6c8a7cd6-ba43-4ed3-b980-\
+   3.7191209369801073`*^9}, {3.7192855983728724`*^9, 
+   3.719285601193825*^9}},ExpressionUUID->"6c8a7cd6-ba43-4ed3-b980-\
 0a3d3cbcf07a"],
-
-Cell[BoxData["\<\"var Scene_Boot_loadSystemImages = \
-Scene_Boot.loadSystemImages;\\nScene_Boot.loadSystemImages = function() {\\n  \
-  Scene_Boot_loadSystemImages.call(this);\\n    var iconList = \
-[\\\"default_empty\\\",\\\"default_unkown\\\",\\\"gold\\\",\\\"icon_frame_\
-sprite\\\",\\\"item_frame_bronze\\\",\\\"item_frame_golden\\\",\\\"item_frame_\
-legendary\\\",\\\"item_frame_silver\\\",\\\"item_frame_unique\\\",\\\"jbe_\
-templar_knight\\\",\\\"jb_templar_knight\\\",\\\"jb_warrior\\\",\\\"portrait_\
-frame\\\",\\\"state_10\\\",\\\"state_11\\\",\\\"state_12\\\",\\\"state_13\\\",\
-\\\"state_14\\\",\\\"state_15\\\",\\\"state_17\\\",\\\"state_18\\\",\\\"state_\
-19\\\",\\\"state_1\\\",\\\"state_20\\\",\\\"state_21\\\",\\\"state_22\\\",\\\"\
-state_23\\\",\\\"state_24\\\",\\\"state_25\\\",\\\"state_26\\\",\\\"state_27\\\
-\",\\\"state_28\\\",\\\"state_2\\\",\\\"state_3\\\",\\\"state_4\\\",\\\"state_\
-5\\\",\\\"state_6\\\",\\\"state_7\\\",\\\"state_8\\\",\\\"state_9\\\",\\\"\
-state_death_sentence\\\",\\\"type_anemos\\\",\\\"type_blow\\\",\\\"type_\
-erebus\\\",\\\"type_gee\\\",\\\"type_heal\\\",\\\"type_hydor\\\",\\\"type_\
-magic\\\",\\\"type_phos\\\",\\\"type_physical\\\",\\\"type_pyros\\\",\\\"type_\
-shoot\\\",\\\"type_slash\\\",\\\"type_statechange\\\",\\\"type_thrust\\\"];\\\
-n    iconList.map(function(iconName) {\\n        \
-ImageManager.reserveBitmap('img/icons/', iconName);\\n    });\\n};\"\>"], \
-"Output",
- CellChangeTimes->{3.719120947856839*^9, 3.7191213719254093`*^9, 
-  3.719123111955326*^9, 3.719129210424293*^9, 
-  3.719142953700141*^9},ExpressionUUID->"a322a8a6-7f56-4bf9-916b-\
-0b43266a0ac7"],
 
 Cell[BoxData["\<\"D:\\\\RMGames\\\\InfiniteFarm\\\\js\\\\plugins\\\\\
 iconReserve.js\"\>"], "Output",
  CellChangeTimes->{3.719120947856839*^9, 3.7191213719254093`*^9, 
-  3.719123111955326*^9, 3.719129210424293*^9, 
-  3.7191429537096543`*^9},ExpressionUUID->"ebf2cfb2-9a1c-4e53-b408-\
-bc00461e9955"]
+  3.719123111955326*^9, 3.719129210424293*^9, 3.719142953700141*^9, 
+  3.7192019054699287`*^9, 3.719205208891188*^9, 3.7192352786143446`*^9, 
+  3.7192364162764397`*^9, 3.7192850885718412`*^9, 3.719285605682855*^9, 
+  3.7192952316509037`*^9, 3.719312971085217*^9, 
+  3.719326595610877*^9},ExpressionUUID->"6ee63df2-f282-4af4-a28f-\
+cb45ebb5723d"]
 }, Open  ]]
 },
 WindowSize->{759, 833},
-WindowMargins->{{Automatic, 361}, {9, Automatic}},
+WindowMargins->{{Automatic, 272}, {31, Automatic}},
 FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
 StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "C:", "Users", "lo", 
    "AppData", "Roaming", "Mathematica", "SystemFiles", "FrontEnd", 
@@ -121,9 +101,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 2018, 47, 726, "Input",ExpressionUUID->"6c8a7cd6-ba43-4ed3-b980-0a3d3cbcf07a"],
-Cell[2601, 71, 1626, 23, 890, "Output",ExpressionUUID->"a322a8a6-7f56-4bf9-916b-0b43266a0ac7"],
-Cell[4230, 96, 298, 5, 49, "Output",ExpressionUUID->"ebf2cfb2-9a1c-4e53-b408-bc00461e9955"]
+Cell[580, 22, 2093, 49, 726, "Input",ExpressionUUID->"6c8a7cd6-ba43-4ed3-b980-0a3d3cbcf07a"],
+Cell[2676, 73, 513, 8, 49, "Output",ExpressionUUID->"6ee63df2-f282-4af4-a28f-cb45ebb5723d"]
 }, Open  ]]
 }
 ]

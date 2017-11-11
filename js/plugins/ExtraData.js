@@ -79,8 +79,8 @@ Object.defineProperties(Game_BattlerBase.prototype, {
     mmp: { get: function() { return Math.floor(this.getSecondaryStatus("mmp")); }, configurable: true },
     pdm: { get: function() { return this.getSecondaryStatus("pdm"); }, configurable: true },
     mdm: { get: function() { return this.getSecondaryStatus("mdm"); }, configurable: true },
-    pdf: { get: function() { return this.getSecondaryStatus("pdf"); }, configurable: true },
-    mdf: { get: function() { return this.getSecondaryStatus("mdf"); }, configurable: true },
+    pdf: { get: function() { return this.getArmor("pdf"); }, configurable: true },
+    mdf: { get: function() { return this.getArmor("mdf"); }, configurable: true },
     hit: { get: function() { return this.getSecondaryStatus("hit"); }, configurable: true },
     eva: { get: function() { return this.getSecondaryStatus("eva"); }, configurable: true },
     cri: { get: function() { return this.getSecondaryStatus("cri"); }, configurable: true },
@@ -160,6 +160,21 @@ Game_Actor.prototype.getEquipAdd = function(value, status) {
     return add;
 };
 
+Game_Actor.prototype.getEquipArmor = function(value, status) {
+    var add = 0;
+    var eqs = this.equips();
+    for (var i = 0; i < eqs.length; i++){
+        var eq = eqs[i];
+        if (!eq) { continue; }
+        if(eq.adds&&eq.adds[status]) { add += eq.adds[status]; }
+    }
+    return add;
+};
+
+Game_Enemy.prototype.getEquipArmor = function(value, status) {
+    return this._level * $dataEnemies[this._enemyId]['params'][status];
+};
+
 Game_Enemy.prototype.getEquipAdd = function(value, status) {
     return 0;
 };
@@ -174,7 +189,7 @@ Game_Actor.prototype.getSkillAdd = function(value, status) {
             if (skl.adds[status] instanceof Array) {
                 add += this.calcSkillLevelValue(skl.adds[status], skl.id);
             } else {
-                add += skl.adds[status]; 
+                add += typeof skl.adds[status] === 'string' ? eval(skl.adds[status]) : skl.adds[status];
             }
         }
         if(skl.mults&&skl.mults[status]) { 
@@ -198,7 +213,7 @@ Game_BattlerBase.prototype.getStateAdd = function(value, status) {
     for (var i = 0; i < states.length; i++){
         var state = states[i];
         if (!state) { continue; }
-        if(state.adds&&state.adds[status]) { add += state.adds[status]; }
+        if(state.adds&&state.adds[status]) { add += typeof state.adds[status] === 'string' ? eval(state.adds[status]) : state.adds[status]; }
         if(state.mults&&state.mults[status]) { add += value * state.mults[status] / 100; }
     }
     return add;
@@ -248,6 +263,15 @@ Game_BattlerBase.prototype.calcBaseSecondaryStatus = function(status) {
 Game_BattlerBase.prototype.getSecondaryStatus = function(status) {
     var value = this.calcBaseSecondaryStatus(status);
     var add = this.calcAddStatus(value, status);    
+    return value + add;
+};
+
+Game_BattlerBase.prototype.getArmor = function(status) {
+    var value = this.calcBaseSecondaryStatus(status);
+    value += this.getEquipArmor(0, status);
+    var add = 0;
+    add += this.getSkillAdd(value, status);
+    add += this.getStateAdd(value, status);
     return value + add;
 };
 

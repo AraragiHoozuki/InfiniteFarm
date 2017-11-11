@@ -1,3 +1,29 @@
 {
-	
+  "1": {
+    "name": "帽子",
+    "iname": "CAP_BASIC",
+    "icon": "it_head_cap",
+    "rarity": "bronze",
+    "slot": "head",
+    "etype": "轻甲",
+    "description": "最大HP +30",
+    "flavour": "据说是仿照异界人的风格做的帽子。",
+    "adds": {
+      "mhp": 30
+    }
+  },
+  "2": {
+    "name": "马甲",
+    "iname": "VEST_BASIC",
+    "icon": "it_body_vest",
+    "rarity": "bronze",
+    "slot": "body",
+    "etype": "轻甲",
+    "description": "最大HP + 80、物理防御 + 25",
+    "flavour": "据说是仿照异界人的风格做的马甲。",
+    "adds": {
+      "mhp": 80,
+      "pdf": 25
+    }
+  }
 }

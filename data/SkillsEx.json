@@ -41,7 +41,8 @@
         "icon": "jbe_templar_knight",
         "description": "自身斩击伤害提高10% ~ 30%\n 暗属性抗性提高 10% ~ 30%",
         "flavour": "每位神殿骑士就职时都会受到此祝福。",
-        "types": [],
+        "types": ["passive"],
+        "cap": 3,
         "adds": {
             "slash_assist": [10, 30],
             "erebus_resist": [10, 30]
@@ -51,41 +52,296 @@
         "name": "阳炎剑",
         "iname": "TEMPLAR_KNIGHT_ACT_1",
         "icon": "jbe_templar_knight",
-        "description": "指定敌人 115% ~ 150% 光属性斩击物理伤害、赋予3回合死亡宣告效果。",
+        "description": "指定敌人 115% ~ 140% 光属性斩击物理伤害、自身3回合物理攻击提高 20% ~ 30%。\n基础伤害受物理和魔法攻击加成。",
         "flavour": "",
         "types": ["physical","slash","phos"],
         "damages": [
             {
-                "base": "this.pdm",
-                "rate": [15, 50],
+                "base": "(this.pdm + this.mdm) * 0.7",
+                "rate": [15, 40],
                 "type": "phy",
                 "hittype": "slash",
                 "element": "phos"
             }
         ],
         "enchants": [
-            {"iname": "PDM_UP", "turns": "3", "param":{
+            {"iname": "PDM_UP", "self": true, "turns": 3, "param":{
+                "mults":{
+                    "pdm": [20, 30]
+                }
+            }}
+        ]
+    },
+    "6": {
+        "name": "治愈福音",
+        "iname": "TEMPLAR_KNIGHT_ACT_2",
+        "icon": "jbe_templar_knight",
+        "description": "指定我方回复生命值 \n效果受魔法攻击加成。",
+        "types": ["heal"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [100, 200],
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "7": {
+        "name": "魔法屏障",
+        "iname": "TEMPLAR_KNIGHT_ACT_3",
+        "icon": "jbe_templar_knight",
+        "description": "指定我方4 ~ 6 回合魔法防御提高 2000，受到魔法伤害时会减少1回合持续时间。",
+        "cap": 3,
+        "types": ["statechange"],
+        "enchants": [
+            {"iname": "TEMPLAR_KNIGHT_ACT_3_BUFF", "param":{
+                "duration": [4, 6],
                 "adds":{
-                    "pdm": [200, 5000]
+                    "mdf": 2000
                 }
             }}
         ]
     },
     "8": {
-        "name": "测试：治疗",
-        "iname": "TEST_HEAL",
-        "types": ["heal"],
-        "cap": 10,
+        "name": "圣战号角",
+        "iname": "TEMPLAR_KNIGHT_ACT_4",
+        "icon": "jbe_templar_knight",
+        "description": "我方全员HP回复、自身4回合斩击伤害提高15% ~ 30%。",
+        "cap": 3,
+        "types": ["heal","statechange"],
         "damages": [{
             "base": "this.mdm",
-            "rate": [0, 180],
+            "rate": [80, 220],
             "type": "heal",
-            "hittyp": null,
+            "hittype": null,
+            "element": null
+        }],
+        "enchants": [
+            {"iname": "SLASH_ASSIST_UP", "self": true, "param":{
+                "duration": 4,
+                "adds":{
+                    "slash_assist": [15, 30]
+                }
+            }}
+        ]
+    },
+    "9": {
+        "name": "圣光一闪击",
+        "iname": "TEMPLAR_KNIGHT_ACT_5",
+        "icon": "jbe_templar_knight",
+        "description": "指定敌人 150% ~ 200% 光属性魔法伤害。",
+        "flavour": "神殿骑士偶尔也会使用魔法。",
+        "types": ["magic", "phos"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [50, 100],
+            "type": "mag",
+            "hittype": null,
             "element": null
         }]
     },
 	"10": {
-		"name": "火花",
-		"iname": "TEST_SPARK"
-	}
+		"name": "新星",
+		"iname": "TEMPLAR_KNIGHT_ACT_6",
+        "icon": "jbe_templar_knight",
+        "description": "全体敌人 135% ~ 170% 光属性斩击物理伤害。\n基础伤害受物理和魔法攻击加成。",
+        "types": ["physical", "slash", "phos"],
+        "damages": [{
+            "base": "(this.pdm + this.mdm) * 0.7",
+            "rate": [35, 70],
+            "type": "phy",
+            "hittype": "slash",
+            "element": "phos"
+        }]
+	},
+    "11": {
+        "name": "神谕",
+        "iname": "TEMPLAR_KNIGHT_PAS_2",
+        "icon": "jbe_templar_knight",
+        "description": "法力上限增加10%、受到物理伤害时，回复 30 ~ 80 点法力。",
+        "flavour": "每位神殿骑士就职时都会受到此祝福。",
+        "types": ["passive"],
+        "cap": 3,
+        "mults": {
+            "mmp": 10
+        },
+        "onDamage": "if(action.hasPhysicalDamage()) {this.gainMp(Math.floor(this.calcSkillLevelValue([30,80],11)));}"
+    },
+    "12": {
+        "name": "天使的祈祷",
+        "iname": "BISHOP_PAS_1",
+        "icon": "jbe_bishop",
+        "description": "生命上限增加15% ~ 30%\n 回合结束时回复5% ~ 7%的生命。",
+        "flavour": "主教其实并没有那么容易被秒。",
+        "types": ["passive"],
+        "cap": 3,
+        "mults": {
+            "mhp": [15, 30]
+        },
+        "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([5,7],12) / 100 );"
+    },
+    "13": {
+        "name": "魔法壁障",
+        "iname": "BISHOP_PAS_2",
+        "icon": "jbe_bishop",
+        "description": "受到魔法伤害时防御，减少伤害 50 ~ 150 点。",
+        "flavour": "主教其实真的并没有那么容易被秒。",
+        "types": ["passive"],
+        "cap": 3,
+        "onPreDamage": "if(dmg>0&&action.hasMagicDamage()) dmg = Math.max(0, dmg - this.calcSkillLevelValue([50,150],13));"
+    },
+    "14": {
+        "name": "大型治疗",
+        "iname": "BISHOP_ACT_1",
+        "icon": "jbe_bishop",
+        "description": "我方全员生命值回复\n 效果受魔法攻击加成。",
+        "types": ["heal"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [90, 220],
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "15": {
+        "name": "闪耀",
+        "iname": "BISHOP_ACT_2",
+        "icon": "jbe_bishop",
+        "description": "指定敌人150% ~ 200%光属性魔法伤害、致盲3回合。",
+        "types": ["magic", "phos"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [50, 100],
+            "type": "mag",
+            "hittype": null,
+            "element": "phos"
+        }],
+        "enchants": [
+            {"iname": "BLIND"}
+        ]
+    },
+    "16": {
+        "name": "终极治愈",
+        "iname": "BISHOP_ACT_3",
+        "icon": "jbe_bishop",
+        "description": "指定我方HP全回复, 解除全部负面状态（1级净化：可以净化所有1级或以下的负面状态，技能中无特殊说明则附加的状态为0级。）",
+        "flavour": "这已经是普通主教能习得的最高级的法术了。",
+        "types": ["heal"],
+        "cap": 1,
+        "damages": [{
+            "base": "target.mhp",
+            "rate": 0,
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }],
+        "script": "target.purge(true, 1);"
+    },
+    "17": {
+        "name": "治疗术",
+        "iname": "BISHOP_ACT_4",
+        "icon": "jbe_bishop",
+        "description": "指定我方HP全回复, HP小回复。\n效果受魔攻加成。",
+        "types": ["heal"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [100, 250],
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "18": {
+        "name": "复活术",
+        "iname": "BISHOP_ACT_5",
+        "icon": "jbe_bishop",
+        "description": "指定我方复活, HP小回复。\n回复效果受魔攻加成。",
+        "types": ["heal"],
+        "cap": 3,
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [-30, 50],
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }],
+        "script": "target.removeState(1);"
+    },
+    "19": {
+        "name": "次元超越",
+        "iname": "TRICKER_PAS_1",
+        "icon": "jbe_tricker",
+        "description": "使用魔法攻击法术时，有 10% ~ 40% 的概率再次施放该法术，可重复触发",
+        "flavour": "穿越时空就为了放个法术……",
+        "types": ["passive"],
+        "cap": 8,
+        "onActionEnd": "if(action.hasMagicDamage() && Math.random()*100 <= this.calcSkillLevelValue([10,40],19) && this.mp >= acton.item().mpCost) {this.instantAction(action.item().id, target);}"
+    },
+    "20": {
+        "name": "魔能爆轰",
+        "iname": "TRICKER_ACT_1",
+        "icon": "jbe_tricker",
+        "description": "指定敌方200% ~ 300% 暗属性魔法伤害。赋予3回合物理魔法攻击提高50%效果。",
+        "types": ["magic", "erebus"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [100, 200],
+            "type": "mag",
+            "hittype": null,
+            "element": "erebus"
+        }],
+        "enchants": [
+            {"iname": "PDM_UP", "param": {"mults": {"pdm": 50}}},
+            {"iname": "MDM_UP", "param": {"mults": {"mdm": 50}}}
+        ]
+    },
+    "21": {
+        "name": "超载",
+        "iname": "TRICKER_ACT_2",
+        "icon": "jbe_tricker",
+        "description": "自身4回合魔法攻击提高 100% ~ 200%、物理与魔法防御下降 80%",
+        "types": ["statechange"],
+        "cap": 5,
+        "enchants": [
+            {"iname": "MDM_UP", "self": true, "turns": 4, "param": {"mults": {"mdm": [100, 200]}}},
+            {"iname": "PDF_DOWN", "self": true, "turns": 4, "param": {"mults": {"pdf": -80}}},
+            {"iname": "MDF_DOWN", "self": true, "turns": 4, "param": {"mults": {"mdf": -80}}}
+        ]
+    },
+    "22": {
+        "name": "反转",
+        "iname": "TRICKER_ACT_3",
+        "icon": "jbe_tricker",
+        "description": "将自己的负面状态和目标的正面状态交换。（仅对1级以下的状态有效）",
+        "types": ["statechange"],
+        "cap": 1,
+        "script": "subject.statesExchange(target, 1);"
+    },
+    "23": {
+        "name": "强制转换",
+        "iname": "TRICKER_ACT_4",
+        "icon": "jbe_tricker",
+        "description": "自身和目标当前生命值交换。（目标最少会留下20%生命。）",
+        "types": ["statechange"],
+        "cap": 1,
+        "script": "subject.hpExchange(target, 20);"
+    },
+    "24": {
+        "name": "黑洞",
+        "iname": "TRICKER_ACT_5",
+        "icon": "jbe_tricker",
+        "description": "全体敌方180% ~ 240% 暗属性魔法伤害。",
+        "types": ["magic", "erebus"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [80, 140],
+            "type": "mag",
+            "hittype": null,
+            "element": "erebus"
+        }]
+    }
 }

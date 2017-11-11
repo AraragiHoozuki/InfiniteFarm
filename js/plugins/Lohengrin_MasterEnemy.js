@@ -27,6 +27,23 @@ Game_Enemy.prototype.setup = function(enemyId, x, y, level) {
     this.recoverAll();
 };
 
+Game_Actor.prototype.setup = function(actorId) {
+    var actor = $dataActors[actorId];
+    this._actorId = actorId;
+    this._name = actor.name;
+    this._nickname = actor.nickname;
+    this._profile = actor.profile;
+    this._classId = actor.classId;
+    this._level = actor.initialLevel;
+
+    this.initImages();
+    this.initExp();
+    this.initSkills();
+    this.initEquips(actor.equips);
+    this.clearParamPlus();
+    this.recoverAll();
+};
+
 Game_Enemy.prototype.initialize = function(enemyId, x, y, level) {
     Game_Battler.prototype.initialize.call(this);
     this.setup(enemyId, x, y, level);
@@ -41,8 +58,37 @@ BattleManager.setup = function(troopId, canEscape, canLose, levels) {
     this.makeEscapeRatio();
 };
 
+Game_Troop.prototype.setup = function(troopId, levels) {
+    this.clear();
+    this._troopId = troopId;
+    this._enemies = [];
+    this.troop().members.forEach(function(member) {
+        if ($dataEnemies[member.enemyId]) {
+            var enemyId = member.enemyId;
+            var x = member.x;
+            var y = member.y;
+            var enemy = new Game_Enemy(enemyId, x, y, levels?levels.shift():null);
+            if (member.hidden) {
+                enemy.hide();
+            }
+            this._enemies.push(enemy);
+        }
+    }, this);
+    this.makeUniqueNames();
+};
+
 Game_Enemy.prototype.exp = function() {
-    return this.enemy().exp * this._level;
+    if(this._level >= $gameParty.averageLevel()) {
+        return Math.round((this._level * 50) * Math.pow(1.05, (this._level - $gameParty.averageLevel())));
+    } else {
+        return this._level * 10;
+    }
+};
+
+Game_Party.prototype.averageLevel = function() {
+    return this.members().reduce(function(total, actor){
+        return total + actor._level;
+    }, 0) / this.members().length;
 };
 
 Game_Enemy.prototype.gold = function() {
@@ -50,26 +96,14 @@ Game_Enemy.prototype.gold = function() {
 };
 
 Game_Enemy.prototype.makeDropItems = function() {    
-    var drops = this.enemy().dropItems.reduce(function(r, di) {
-        if (di.kind > 0 && Math.random() * di.denominator < this.dropItemRate()) {
-            return r.concat(this.itemObject(di.kind, di.dataId));
-        } else {
-            return r;
-        }
-    }.bind(this), []);
-
-    var ex = $dataEnemiesEx[this._enemyId];
-    if(ex&&ex.drops){
-        drops = ex.drops.reduce(function(r, di) {
-            if (di.kind > 0 && Math.random() < this.dropItemRate() * (di.prob + (this._level - ex.lv) / 100)) {
-                var num = di.num;
-                do {r = r.concat(this.itemObject(di.kind, di.id)); num--; } while (num > 0);
-                return r;
-            } else {
-                return r;
+    return this.enemy().drops.reduce(function(r, drop) {
+        var item = DataManager.findDropItem(drop);
+        //bp = base prob, mpl = max prob level
+        if (Math.random() * 100 <= drop.bp + 100 * this._level / drop.mpl) {
+            for (var i = 0; i < drop.amount; i ++) {
+                r.push(item);
             }
-        }.bind(this), drops);
-    }
-
-    return drops;
+        }
+        return r;
+    }.bind(this), []);
 };

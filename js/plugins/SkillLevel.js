@@ -26,6 +26,9 @@ Game_Actor.prototype.skillMaxLevel = function(skillId) {
 };
 
 Game_Actor.prototype.learnSkill = function(skillId) {
+    if (typeof skillId === 'string') {
+        skillId = DataManager.findSkill(skillId).id;
+    }
     if (!this.isLearnedSkill(skillId)) {
         this._skills.push(skillId);
         this.setSkillLevel(skillId, 1);
@@ -39,8 +42,11 @@ Game_Actor.prototype.learnSkill = function(skillId) {
     }
 };
 
+
 Game_Actor.prototype.calcSkillLevelValue = function(value, skillId) {
-    return value[0] + (value[1] - value[0]) * (this.getSkillLevel(skillId) - 1) / (this.skillMaxLevel(skillId) - 1);
+    var c = 1;
+    if (value.length >= 3) { c = eval(value[2]); }
+    return c * (value[0] + (value[1] - value[0]) * (this.getSkillLevel(skillId) - 1) / (this.skillMaxLevel(skillId) - 1));
 };
 
 Game_Enemy.prototype.calcSkillLevelValue = function(value, skillId) {
@@ -48,12 +54,15 @@ Game_Enemy.prototype.calcSkillLevelValue = function(value, skillId) {
 };
 
 Game_Battler.prototype.calcEnchantLevelValue = function(param, skillId) {
+    var newParam = {};
     for (var key in param) {
         if (param[key] instanceof Array) {
-            param[key] = this.calcSkillLevelValue(param[key], skillId);
-        } else if (!(param[key] instanceof Number)) {
-            param[key] = this.calcEnchantLevelValue(param[key], skillId);
+            newParam[key] = this.calcSkillLevelValue(param[key], skillId);
+        } else if ((typeof param[key]) === "number" ||(typeof param[key]) === "string") {
+            newParam[key] = param[key];
+        } else {
+            newParam[key] = this.calcEnchantLevelValue(param[key], skillId);
         }
     }
-    return param;
+    return newParam;
 };

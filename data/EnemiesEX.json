@@ -10,7 +10,80 @@
             "CON": [28, 540],
             "INT": [12, 315],
             "WIL": [20, 415],
-            "WIT": [15, 342]
+            "WIT": [15, 342],
+            "pdf": 2,
+            "mdf": 2
         }
+    },
+    "2": {
+        "name": "铜宝箱怪",
+        "iname": "BRONZE_CHEST_MONSTER",
+        "tags": ["金属", "魔法生物"],
+        "curve": "Normal",
+        "lv": 3,
+        "params": {
+            "STR": [34, 666],
+            "FIN": [22, 435],
+            "CON": [32, 725],
+            "INT": [10, 186],
+            "WIL": [40, 400],
+            "WIT": [10, 320],
+            "pdf": 2,
+            "mdf": 2
+        },
+        "drops": [
+            {"iname":"IT_HEAL_POTION", "type":"item", "amount":3, "bp":20, "mpl": 5},
+            {"iname":"IT_MANA_POTION", "type":"item", "amount":3, "bp":20, "mpl": 5},
+            {"iname":"STAFF_BASIC", "type":"weapon", "amount":1, "bp":10, "mpl": 10},
+            {"iname":"CAP_BASIC", "type":"armor", "amount":1, "bp":10, "mpl": 10},
+            {"iname":"VEST_BASIC", "type":"armor", "amount":1, "bp":8, "mpl": 12}
+        ]
+    },
+    "3": {
+        "name": "托莉托",
+        "iname": "TEST_TORITOH",
+        "tags": ["人类", "女性"],
+        "curve": "Normal",
+        "lv": 10,
+        "params": {
+            "STR": [35, 785],
+            "FIN": [25, 672],
+            "CON": [26, 800],
+            "INT": [25, 644],
+            "WIL": [20, 496],
+            "WIT": [24, 496],
+            "pdf": 5,
+            "mdf": 8
+        },
+        "drops": [
+            {"iname":"IT_HEAL_POTION", "type":"item", "amount":1, "bp":20, "mpl": 5},
+            {"iname":"IT_MANA_POTION", "type":"item", "amount":1, "bp":20, "mpl": 5},
+            {"iname":"IT_PIECE_SWORD_SOLAR_SWORD_QAMAR", "type":"item", "amount":1, "bp":20, "mpl": 50}
+        ]
+    },
+    "4": {
+        "name": "罗菲娅",
+        "iname": "BOSS_ROPHIA",
+        "tags": ["人类", "女性"],
+        "curve": "Normal",
+        "lv": 10,
+        "params": {
+            "STR": [20, 350],
+            "FIN": [22, 520],
+            "CON": [22, 550],
+            "INT": [32, 760],
+            "WIL": [26, 612],
+            "WIT": [22, 465],
+            "pdf": 3,
+            "mdf": 9
+        },
+        "drops": [
+            {"iname":"IT_HEAL_POTION", "type":"item", "amount":2, "bp":20, "mpl": 20},
+            {"iname":"IT_MANA_POTION", "type":"item", "amount":3, "bp":20, "mpl": 20},
+            {"iname":"IT_PIECE_ROPHIA", "type":"item", "amount":2, "bp":50, "mpl": 30},
+            {"iname":"IT_PIECE_ROPHIA", "type":"item", "amount":2, "bp":20, "mpl": 50},
+            {"iname":"IT_PIECE_ROPHIA", "type":"item", "amount":2, "bp":5, "mpl": 80}
+
+        ]
     }
 }

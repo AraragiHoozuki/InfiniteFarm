@@ -3,7 +3,7 @@
 var BattleSystem = BattleSystem || {};
 
 BattleSystem.calcDamageValue = function(source, target, damage, skill) {
-    var value = 0;
+    var value;
     var atk = source.calcAtkPower(damage, target, skill);
     var def = target.calcDefPower(damage, source, skill);
     value = atk * def;
@@ -30,9 +30,9 @@ Game_BattlerBase.prototype.calcAtkPower = function(damage, target, skill) {
 Game_BattlerBase.prototype.calcDefPower = function(damage, source, skill) {
     var armor_rate;
     if(damage.type == 'phy') {
-        armor_rate = this.pdf / (this.pdf + 500 + this._level * 50);
+        armor_rate = Math.abs(this.pdf) / (Math.abs(this.pdf) + 500 + this._level * 25) * (this.pdf >= 0 ? 1 : -1);
     } else if(damage.type == 'mag') {
-        armor_rate = this.mdf / (this.mdf + 500 + this._level * 50);
+        armor_rate = Math.abs(this.mdf) / (Math.abs(this.mdf) + 500 + this._level * 25) * (this.mdf >= 0 ? 1 : -1);
     } else if(damage.type == 'heal') {
         armor_rate = 2;
     } else {
@@ -57,6 +57,24 @@ Game_BattlerBase.prototype.calcDefPower = function(damage, source, skill) {
 
 
 // Game_Action =========================================================================================
+Game_Action.prototype.hasMagicDamage = function() {
+    var item = this.item();
+    if (!item.damages) {return false;}
+    for (var i = 0; i < item.damages.length; i++) {
+        if (item.damages[i].type === 'mag') {return true;}
+    }
+    return false;
+};
+
+Game_Action.prototype.hasPhysicalDamage = function() {
+    var item = this.item();
+    if (!item.damages) {return false;}
+    for (var i = 0; i < item.damages.length; i++) {
+        if (item.damages[i].type === 'phy') {return true;}
+    }
+    return false;
+};
+
 Game_Action.prototype.itemCri = function(target) {
     return this.item().damage.critical ? this.subject().cri / (this.subject().cri + 200 + this.subject()._level * 10) : 0;
 };
@@ -83,13 +101,8 @@ Game_Action.prototype.apply = function(target) {
             var value = this.makeDamageValue(target, result.critical);
             this.executeDamage(target, value);
         }
-        
-        if (this.item().enchants) {
-            this.item().enchants.forEach(function(enchant) {
-                this.applyEnchant(item, enchant, subject, target);
-            }, this);
-        }
-        
+
+        if (this.item().script) eval(this.item().script);
         
         this.item().effects.forEach(function(effect) {
             this.applyItemEffect(target, effect);
@@ -98,6 +111,14 @@ Game_Action.prototype.apply = function(target) {
     } else {
         //Evasion response
         //target.onEvasion(this);
+    }
+    
+    if (this.item().enchants) {
+        this.item().enchants.forEach(function(enchant) {
+            if (result.isHit()||enchant.self) {
+                this.applyEnchant(item, enchant, subject, target);
+            }
+        }, this);
     }
 };
 
@@ -108,12 +129,17 @@ Game_Action.prototype.applyEnchant = function(skill, enchant, source, target) {
     param.skill = skill.id;
     param.enchanter = source;
     if (enchant.turns) {param.duration = enchant.turns; }
-    target.addState(state.id, param);
+    if (enchant.self) {
+        source.addState(state.id, param);
+    } else {
+        target.addState(state.id, param);
+    }
 };
 
 Game_Action.prototype.makeDamageValue = function(target, critical) {
     var item = this.item();
     var subject = this.subject();
+    var action = this;
     var baseValue = 0;
     
     //check normal attack
@@ -133,7 +159,7 @@ Game_Action.prototype.makeDamageValue = function(target, critical) {
         value = this.applyCritical(value);
     }
     value = this.applyVariance(value, 5);
-    value = target.onPreDamage(value, subject, item);
+    value = target.onPreDamage(value, subject, action);
     value = Math.round(value);
     return value;
 };
@@ -141,4 +167,41 @@ Game_Action.prototype.makeDamageValue = function(target, critical) {
 Game_Action.prototype.applyCritical = function(damage) {
     if (!this.item().criBonus) {return damage * 1.5; }
     return damage * (150 + this.item().criBonus) / 100;
+};
+
+//Game_BattlerBase
+Game_BattlerBase.prototype.instantAction = function(skillId, target) {
+    this.clearActions();
+    var index;
+    typeof target === 'number' ? index = target : index = target.index();
+    var action = new Game_Action(this, true);
+    action.setSkill(skillId);
+    action.setTarget(index);
+    this._actions.push(action);
+    BattleManager.forceAction(this);
+}
+
+//Skill Functions ======================================================================================================
+Game_BattlerBase.prototype.hpExchange = function(target, cap) {
+    var my_hp = this.hp;
+    var target_hp = target.hp;
+    this.setHp(target_hp);
+    target.setHp(Math.max(my_hp, Math.round(target.mhp * cap / 100)));
+};
+
+Game_Battler.prototype.statesExchange = function(target, level) {
+    var my_states = this._states.filter(function(state) {
+        return state.negative && state.obstinacy <= level;
+    });
+    var target_states = target._states.filter(function(state) {
+        return (!state.negative) && state.obstinacy <= level;
+    });
+    my_states.forEach(function(state) {
+        target.addState(state.id, state);
+        state.remove();
+    });
+    target_states.forEach(function(state) {
+        this.addState(state.id, state);
+        state.remove();
+    }, this);
 };

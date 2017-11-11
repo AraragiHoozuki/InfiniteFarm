@@ -1,16 +1,58 @@
 {
     "1": {
-        "name": "剑",
-        "rarity": "golden",
+        "name": "白银剑",
+        "iname": "SWORD_SILVER_SWORD",
+        "icon": "it_wp_silver_sword",
+        "rarity": "silver",
         "slot": "weapon",
         "etype": "剑",
-        "description": "力量+15、力量+20%",
-        "flavour": "从下水道中捡起来的剑，散发着一股恶臭。",
+        "description": "物理攻击 + 20、魔法攻击 + 20",
+        "flavour": "神殿骑士的标准佩剑，比一般士兵的剑要好。",
         "adds": {
-            "STR": 15
-        },
-        "mults": {
-            "STR": 20
+            "pdm": 20,
+            "mdm": 20
+        }
+    },
+    "2": {
+        "name": "阳剑：卡玛尔",
+        "iname": "SWORD_SOLAR_SWORD_QAMAR",
+        "icon": "it_wp_silver_sword",
+        "rarity": "legendary",
+        "slot": "weapon",
+        "etype": "剑",
+        "description": "物理攻击 + 168\n魔法攻击 + 168\n命中 + 200\n",
+        "flavour": "据说是用太阳之火铸成的剑，但是由于年代久远已经失去了太阳之力。",
+        "adds": {
+            "pdm": 168,
+            "mdm": 168,
+            "hit": 100
+        }
+    },
+    "3": {
+        "name": "基础法杖",
+        "iname": "STAFF_BASIC",
+        "icon": "it_wp_staff",
+        "rarity": "bronze",
+        "slot": "weapon",
+        "etype": "杖",
+        "description": "魔法攻击+7",
+        "flavour": "纯木头做的法杖，看起来上面有个宝石，实际上只是绿色的漆而已。",
+        "adds": {
+            "mdm": 7
+        }
+    },
+    "4": {
+        "name": "木剑",
+        "iname": "SWORD_WOOD_SWORD",
+        "icon": "it_wp_wood_sword",
+        "rarity": "bronze",
+        "slot": "weapon",
+        "etype": "剑",
+        "description": "物理攻击+5、命中+5",
+        "flavour": "比想象中的要坚固一点。",
+        "adds": {
+            "pdm": 5,
+            "hit": 5
         }
     }
 }

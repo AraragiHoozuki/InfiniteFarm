@@ -12,5 +12,33 @@
             "WIL": [22, 460],
             "WIT": [19, 424]
         }
+    },
+    "2":{
+        "name": "赛丽奴",
+        "iname": "SERINU",
+        "tags": ["human", "female"],
+        "curve": "Normal",
+        "params": {
+            "STR": [15, 425],
+            "FIN": [20, 440],
+            "CON": [20, 395],
+            "INT": [26, 655],
+            "WIL": [24, 480],
+            "WIT": [15, 432]
+        }
+    },
+    "3":{
+        "name": "罗菲娅",
+        "iname": "ROPHIA",
+        "tags": ["human", "female"],
+        "curve": "Normal",
+        "params": {
+            "STR": [15, 399],
+            "FIN": [22, 516],
+            "CON": [21, 390],
+            "INT": [28, 689],
+            "WIL": [27, 526],
+            "WIT": [16, 445]
+        }
     }
 }

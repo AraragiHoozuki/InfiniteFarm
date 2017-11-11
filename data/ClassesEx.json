@@ -20,21 +20,104 @@
         "icon": "jb_templar_knight",
         "paramRates": {
             "STR": 8,
+            "FIN": 0,
             "CON": 25,
-            "INT": 8,
+            "INT": 10,
             "WIL": 8,
             "WIT": -5,
             
             "mhp": -5,
             "mmp": -30
         },
-        "equipables": ["剑", "重甲", "轻甲", "饰品"],
+        "equipables": ["剑", "重甲", "中甲", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.pdm + this.mdm",
+                "rate": -30,
+                "type": "phy",
+                "hittype": "slash",
+                "element": null
+            }
+        ]
+    },
+    "3": {
+        "name": "圣骑士",
+        "iname": "HOLY_KNIGHT",
+        "icon": "jb_holy_knight",
+        "paramRates": {
+            "STR": 8,
+            "FIN": -20,
+            "CON": 30,
+            "INT": 0,
+            "WIL": 10,
+            "WIT": -15,
+
+            "mhp": 10,
+            "mmp": -60,
+            "pdm": -10
+        },
+        "equipables": ["剑", "重甲", "中甲", "轻甲", "饰品"],
         "attack": [
             {
                 "base": "this.pdm",
                 "rate": 0,
                 "type": "phy",
                 "hittype": "slash",
+                "element": null
+            }
+        ]
+    },
+    "4": {
+        "name": "主教",
+        "iname": "Bishop",
+        "icon": "jb_bishop",
+        "paramRates": {
+            "STR": -20,
+            "FIN": 0,
+            "CON": -20,
+            "INT": 25,
+            "WIL": 20,
+            "WIT": 5,
+
+            "mhp": 0,
+            "mmp": 10,
+            "pdm": -30
+        },
+        "equipables": ["杖", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.mdm",
+                "rate": 0,
+                "type": "mag",
+                "hittype": null,
+                "element": null
+            }
+        ]
+    },
+    "5": {
+        "name": "奇术师",
+        "iname": "TRICKER",
+        "icon": "jb_tricker",
+        "paramRates": {
+            "STR": -30,
+            "FIN": -10,
+            "CON": -20,
+            "INT": 35,
+            "WIL": 25,
+            "WIT": 10,
+
+            "mhp": -10,
+            "mmp": 15,
+            "pdm": -40,
+            "mdm": 10
+        },
+        "equipables": ["杖", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.mdm",
+                "rate": 0,
+                "type": "mag",
+                "hittype": null,
                 "element": null
             }
         ]

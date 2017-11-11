@@ -21,7 +21,20 @@ MasterState.prototype.initialize = function(stateId, param) {
 };
 
 MasterState.prototype.isExpired = function() {
-    return this.duration === 0;
+    return this.duration <= 0;
+};
+
+MasterState.prototype.remove = function() {
+    var i = this.owner._states.indexOf(this);
+    this.owner.removeStateByIndex(i);
+    this.onStateRemove();
+};
+
+MasterState.prototype.turnProgress = function() {
+    this.duration --;
+    if (this.duration <= 0) {
+        this.remove();
+    }
 };
 
 MasterState.prototype.onStateRemove = function() {
@@ -51,11 +64,11 @@ Game_BattlerBase.prototype.addNewState = function(stateId, param) {
     }
 };
 
-Game_BattlerBase.prototype.isStateAffected = function(stateId) {
-	var stateids = this._states.map(function(masterState) {
-        return masterState.id;
+Game_BattlerBase.prototype.isStateAffected = function(stateId, skillId) {
+    var filtered = this._states.filter(function(state) {
+        return state.id === stateId && (!skillId||state.skill === skillId)
     });
-    return stateids.contains(stateId);
+    return filtered.length > 0;
 };
 
 Game_BattlerBase.prototype.getStateById = function(stateId) {
@@ -106,6 +119,24 @@ Game_BattlerBase.prototype.eraseState = function(stateId) {
     }
 };
 
+Game_Battler.prototype.purge = function(negative, level) {
+    var filtered;
+    if(negative) {
+        filtered = this._states.filter(function(state) {
+            return state.negative && state.obstinacy <= level;
+        });
+    } else {
+        filtered = this._states.filter(function(state) {
+            return (!state.negative) && state.obstinacy <= level;
+        });
+    }
+    filtered.forEach(function(state) {
+        state.remove();
+    });
+};
+
+
+
 
 Game_Battler.prototype.removeStateByIndex = function(index) {
 	var id = this._states[index].id;
@@ -134,10 +165,10 @@ Game_BattlerBase.prototype.isStateExpired = function(masterState) {
 
 
 Game_Battler.prototype.removeStatesAuto = function(timing) {
-	for (var i=0; i<this._states.length; i++){
+	for (var i = this._states.length - 1; i >= 0; i--){
 		var masterState = this._states[i];
-		if (masterState.isExpired() && $dataStates[masterState.id].autoRemovalTiming === timing) {
-            this.removeStateByIndex(i);
+		if (masterState && masterState.isExpired() && masterState.autoRemovalTiming === timing) {
+            masterState.remove();
         }
 	}
 };
@@ -146,12 +177,14 @@ Game_Battler.prototype.removeStatesAuto = function(timing) {
 Game_BattlerBase.prototype.updateStateTurnTiming = function(timing) {
     if (this.isBypassUpdateTurns()) return;
     this._freeStateTurn = this._freeStateTurn || [];
-    for (var i = 0; i < this._states.length; ++i) {
+
+    for (var i = this._states.length - 1; i >= 0; i--) {
       var masterState = this._states[i];
       if ($dataStates[masterState.id].autoRemovalTiming !== timing) continue;
-      masterState.duration -= 1;
-      if (masterState.duration <= 0) {this.removeStateByIndex(i);}
+      masterState.turnProgress();
+      //if (masterState.duration <= 0) {this.removeStateByIndex(i);}
     }
+
 };
 
 //Traits
@@ -160,7 +193,6 @@ Game_BattlerBase.prototype.traitObjects = function() {
     return this._states;
 };
 
-// show enemy state icon =====================================================================================
 //==============================================================================================
 // show enemy state
 //==============================================================================================
@@ -225,7 +257,7 @@ Sprite_StateIcon.prototype.updateFrame = function() {
     for (i = 0; i < this._icons.length; i++){
       var bitmap = ImageManager.loadBitmap('img/icons/',this._icons[i],0,true);
       this.bitmap.blt(bitmap, 0, 0, bitmap.width, bitmap.height, pw * i, 0,pw,ph);
-      this.bitmap.drawText(this._battler._states[i].duration, -3+pw*i, 8, pw, ph, 'right');
+      this.bitmap.drawText(this._battler._states[i].duration, -1+pw*i, 8, pw, ph, 'right');
     }
     this.setFrame(sx, sy, pw * this._icons.length, ph);
 };

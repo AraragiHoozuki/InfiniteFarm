@@ -20,7 +20,7 @@ Window_EquipSlot.prototype.slotName = function(index) {
 
 Game_Actor.prototype.changeEquip = function(slotId, item) {
     if (this.tradeItemWithParty(item, this.equips()[slotId]) &&
-            (!item || (this.equipSlots()[slotId] == item.slot))) {
+            (!item || (this.equipSlots()[slotId] === item.slot))) {
         this._equips[slotId].setObject(item);
         this.refresh();
     }
@@ -66,7 +66,7 @@ Window_EquipItem.prototype.includes = function(item) {
     if (this._slotId < 0) {
         return false;
     }
-    if(this._actor.equipSlots()[this._slotId] != item.slot) {
+    if(this._actor.equipSlots()[this._slotId] !== item.slot) {
         return false;
     }
     return this._actor.canEquip(item);

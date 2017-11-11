@@ -1571,7 +1571,7 @@ Game_Action.prototype.testApply = function(target) {
             ($gameParty.inBattle() || this.isForOpponent() ||
             (this.isHpRecover() && target.hp < target.mhp) ||
             (this.isMpRecover() && target.mp < target.mmp) ||
-            (this.hasItemAnyValidEffects(target))));
+            (true)));
 };
 
 Game_Action.prototype.hasItemAnyValidEffects = function(target) {
@@ -2763,10 +2763,12 @@ Game_BattlerBase.prototype.skillTpCost = function(skill) {
 };
 
 Game_BattlerBase.prototype.canPaySkillCost = function(skill) {
+    if (!this.isActor()) return true;
     return this._tp >= this.skillTpCost(skill) && this._mp >= this.skillMpCost(skill);
 };
 
 Game_BattlerBase.prototype.paySkillCost = function(skill) {
+    if (!this.isActor()) return;
     this._mp -= this.skillMpCost(skill);
     this._tp -= this.skillTpCost(skill);
 };
@@ -3195,12 +3197,14 @@ Game_Battler.prototype.consumeItem = function(item) {
 };
 
 Game_Battler.prototype.gainHp = function(value) {
+    value = Math.round(value);
     this._result.hpDamage = -value;
     this._result.hpAffected = true;
     this.setHp(this.hp + value);
 };
 
 Game_Battler.prototype.gainMp = function(value) {
+    value = Math.round(value);
     this._result.mpDamage = -value;
     this.setMp(this.mp + value);
 };
@@ -3437,6 +3441,7 @@ Game_Actor.prototype.setup = function(actorId) {
     this._profile = actor.profile;
     this._classId = actor.classId;
     this._level = actor.initialLevel;
+    this.tags = actor.tags||[];
     this.initImages();
     this.initExp();
     this.initSkills();
@@ -4824,6 +4829,11 @@ Game_Party.prototype.items = function() {
     for (var id in this._items) {
         list.push($dataItems[id]);
     }
+    list.sort(function(a, b) {
+        if (a.iname < b.iname) return -1;
+        if (a.iname > b.iname) return 1;
+        return 0;
+    });
     return list;
 };
 
@@ -4962,7 +4972,7 @@ Game_Party.prototype.numItems = function(item) {
 };
 
 Game_Party.prototype.maxItems = function(item) {
-    return 99;
+    return 999;
 };
 
 Game_Party.prototype.hasMaxItems = function(item) {
@@ -5003,6 +5013,7 @@ Game_Party.prototype.gainItem = function(item, amount, includeEquip) {
         $gameMap.requestRefresh();
     }
 };
+
 
 Game_Party.prototype.discardMembersEquip = function(item, amount) {
     var n = amount;

@@ -1,4 +1,4 @@
-//GrowCurves
+//GrowCurves and exp
 var Grow = Grow || {};
 
 Grow.Curves = {
@@ -75,4 +75,27 @@ Game_Actor.prototype.levelUp = function() {
 Game_Actor.prototype.changeClass = function(classId, keepExp) {
     this._classId = classId;
     this.refresh();
+};
+
+// get unit
+
+Game_Party.prototype.gainItem = function(item, amount, includeEquip) {
+    if (item&&item.soulSummon) {
+        var actor = DataManager.findActor(item.soulSummon);
+        $gameParty.addActor(actor.id);
+        return;
+    }
+    var container = this.itemContainer(item);
+    if (container) {
+        var lastNumber = this.numItems(item);
+        var newNumber = lastNumber + amount;
+        container[item.id] = newNumber.clamp(0, this.maxItems(item));
+        if (container[item.id] === 0) {
+            delete container[item.id];
+        }
+        if (includeEquip && newNumber < 0) {
+            this.discardMembersEquip(item, -newNumber);
+        }
+        $gameMap.requestRefresh();
+    }
 };
