@@ -343,5 +343,66 @@
             "hittype": null,
             "element": "erebus"
         }]
+    },
+    "25": {
+        "name": "拔刀",
+        "iname": "KENGOU_PAS_1",
+        "icon": "jbe_kengou",
+        "description": "战斗开始时，斩味等级 + 5 ~ 9。\n（每个斩味等级提高5%的斩击伤害，负数则效果变为下降。）",
+        "types": ["passive"],
+        "cap": 5,
+        "onBattleStart": "this.kireajiAdd(this.calcSkillLevelValue([5,9],25));"
+    },
+    "26": {
+        "name": "飞燕反",
+        "iname": "KENGOU_PAS_2",
+        "icon": "jbe_kengou",
+        "description": "受到伤害时有40% ~ 60%概率进行反击，反击造成77%斩击物理伤害、必中、并赋予治疗无效状态3回合。 ",
+        "types": ["passive"],
+        "cap": 5,
+        "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([40,60],26)) this.counter(action, 27);"
+    },
+    "27": {
+        "name": "飞燕反（反击）",
+        "iname": "KENGOU_PAS_2_COUNTER",
+        "icon": "jbe_kengou",
+        "description": "反击：77%斩击物理伤害、必中、并赋予治疗无效状态3回合。",
+        "types": ["physical", "slash"],
+        "Counter": true,
+        "cap": 1,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": -23,
+            "type": "phy",
+            "hittype": "slash",
+            "element": null
+        }],
+        "enchants": [{"iname": "NO_HEAL"}]
+    },
+    "28": {
+        "name": "居合",
+        "iname": "KENGOU_ACT_1",
+        "icon": "jbe_kengou",
+        "description": "自身斩味等级提高 6 ~ 14",
+        "types": ["statechange"],
+        "cap": 5,
+        "script": "subject.kireajiAdd(subject.calcSkillLevelValue([6,14],28));"
+    },
+    "29": {
+        "name": "金翅鸟王旋风",
+        "iname": "KENGOU_ACT_2",
+        "icon": "jbe_kengou",
+        "description": "敌方全体风属性100% ~ 140%斩击物理伤害、每个斩味等级额外提高10%的伤害。\n使用后斩味等级 -8",
+        "types": ["physical", "slash"],
+        "Counter": true,
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": [0, 40, "this.kireaji() * 10"],
+            "type": "phy",
+            "hittype": "slash",
+            "element": "anemos"
+        }],
+        "script": "subject.kireajiAdd(-8)"
     }
 }

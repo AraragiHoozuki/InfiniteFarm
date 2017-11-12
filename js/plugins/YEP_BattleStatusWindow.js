@@ -516,6 +516,15 @@ Window_BattleStatus.prototype.drawStateArea = function(rect, actor) {
   this.drawActorIcons(actor, rect.x + 2, wy, rect.width);
 };
 
+Window_Base.prototype.drawActorIcons = function(actor, x, y, width) {
+    width = width || 144;
+    var states = actor._states;
+    for (var i = 0; i < states.length; i++) {
+        this.drawIcon(states[i].icon, x + Window_Base._iconWidth * i, y + 2);
+        this.drawText(states[i].duration, x + Window_Base._iconWidth * i, y + 12, 32, 'right');
+    }
+};
+
 Window_BattleStatus.prototype.getGaugesDrawn = function(actor) {
     var value = 2;
     if ($dataSystem.optDisplayTp) value += 1;

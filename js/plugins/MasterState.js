@@ -74,7 +74,7 @@ Game_BattlerBase.prototype.isStateAffected = function(stateId, skillId) {
 Game_BattlerBase.prototype.getStateById = function(stateId) {
     var states = this._states;
     for (var i = 0; i < states.length; i++){
-        if(states[i].id == stateId) {return states[i];}
+        if(states[i].id === stateId) {return states[i];}
     }
     return null;
 };
@@ -153,7 +153,7 @@ Game_Battler.prototype.removeStateByIndex = function(index) {
 
 Game_BattlerBase.prototype.updateStateTurns = function() {
     this._states.forEach(function(masterState) {
-        if (masterState.duration > 0) {
+        if (masterState.duration > 0 && (!masterState.spGauge) ) {  //spGauge 表示改状态为特殊量表
             masterState.duration--;
         }
     }, this);

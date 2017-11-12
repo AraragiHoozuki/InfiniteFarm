@@ -121,5 +121,36 @@
                 "element": null
             }
         ]
+    },
+    "6": {
+        "name": "剑豪",
+        "iname": "KENGOU",
+        "icon": "jb_kengou",
+        "paramRates": {
+            "STR": -10,
+            "FIN": 15,
+            "CON": -5,
+            "INT": -5,
+            "WIL": 5,
+            "WIT": 15,
+
+            "mhp": -5,
+            "mmp": -75,
+            "pdm": 5,
+            "mdm": -30
+        },
+        "formulas": {
+            "pdm": "this.STR * 1.4 + this.FIN * 0.8"
+        },
+        "equipables": ["刀", "中甲", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.pdm",
+                "rate": 0,
+                "type": "phy",
+                "hittype": "slash",
+                "element": null
+            }
+        ]
     }
 }

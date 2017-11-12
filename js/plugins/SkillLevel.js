@@ -44,9 +44,9 @@ Game_Actor.prototype.learnSkill = function(skillId) {
 
 
 Game_Actor.prototype.calcSkillLevelValue = function(value, skillId) {
-    var c = 1;
+    var c = 0;
     if (value.length >= 3) { c = eval(value[2]); }
-    return c * (value[0] + (value[1] - value[0]) * (this.getSkillLevel(skillId) - 1) / (this.skillMaxLevel(skillId) - 1));
+    return c + (value[0] + (value[1] - value[0]) * (this.getSkillLevel(skillId) - 1) / (this.skillMaxLevel(skillId) - 1));
 };
 
 Game_Enemy.prototype.calcSkillLevelValue = function(value, skillId) {

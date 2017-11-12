@@ -252,8 +252,15 @@ ExData.Formulas = {
 
 Game_BattlerBase.prototype.calcBaseSecondaryStatus = function(status) {
     var value = 0;
-    if (this.formulas&&this.formulas[status]) {
-        value = eval(this.formulas[status]);
+    var formulas = false;
+    if (this.isActor()&&this.currentClass().formulas) {
+        formulas = this.currentClass().formulas;
+    } else if (this.isEnemy()&&this.enemy().formulas) {
+        formulas = this.enemy().formulas;
+    }
+
+    if (formulas&&formulas[status]) {
+        value = eval(formulas[status]);
     } else {
         value = eval(ExData.Formulas[status]);
     }

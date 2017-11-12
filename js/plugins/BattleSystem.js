@@ -169,19 +169,26 @@ Game_Action.prototype.applyCritical = function(damage) {
     return damage * (150 + this.item().criBonus) / 100;
 };
 
-//Game_BattlerBase
+//Game_BattlerBase action and counter ==================================================================================
 Game_BattlerBase.prototype.instantAction = function(skillId, target) {
-    this.clearActions();
     var index;
     typeof target === 'number' ? index = target : index = target.index();
     var action = new Game_Action(this, true);
     action.setSkill(skillId);
     action.setTarget(index);
-    this._actions.push(action);
+    this._actions.unshift(action);
     BattleManager.forceAction(this);
-}
+};
+
+Game_BattlerBase.prototype.counter = function(action, skillId) {
+    if (!action.item().Counter) {
+        this.instantAction(skillId, action.subject());
+    }
+};
 
 //Skill Functions ======================================================================================================
+
+//奇术 hp 交换
 Game_BattlerBase.prototype.hpExchange = function(target, cap) {
     var my_hp = this.hp;
     var target_hp = target.hp;
@@ -189,6 +196,7 @@ Game_BattlerBase.prototype.hpExchange = function(target, cap) {
     target.setHp(Math.max(my_hp, Math.round(target.mhp * cap / 100)));
 };
 
+//奇术 状态交换
 Game_Battler.prototype.statesExchange = function(target, level) {
     var my_states = this._states.filter(function(state) {
         return state.negative && state.obstinacy <= level;
@@ -204,4 +212,15 @@ Game_Battler.prototype.statesExchange = function(target, level) {
         this.addState(state.id, state);
         state.remove();
     }, this);
+};
+
+//剑豪 斩味
+Game_Battler.prototype.kireaji = function() {
+    if (!this.isStateAffected(123)) return 0;
+    return this.getStateById(123).duration;
+};
+
+Game_Battler.prototype.kireajiAdd = function(value) {
+    if (!this.isStateAffected(123)) this.addState(123, {duration: 0});
+    this.getStateById(123).duration += value;
 };

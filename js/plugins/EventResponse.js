@@ -1,5 +1,5 @@
 // Event Responses
-var EventResponseData = EventResponseData || {};
+var EventResponse = EventResponse || {};
 
 //on pre damage
 Game_Battler.prototype.onPreDamage = function (value, source, action) {
@@ -183,11 +183,10 @@ BattleManager.updateAction = function() {
         this.endAction();
     }
 };
-
+EventResponse.BattleManager_endAction = BattleManager.endAction;
 BattleManager.endAction = function() {
-    this._logWindow.endAction(this._subject);
+    EventResponse.BattleManager_endAction.call(this);
     this._subject.onActionEnd(this._action, this._subject._lastTargetIndex);
-    this._phase = 'turn';
 };
 
 Game_Battler.prototype.onActionEnd = function(action, target) {
@@ -209,6 +208,34 @@ Game_Battler.prototype.onActionEnd = function(action, target) {
         var skill = skills[i];
         if (skill.onActionEnd){
             eval(skill.onActionEnd);
+        }
+    }
+};
+
+// On battle start =====================================================================================================
+EventResponse.Game_Battler_onBattleStart = Game_Battler.prototype.onBattleStart;
+Game_Battler.prototype.onBattleStart = function() {
+    EventResponse.Game_Battler_onBattleStart.call(this);
+
+    var states = this._states;
+
+
+    for (var i = 0; i < states.length; i++){
+        var masterState = states[i];
+        if (masterState.onBattleStart) {
+            eval(masterState.onBattleStart);
+        }
+    }
+
+    if(!this.isActor()){return;}
+
+    var skills = this.skills();
+    var equips = this.equips();
+
+    for (var i = 0; i < skills.length; i++){
+        var skill = skills[i];
+        if (skill.onBattleStart){
+            eval(skill.onBattleStart);
         }
     }
 };

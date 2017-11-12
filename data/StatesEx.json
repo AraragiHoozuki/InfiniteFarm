@@ -18,6 +18,14 @@
             "hit": -50
         }
     },
+    "5": {
+        "name": "治疗无效",
+        "iname": "NO_HEAL",
+        "icon": "state_no_heal",
+        "rule": "unique",
+        "negative": true,
+        "obstinacy": 0
+    },
     "21": {
         "name": "物理攻击+",
         "iname": "PDM_UP",
@@ -70,5 +78,14 @@
         "rule": "unique",
         "obstinacy": 3,
         "onActionEnd": "if(action.hasMagicDamage() && Math.random*100 <= 40 && this.mp >= acton.item().mpCost) {this.instantAction(action.item().id, target);}"
+    },
+    "123": {
+        "name": "斩味",
+        "iname": "KENGOU_KIREAJI",
+        "icon": "jbe_kengou",
+        "rule": "unique",
+        "obstinacy": 4,
+        "spGauge": true,
+        "adds": {"slash_assist": "this.kireaji() * 5"}
     }
 }
