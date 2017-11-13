@@ -383,26 +383,92 @@
         "name": "居合",
         "iname": "KENGOU_ACT_1",
         "icon": "jbe_kengou",
-        "description": "自身斩味等级提高 6 ~ 14",
+        "description": "自身斩味等级提高 4 ~ 12",
         "types": ["statechange"],
         "cap": 5,
-        "script": "subject.kireajiAdd(subject.calcSkillLevelValue([6,14],28));"
+        "script": "subject.kireajiAdd(subject.calcSkillLevelValue([4,12],28));"
     },
     "29": {
         "name": "金翅鸟王旋风",
         "iname": "KENGOU_ACT_2",
         "icon": "jbe_kengou",
-        "description": "敌方全体风属性100% ~ 140%斩击物理伤害、每个斩味等级额外提高10%的伤害。\n使用后斩味等级 -8",
+        "description": "敌方全体风属性100%斩击物理伤害、每个斩味等级额外提高5~9%的伤害。\n使用后斩味等级 -8",
         "types": ["physical", "slash"],
-        "Counter": true,
         "cap": 5,
         "damages": [{
             "base": "this.pdm",
-            "rate": [0, 40, "this.kireaji() * 10"],
+            "rate": [0, 0, "this.kireaji() * this.calcSkillLevelValue([5,9],29)"],
             "type": "phy",
             "hittype": "slash",
             "element": "anemos"
         }],
         "script": "subject.kireajiAdd(-8)"
+    },
+    "30": {
+        "name": "虎振",
+        "iname": "KENGOU_ACT_3",
+        "icon": "jbe_kengou",
+        "description": "敌方单体140% ~ 180%斩击物理伤害、每个斩味等级额外提高7~13%的伤害。\n使用后斩味等级 -6",
+        "types": ["physical", "slash"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": [40, 80, "this.kireaji() * this.calcSkillLevelValue([7,13],30)"],
+            "type": "phy",
+            "hittype": "slash",
+            "element": null
+        }],
+        "script": "subject.kireajiAdd(-6)"
+    },
+    "31": {
+        "name": "夜曝",
+        "iname": "KENGOU_ACT_4",
+        "icon": "jbe_kengou",
+        "description": "敌方单体70%暗属性斩击物理伤害、自身2回合物理攻击提高60% ~ 90%。\n使用后斩味等级 -2",
+        "types": ["physical", "slash"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": -30,
+            "type": "phy",
+            "hittype": "slash",
+            "element": "erebus"
+        }],
+        "script": "subject.kireajiAdd(-2)",
+        "enchants": [
+            {"iname": "PDM_UP", "self": true, "turns": 2, "param": {"mults": {"mdm": [60, 90]}}}
+        ]
+    },
+    "32": {
+        "name": "飞天斩",
+        "iname": "KENGOU_ACT_5",
+        "icon": "jbe_kengou",
+        "description": "敌方单体120%~160%斩击物理伤害、飞行特攻。",
+        "types": ["physical", "slash"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": [20, 60],
+            "type": "phy",
+            "hittype": "slash",
+            "element": null,
+            "tokkou": "飞行"
+        }]
+    },
+    "33": {
+        "name": "天地切断",
+        "iname": "KENGOU_ACT_6",
+        "icon": "jbe_kengou",
+        "description": "敌方单体150%斩击物理伤害、每个斩味等级提高15% ~ 25%的伤害。\n使用后斩味等级归0.",
+        "types": ["physical", "slash"],
+        "cap": 3,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": [50, 50, "this.kireaji() * this.calcSkillLevelValue([15,25],33)"],
+            "type": "phy",
+            "hittype": "slash",
+            "element": null
+        }],
+        "script": "subject.kireajiAdd(-subject.kireaji())"
     }
 }

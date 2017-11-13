@@ -18,12 +18,17 @@ Game_BattlerBase.prototype.calcAtkPower = function(damage, target, skill) {
         var rate = this.calcSkillLevelValue(damage.rate, skill.id);
     } else {var rate = damage.rate;}
     value = base * (rate + 100) / 100;
-    if (damage.hittype != null) {
+    if (damage.hittype !== null) {
         value *= (this[damage.hittype + "_assist"] + 100) / 100;
     }
-    if (damage.element != null) {
+    if (damage.element !== null) {
         value *= (this[damage.element + "_assist"] + 100) / 100;
     }
+    //tokkou effect
+    if (damage.tokkou && target.tags.contains(damage.tokkou)) {
+        value *= (damage.tokkou_rate? damage.tokkou_rate : 1.5);
+    }
+
     return value;
 };
 
