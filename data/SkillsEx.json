@@ -470,5 +470,46 @@
             "element": null
         }],
         "script": "subject.kireajiAdd(-subject.kireaji())"
+    },
+    "34": {
+        "name": "举盾",
+        "iname": "HOLY_KNIGHT_PAS_1",
+        "icon": "jbe_holy_knight",
+        "description": "受到攻击/技能伤害时，35% ~ 45% 概率防御，减少 25% ~ 40% 的伤害。",
+        "types": ["passive"],
+        "cap": 5,
+        "onPreDamage": "if (Math.random()*100 <= this.calcSkillLevelValue([35,45],34)) dmg *= (100-this.calcSkillLevelValue([25,40],34))/100;"
+    },
+    "35": {
+        "name": "坚韧",
+        "iname": "HOLY_KNIGHT_PAS_2",
+        "icon": "jbe_holy_knight",
+        "description": "生命上限提高10% ~ 50%、每回合回复4% ~ 8%的生命。",
+        "types": ["passive"],
+        "cap": 5,
+        "mults": {
+            "mhp": [10, 50]
+        },
+        "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],12) / 100 );"
+    },
+    "36": {
+        "name": "迎击姿态",
+        "iname": "HOLY_KNIGHT_ACT_1",
+        "icon": "jbe_holy_knight",
+        "description": "最速】回复少量生命值，自身1回合物理魔法防御提高100% ~ 300%，闪避下降50%。回复生命值受物理攻击加成。",
+        "types": ["passive"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": [-60, -20],
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }],
+        "enchants":[
+            {"iname": "MDF_UP", "turns": 1, "params":{"mults":{"mdf": [100, 300]}}},
+            {"iname": "PDF_UP",  "turns": 1, "params":{"mults":{"pdf": [100, 300]}}},
+            {"iname": "EVA_DOWN", "turns": 1, "params":{"mults":{"eva": -50}}}
+        ]
     }
 }

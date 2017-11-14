@@ -40,6 +40,20 @@
         "rule": "multi",
         "obstinacy": 0
     },
+    "23": {
+        "name": "物理防御+",
+        "iname": "PDF_UP",
+        "icon": "state_pdf_up",
+        "rule": "multi",
+        "obstinacy": 0
+    },
+    "24": {
+        "name": "魔法防御+",
+        "iname": "MDF_UP",
+        "icon": "state_mdf_up",
+        "rule": "multi",
+        "obstinacy": 0
+    },
     "31": {
         "name": "物理防御-",
         "iname": "PDF_DOWN",
@@ -52,6 +66,14 @@
         "name": "魔法防御-",
         "iname": "MDF_DOWN",
         "icon": "state_mdf_down",
+        "rule": "multi",
+        "negative": true,
+        "obstinacy": 0
+    },
+    "34": {
+        "name": "闪避-",
+        "iname": "EVA_DOWN",
+        "icon": "state_eva_down",
         "rule": "multi",
         "negative": true,
         "obstinacy": 0
