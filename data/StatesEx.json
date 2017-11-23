@@ -26,6 +26,14 @@
         "negative": true,
         "obstinacy": 0
     },
+    "6": {
+      "name": "眩晕",
+      "iname": "STUN",
+      "icon": "state_stun",
+      "rule": "unique",
+      "negative": true,
+      "obstinacy": 0
+    },
     "21": {
         "name": "物理攻击+",
         "iname": "PDM_UP",
@@ -53,6 +61,14 @@
         "icon": "state_mdf_up",
         "rule": "multi",
         "obstinacy": 0
+    },
+    "29": {
+        "name": "物理攻击-",
+        "iname": "PDM_DOWN",
+        "icon": "state_pdm_down",
+        "rule": "multi",
+        "obstinacy": 0,
+        "negative": true
     },
     "31": {
         "name": "物理防御-",
@@ -105,6 +121,15 @@
         "name": "斩味",
         "iname": "KENGOU_KIREAJI",
         "icon": "jbe_kengou",
+        "rule": "unique",
+        "obstinacy": 4,
+        "spGauge": true,
+        "adds": {"slash_assist": "this.kireaji() * 5"}
+    },
+    "124": {
+        "name": "援护",
+        "iname": "BUFF_HOLY_KNIGHT_ACT_5",
+        "icon": "jb_holy_knight",
         "rule": "unique",
         "obstinacy": 4,
         "spGauge": true,

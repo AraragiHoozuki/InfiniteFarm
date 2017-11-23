@@ -9,7 +9,7 @@ Window_Selectable.prototype.processNormalCharacter = Window_Base.prototype.proce
 Window_Base.prototype.processNormalCharacter = function(textState) {
     var c = textState.text[textState.index];
     var w = this.textWidth(c);
-    if (this.width - 2 * this.standardPadding() - textState.x >= w){
+    if (((!textState.width) && this.width - 2 * this.standardPadding() - textState.x >= w) || (textState.width && textState.beginX && textState.width + textState.beginX - textState.x >= w)) {
         this.contents.drawText(c, textState.x, textState.y, w * 2, textState.height);
         textState.index++;
         textState.x += w;

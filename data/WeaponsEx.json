@@ -54,5 +54,19 @@
             "pdm": 5,
             "hit": 5
         }
+    },
+    "5": {
+        "name": "刀",
+        "iname": "KATANA_KATANA",
+        "icon": "it_wp_katana",
+        "rarity": "bronze",
+        "slot": "weapon",
+        "etype": "刀",
+        "description": "物理攻击+8、会心+5",
+        "flavour": "粗制滥造的武士刀",
+        "adds": {
+            "pdm": 8,
+            "cri": 5
+        }
     }
 }

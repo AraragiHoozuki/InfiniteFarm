@@ -3201,12 +3201,28 @@ Game_Battler.prototype.gainHp = function(value) {
     this._result.hpDamage = -value;
     this._result.hpAffected = true;
     this.setHp(this.hp + value);
+    if (!(SceneManager._scene instanceof Scene_Battle)) return;
+
+    var sprite = new Sprite_Damage();
+    sprite.x = this.battler().x + this.battler().damageOffsetX();
+    sprite.y = this.battler().y + this.battler().damageOffsetY();
+    sprite.createDigits(0, -value);
+    this.battler().pushDamageSprite(sprite);
+    BattleManager._spriteset.addChild(sprite);
 };
 
 Game_Battler.prototype.gainMp = function(value) {
     value = Math.round(value);
     this._result.mpDamage = -value;
     this.setMp(this.mp + value);
+    if (!(SceneManager._scene instanceof Scene_Battle)) return;
+
+    var sprite = new Sprite_Damage();
+    sprite.x = this.battler().x + this.battler().damageOffsetX();
+    sprite.y = this.battler().y + this.battler().damageOffsetY();
+    sprite.createDigits(2, -value);
+    this.battler().pushDamageSprite(sprite);
+    BattleManager._spriteset.addChild(sprite);
 };
 
 Game_Battler.prototype.gainTp = function(value) {

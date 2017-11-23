@@ -490,14 +490,14 @@
         "mults": {
             "mhp": [10, 50]
         },
-        "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],12) / 100 );"
+        "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],35) / 100 );"
     },
     "36": {
         "name": "迎击姿态",
         "iname": "HOLY_KNIGHT_ACT_1",
         "icon": "jbe_holy_knight",
-        "description": "最速】回复少量生命值，自身1回合物理魔法防御提高100% ~ 300%，闪避下降50%。回复生命值受物理攻击加成。",
-        "types": ["passive"],
+        "description": "【最速】回复少量生命值，自身1回合物理魔法防御提高100% ~ 300%，闪避下降50%。回复生命值受物理攻击加成。",
+        "types": ["heal"],
         "cap": 5,
         "damages": [{
             "base": "this.pdm",
@@ -507,9 +507,109 @@
             "element": null
         }],
         "enchants":[
-            {"iname": "MDF_UP", "turns": 1, "params":{"mults":{"mdf": [100, 300]}}},
-            {"iname": "PDF_UP",  "turns": 1, "params":{"mults":{"pdf": [100, 300]}}},
-            {"iname": "EVA_DOWN", "turns": 1, "params":{"mults":{"eva": -50}}}
+            {"iname": "MDF_UP", "turns": 1, "param":{"mults":{"mdf": [100, 300]}}},
+            {"iname": "PDF_UP",  "turns": 1, "param":{"mults":{"pdf": [100, 300]}}},
+            {"iname": "EVA_DOWN", "turns": 1, "param":{"mults":{"eva": -50}}}
         ]
+    },
+    "37": {
+        "name": "冲撞",
+        "iname": "HOLY_KNIGHT_ACT_2",
+        "icon": "jbe_holy_knight",
+        "description": "指定敌人80%~120%打击物理伤害、2回合眩晕效果。伤害基于自身物理防御。",
+        "types": ["physical", "blow"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdf",
+            "rate": [-20, 20],
+            "type": "phy",
+            "hittype": "blow",
+            "element": null
+        }],
+        "enchants": [
+            {"iname": "STUN", "turns": 2}
+        ]
+    },
+    "38": {
+        "name": "神圣祈祷",
+        "iname": "HOLY_KNIGHT_ACT_3",
+        "icon": "jbe_holy_knight",
+        "description": "受到致命伤害时，若自身法力值高于 70% ~ 60% 且高于 100，消耗全部法力，使那次伤害无效并解除自身所有负面状态（2级净化）、回复等同于消耗法力值的生命。\n此技能也可以主动使用。",
+        "types": ["heal"],
+        "cap": 3,
+        "damages": [{
+            "base": "this.mp",
+            "rate": 0,
+            "type": "heal",
+            "hittype": null,
+            "element": null
+        }],
+        "script": "subject.purge(true,2); this._mp = 0;",
+        "onPreDamage": "if (this.mp>=100&&this.mpRate()>=this.calcSkillLevelValue([70,60],38)) {dmg=0; this.instantAction(38,this);}"
+    },
+    "39": {
+        "name": "圣剑斩",
+        "iname": "HOLY_KNIGHT_ACT_4",
+        "icon": "jbe_holy_knight",
+        "description": "指定敌人混合伤害（75% ~ 100%斩击物理伤害 + 120% ~ 200%光属性魔法伤害），死灵特攻（+50%）",
+        "types": ["physical", "blow"],
+        "cap": 5,
+        "damages": [
+            {
+                "base": "this.pdm",
+                "rate": [-25, 0],
+                "type": "phy",
+                "hittype": "slash",
+                "element": null,
+                "tokkou": "死灵"
+            },
+            {
+                "base": "this.mdm",
+                "rate": [20, 100],
+                "type": "mag",
+                "hittype": null,
+                "element": "phos",
+                "tokkou": "死灵"
+            }
+        ]
+    },
+    "40": {
+        "name": "缴械",
+        "iname": "HOLY_KNIGHT_ACT_5",
+        "icon": "jbe_holy_knight",
+        "description": "指定敌方90%斩击物理伤害、3回合物理攻击下降40% ~ 60%。",
+        "types": ["physical", "slash"],
+        "cap": 5,
+        "damages": [{
+            "base": "this.pdm",
+            "rate": -10,
+            "type": "phy",
+            "hittype": "slash",
+            "element": null
+        }],
+        "enchants": [
+            {"iname": "PDM_DOWN", "turns": 3, "param":{"mults":{"pdm":[-40, -60]}}}
+        ]
+    },
+    "41": {
+        "name": "神圣之盾",
+        "iname": "HOLY_KNIGHT_ACT_6",
+        "icon": "jbe_holy_knight",
+        "description": "【最速】我方全员1回合物理魔法防御上升900%、自身眩晕4回合（3级负面状态）。",
+        "types": ["statechange"],
+        "cap": 1,
+        "enchants": [
+            {"iname": "PDF_UP", "turns": 1, "param":{"mults":{"pdf": 900}}},
+            {"iname": "MDF_UP", "turns": 1, "param":{"mults":{"mdf": 900}}},
+            {"iname": "STUN", "turns": 4, "self": true, "param":{"obstinacy": 4}}
+        ]
+    },
+    "42": {
+        "name": "不竭之力",
+        "iname": "BERSERK_PAS_1",
+        "icon": "jbe_berserk",
+        "description": "死亡时获得不竭之力状态，可以继续行动并免疫死亡，持续4回合。持续时间结束后直接死亡。不竭之力为2-4级状态。",
+        "types": ["passive"],
+        "cap": 5
     }
 }

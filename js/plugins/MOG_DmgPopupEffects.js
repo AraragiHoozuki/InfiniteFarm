@@ -406,3 +406,5 @@ Sprite_Enemy.prototype.damageOffsetY = function() {
     if (this._dmgCenter && this.bitmap) {return (-this.bitmap.height / 2) + this._battler._dmgOffsetY + 16;};
 	return this._battler._dmgOffsetY;
 };
+
+//================================================================

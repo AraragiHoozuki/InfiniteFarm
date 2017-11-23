@@ -38,6 +38,41 @@ Window_Base.prototype.drawActorMp = function(actor, x, y, width) {
                            this.mpColor(actor), this.normalColor());
 };
 
+Window_Base.prototype.drawHpGauge = function(actor, x, y, width) {
+    width = width || 186;
+    this.drawImage('img/system/', 'party_hpgauge', x, y, width, 18); //draw empty bar
+
+    var filling = ImageManager.loadBitmap('img/system/', 'party_hpgauge_filling', 0, true);
+    var filling_width = filling.width * actor.hpRate();
+    this.contents.blt(filling, 0, 0, filling_width, filling.height, x, y, width * actor.hpRate(), 18);
+    this.drawText(actor.hp + '/' + actor.mhp, x, y - 12, width, 'right');
+};
+
+Window_Base.prototype.drawMpGauge = function(actor, x, y, width) {
+    width = width || 186;
+    this.drawImage('img/system/', 'party_hpgauge', x, y, width, 18); //draw empty bar
+
+    var filling = ImageManager.loadBitmap('img/system/', 'party_mpgauge_filling', 0, true);
+    var filling_width = filling.width * actor.mpRate();
+    this.contents.blt(filling, 0, 0, filling_width, filling.height, x, y, width * actor.mpRate(), 18);
+    this.drawText(actor.mp + '/' + actor.mmp, x, y - 12, width, 'right');
+};
+
+Window_Base.prototype.drawTextExWithWidth = function(text, x, y, width) {
+    if (text) {
+        var textState = { index: 0, x: x, y: y, left: x, width: width, beginX: x };
+        textState.text = this.convertEscapeCharacters(text);
+        textState.height = this.calcTextHeight(textState, false);
+        this.resetFontSettings();
+        while (textState.index < textState.text.length) {
+            this.processCharacter(textState);
+        }
+        return textState.x - x;
+    } else {
+        return 0;
+    }
+};
+
 //========================================================================================================
 // Window_Selectable
 

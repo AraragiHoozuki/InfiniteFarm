@@ -179,7 +179,7 @@ Game_Enemy.prototype.getEquipAdd = function(value, status) {
     return 0;
 };
 
-Game_Actor.prototype.getSkillAdd = function(value, status) {
+Game_BattlerBase.prototype.getSkillAdd = function(value, status) {
     var add = 0;
     var skls = this.skills();
     for (var i = 0; i < skls.length; i++){
@@ -201,10 +201,6 @@ Game_Actor.prototype.getSkillAdd = function(value, status) {
         }
     }
     return add;
-};
-
-Game_Enemy.prototype.getSkillAdd = function(value, status) {
-    return 0;
 };
 
 Game_BattlerBase.prototype.getStateAdd = function(value, status) {

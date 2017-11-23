@@ -13,10 +13,7 @@ Game_Battler.prototype.onPreDamage = function (value, source, action) {
         }
     }
 
-    if(!this.isActor()){return dmg;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];
@@ -45,10 +42,7 @@ Game_Battler.prototype.onDamage = function(action, value) {
         }
     }
 
-    if(!this.isActor()){return;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];
@@ -94,10 +88,7 @@ Game_Battler.prototype.onTurnStart = function() {
         }
     }
 
-    if(!this.isActor()){return;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];
@@ -131,10 +122,7 @@ Game_Battler.prototype.onTurnEnd = function() {
         }
     }
 
-    if(!this.isActor()){return;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];
@@ -160,10 +148,7 @@ Game_Battler.prototype.onEvasion = function(action) {
         }
     }
 
-    if(!this.isActor()){return;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];
@@ -199,10 +184,7 @@ Game_Battler.prototype.onActionEnd = function(action, target) {
         }
     }
 
-    if(!this.isActor()){return;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];
@@ -216,6 +198,8 @@ Game_Battler.prototype.onActionEnd = function(action, target) {
 EventResponse.Game_Battler_onBattleStart = Game_Battler.prototype.onBattleStart;
 Game_Battler.prototype.onBattleStart = function() {
     EventResponse.Game_Battler_onBattleStart.call(this);
+    //if MOG_BattleCry
+    this.isActor()? this.battleCrySetupActor() : this.battleCrySetupEnemy();
 
     var states = this._states;
 
@@ -227,10 +211,7 @@ Game_Battler.prototype.onBattleStart = function() {
         }
     }
 
-    if(!this.isActor()){return;}
-
-    var skills = this.skills();
-    var equips = this.equips();
+    var skills = this.isActor()? this.skills() : this.passives();
 
     for (var i = 0; i < skills.length; i++){
         var skill = skills[i];

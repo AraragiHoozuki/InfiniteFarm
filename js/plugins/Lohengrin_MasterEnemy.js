@@ -77,6 +77,19 @@ Game_Troop.prototype.setup = function(troopId, levels) {
     this.makeUniqueNames();
 };
 
+// enemy skills ==================================
+Game_Enemy.prototype.passives = function() {
+    if (!this.enemy().passives) return [];
+    var list = [];
+    this.enemy().passives.forEach(function(id) {
+        if (!list.contains($dataSkills[id])) {
+            list.push($dataSkills[id]);
+        }
+    });
+    return list;
+};
+//=================================================
+
 Game_Enemy.prototype.exp = function() {
     if(this._level >= $gameParty.averageLevel()) {
         return Math.round((this._level * 50) * Math.pow(1.05, (this._level - $gameParty.averageLevel())));

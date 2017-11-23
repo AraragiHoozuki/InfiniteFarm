@@ -4,7 +4,16 @@
 Window_Base.prototype.drawIcon = function(iconName, x, y, w, h) {
     h = h||this.lineHeight();
     w = h||this.lineHeight();
-    var bitmap = ImageManager.loadBitmap('img/icons/', iconName,0,true);
+    var bitmap = ImageManager.loadBitmap('img/icons/', iconName, 0, true);
+    var pw = bitmap.width;
+    var ph = bitmap.height;
+    var sx = 0;
+    var sy = 0;
+    this.contents.blt(bitmap, sx, sy, pw, ph, x, y, w, h);
+};
+
+Window_Base.prototype.drawImage = function(folder, name, x, y, w, h) {
+    var bitmap = ImageManager.loadBitmap(folder, name, 0, true);
     var pw = bitmap.width;
     var ph = bitmap.height;
     var sx = 0;

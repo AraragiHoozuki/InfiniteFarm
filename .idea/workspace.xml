@@ -2,13 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f513348-3fa5-48f7-9b62-b7c8936df1bc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Rholin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Rholin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Actors.json" afterPath="$PROJECT_DIR$/data/Actors.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ClassesEx.json" afterPath="$PROJECT_DIR$/data/ClassesEx.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ActorsEx.json" afterPath="$PROJECT_DIR$/data/ActorsEx.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Animations.json" afterPath="$PROJECT_DIR$/data/Animations.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Classes.json" afterPath="$PROJECT_DIR$/data/Classes.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Enemies.json" afterPath="$PROJECT_DIR$/data/Enemies.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/EnemiesEX.json" afterPath="$PROJECT_DIR$/data/EnemiesEX.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Items.json" afterPath="$PROJECT_DIR$/data/Items.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ItemsEx.json" afterPath="$PROJECT_DIR$/data/ItemsEx.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Skills.json" afterPath="$PROJECT_DIR$/data/Skills.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SkillsEx.json" afterPath="$PROJECT_DIR$/data/SkillsEx.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/States.json" afterPath="$PROJECT_DIR$/data/States.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/StatesEx.json" afterPath="$PROJECT_DIR$/data/StatesEx.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/System.json" afterPath="$PROJECT_DIR$/data/System.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Troops.json" afterPath="$PROJECT_DIR$/data/Troops.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Weapons.json" afterPath="$PROJECT_DIR$/data/Weapons.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/WeaponsEx.json" afterPath="$PROJECT_DIR$/data/WeaponsEx.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/icons/MakeList.nb" afterPath="$PROJECT_DIR$/img/icons/MakeList.nb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins.js" afterPath="$PROJECT_DIR$/js/plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/BattleSystem.js" afterPath="$PROJECT_DIR$/js/plugins/BattleSystem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/EventResponse.js" afterPath="$PROJECT_DIR$/js/plugins/EventResponse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/ExtraData.js" afterPath="$PROJECT_DIR$/js/plugins/ExtraData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/Icon.js" afterPath="$PROJECT_DIR$/js/plugins/Icon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js" afterPath="$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" afterPath="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/MOG_DmgPopupEffects.js" afterPath="$PROJECT_DIR$/js/plugins/MOG_DmgPopupEffects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/UIBase.js" afterPath="$PROJECT_DIR$/js/plugins/UIBase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/WordWrap.js" afterPath="$PROJECT_DIR$/js/plugins/WordWrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js" afterPath="$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/iconReserve.js" afterPath="$PROJECT_DIR$/js/plugins/iconReserve.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/typper.js" afterPath="$PROJECT_DIR$/js/plugins/typper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/rpg_objects.js" afterPath="$PROJECT_DIR$/js/rpg_objects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save/config.rpgsave" afterPath="$PROJECT_DIR$/save/config.rpgsave" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save/file1.rpgsave" afterPath="$PROJECT_DIR$/save/file1.rpgsave" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save/global.rpgsave" afterPath="$PROJECT_DIR$/save/global.rpgsave" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,91 +54,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventResponse.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/EventResponse.js">
+      <file leaf-file-name="UI_Button.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/UI_Button.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="1007">
+              <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BattleSystem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
+      <file leaf-file-name="UI_ScrollWindow.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="106" column="25" lean-forward="false" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+            <state relative-caret-position="-973">
+              <caret line="160" column="6" lean-forward="true" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkillLevel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/SkillLevel.js">
+      <file leaf-file-name="UI_MainMenu.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/UI_MainMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+            <state relative-caret-position="513">
+              <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MasterState.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/MasterState.js">
+      <file leaf-file-name="UI_PartyScene.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/UI_PartyScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2646">
-              <caret line="149" column="42" lean-forward="false" selection-start-line="149" selection-start-column="42" selection-end-line="149" selection-end-column="42" />
+            <state relative-caret-position="1045">
+              <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YEP_BattleEngineCore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js">
+      <file leaf-file-name="UI_SkillScene.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/UI_SkillScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="3378" column="0" lean-forward="false" selection-start-line="3378" selection-start-column="0" selection-end-line="3378" selection-end-column="0" />
+            <state relative-caret-position="703">
+              <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActorsEx.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
+      <file leaf-file-name="rpg_windows.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/rpg_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="290">
+              <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="275" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassesEx.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/ClassesEx.json">
+      <file leaf-file-name="rpg_core.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/rpg_core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-635">
-              <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+            <state relative-caret-position="442">
+              <caret line="1336" column="13" lean-forward="false" selection-start-line="1336" selection-start-column="13" selection-end-line="1336" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatesEx.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
+      <file leaf-file-name="UIBase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="64" column="11" lean-forward="false" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SkillsEx.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6140">
-              <caret line="507" column="11" lean-forward="false" selection-start-line="507" selection-start-column="11" selection-end-line="507" selection-end-column="11" />
+            <state relative-caret-position="551">
+              <caret line="62" column="77" lean-forward="false" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -126,35 +145,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>level()</find>
-      <find>level</find>
-      <find>troop</find>
-      <find>guard</find>
-      <find>canuse</find>
-      <find>sort</find>
-      <find>pay</find>
-      <find>EFFECT_REMOVE_STATE</find>
-      <find>removeState</find>
-      <find>dead</find>
-      <find>makeTargets</find>
-      <find>lastTarget</find>
-      <find>lastTarget(</find>
-      <find>mpcost</find>
-      <find>statechange</find>
-      <find>subject</find>
-      <find>gam</find>
-      <find>autoRemovalTiming</find>
-      <find>updateStateTurnEnd</find>
-      <find>_item</find>
-      <find>command129</find>
-      <find>drawItemName</find>
-      <find>game_actor</find>
-      <find>paySkillCost</find>
-      <find>onBattleStart</find>
-      <find>drawState</find>
-      <find>calcSkillLevelValue</find>
-      <find>victory</find>
       <find>_processingForcedAction</find>
+      <find>skills()</find>
+      <find>file</find>
+      <find>Mouse Over</find>
+      <find>sprite</find>
+      <find>sprite.prototype</find>
+      <find>BECSelectMouseOver</find>
+      <find>_hotf</find>
+      <find>addChild</find>
+      <find>gainHp</find>
+      <find>scroll</find>
+      <find>prototype.drawItem</find>
+      <find>function Window</find>
+      <find>window.prototype.addC</find>
+      <find>parent</find>
+      <find>calculateBounds</find>
+      <find>setFrame</find>
+      <find>.parent</find>
+      <find>.content</find>
+      <find>drawText</find>
+      <find>_windowSpriteContainer</find>
+      <find>.move</find>
+      <find>Window.move</find>
+      <find>scale</find>
+      <find>bitmap.width</find>
+      <find>game_party.prototype.memb</find>
+      <find>.update</find>
+      <find>bitmap.prototype</find>
+      <find>HPGaugeActor_B</find>
+      <find>game_actor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,32 +184,43 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/plugins/EquipSlot.js" />
-        <option value="$PROJECT_DIR$/js/plugins/UIBase.js" />
-        <option value="$PROJECT_DIR$/data/WeaponsEx.json" />
-        <option value="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" />
-        <option value="$PROJECT_DIR$/js/plugins/typper.js" />
         <option value="$PROJECT_DIR$/js/plugins/YEP_BattleAICore.js" />
         <option value="$PROJECT_DIR$/js/plugins/Iname.js" />
         <option value="$PROJECT_DIR$/js/plugins/YEP_ItemSynthesis.js" />
         <option value="$PROJECT_DIR$/js/plugins/Grow.js" />
-        <option value="$PROJECT_DIR$/js/plugins/Icon.js" />
         <option value="$PROJECT_DIR$/data/ArmorsEx.json" />
-        <option value="$PROJECT_DIR$/data/EnemiesEX.json" />
-        <option value="$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js" />
-        <option value="$PROJECT_DIR$/js/rpg_objects.js" />
-        <option value="$PROJECT_DIR$/data/ItemsEx.json" />
-        <option value="$PROJECT_DIR$/js/plugins/ExtraData.js" />
         <option value="$PROJECT_DIR$/js/plugins/MasterState.js" />
-        <option value="$PROJECT_DIR$/data/ActorsEx.json" />
-        <option value="$PROJECT_DIR$/js/rpg_windows.js" />
         <option value="$PROJECT_DIR$/js/plugins/YEP_BattleStatusWindow.js" />
-        <option value="$PROJECT_DIR$/js/plugins/EventResponse.js" />
-        <option value="$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js" />
         <option value="$PROJECT_DIR$/js/plugins/SkillLevel.js" />
-        <option value="$PROJECT_DIR$/js/plugins/BattleSystem.js" />
         <option value="$PROJECT_DIR$/data/ClassesEx.json" />
-        <option value="$PROJECT_DIR$/data/SkillsEx.json" />
+        <option value="$PROJECT_DIR$/js/plugins/MOG_DmgPopupEffects.js" />
+        <option value="$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js" />
         <option value="$PROJECT_DIR$/data/StatesEx.json" />
+        <option value="$PROJECT_DIR$/js/plugins/ExtraData.js" />
+        <option value="$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js" />
+        <option value="$PROJECT_DIR$/js/plugins/EventResponse.js" />
+        <option value="$PROJECT_DIR$/js/plugins/MOG_BattleCry.js" />
+        <option value="$PROJECT_DIR$/data/WeaponsEx.json" />
+        <option value="$PROJECT_DIR$/data/ItemsEx.json" />
+        <option value="$PROJECT_DIR$/data/EnemiesEX.json" />
+        <option value="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" />
+        <option value="$PROJECT_DIR$/js/plugins/BattleSystem.js" />
+        <option value="$PROJECT_DIR$/data/SkillsEx.json" />
+        <option value="$PROJECT_DIR$/js/plugins/typper.js" />
+        <option value="$PROJECT_DIR$/js/plugins/Button.js" />
+        <option value="$PROJECT_DIR$/js/rpg_objects.js" />
+        <option value="$PROJECT_DIR$/js/rpg_core.js" />
+        <option value="$PROJECT_DIR$/js/libs/pixi.js" />
+        <option value="$PROJECT_DIR$/js/rpg_windows.js" />
+        <option value="$PROJECT_DIR$/data/ActorsEx.json" />
+        <option value="$PROJECT_DIR$/js/plugins/UI_MainMenu.js" />
+        <option value="$PROJECT_DIR$/js/plugins/Icon.js" />
+        <option value="$PROJECT_DIR$/js/plugins/UI_Button.js" />
+        <option value="$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js" />
+        <option value="$PROJECT_DIR$/js/plugins/UI_PartyScene.js" />
+        <option value="$PROJECT_DIR$/js/plugins/UIBase.js" />
+        <option value="$PROJECT_DIR$/js/plugins/WordWrap.js" />
+        <option value="$PROJECT_DIR$/js/plugins/UI_SkillScene.js" />
       </list>
     </option>
   </component>
@@ -199,7 +230,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1400" />
@@ -272,6 +303,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -300,7 +332,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,11 +380,21 @@
       <workItem from="1510572537388" duration="3605000" />
       <workItem from="1510648487916" duration="2434000" />
       <workItem from="1510675760681" duration="2445000" />
+      <workItem from="1510715066535" duration="1666000" />
+      <workItem from="1510717200316" duration="553000" />
+      <workItem from="1510743214303" duration="4530000" />
+      <workItem from="1510898905192" duration="14223000" />
+      <workItem from="1511091725601" duration="5950000" />
+      <workItem from="1511162254270" duration="774000" />
+      <workItem from="1511174256670" duration="11927000" />
+      <workItem from="1511236210138" duration="34069000" />
+      <workItem from="1511318960199" duration="40432000" />
+      <workItem from="1511417468417" duration="7671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106837000" />
+    <option name="totallyTimeSpent" value="228632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -365,15 +406,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13100898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1308017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17908083" sideWeight="0.4955947" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17879747" sideWeight="0.4955947" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986793" sideWeight="0.50440526" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -382,7 +423,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -438,131 +479,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2718">
-          <caret line="151" column="28" lean-forward="false" selection-start-line="151" selection-start-column="28" selection-end-line="151" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4788">
-          <caret line="266" column="47" lean-forward="false" selection-start-line="266" selection-start-column="47" selection-end-line="266" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/WeaponsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/EquipSlot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4788">
-          <caret line="266" column="47" lean-forward="false" selection-start-line="266" selection-start-column="47" selection-end-line="266" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/icons/MakeList.nb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JavaScript-modules-diagram/D:/RMGames/InfiniteFarm/js/plugins/UIBase.js">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/js/plugins/UIBase.js</OriginalElement>
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="519.0" y="415.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Overview</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/icons/default_empty.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/States.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/icons/MakeList.nb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-586">
           <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="6520" column="0" lean-forward="false" selection-start-line="6520" selection-start-column="0" selection-end-line="6520" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_scenes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="944" column="25" lean-forward="false" selection-start-line="944" selection-start-column="25" selection-end-line="944" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/libs/pixi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="34373" column="8" lean-forward="false" selection-start-line="34373" selection-start-column="8" selection-end-line="34373" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -587,24 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/WeaponsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleAICore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="947" column="30" lean-forward="false" selection-start-line="947" selection-start-column="30" selection-end-line="947" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -622,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="152" column="2" lean-forward="true" selection-start-line="152" selection-start-column="2" selection-end-line="152" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/YEP_ItemSynthesis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1043">
@@ -643,52 +547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Grow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Icon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/typper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/EnemiesEX.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="74" column="29" lean-forward="false" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/ArmorsEx.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ItemsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -699,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_windows.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleStatusWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="647">
@@ -713,111 +568,292 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/Actors.json">
+    <entry file="file://$PROJECT_DIR$/js/plugins/MOG_DmgPopupEffects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="132">
+          <caret line="172" column="27" lean-forward="false" selection-start-line="172" selection-start-column="27" selection-end-line="172" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_managers.js">
+    <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="2586" column="0" lean-forward="false" selection-start-line="2586" selection-start-column="0" selection-end-line="2586" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/ExtraData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="150" column="32" lean-forward="false" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/MasterState.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2646">
-          <caret line="149" column="42" lean-forward="false" selection-start-line="149" selection-start-column="42" selection-end-line="149" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/SkillLevel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3378" column="0" lean-forward="false" selection-start-line="3378" selection-start-column="0" selection-end-line="3378" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="536">
+          <caret line="67" column="31" lean-forward="false" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ClassesEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-635">
-          <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="513">
+          <caret line="141" column="8" lean-forward="false" selection-start-line="141" selection-start-column="8" selection-end-line="143" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/MOG_DmgPopupEffects.js">
+    <entry file="file://$PROJECT_DIR$/js/plugins/MOG_BattleCry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="472">
+          <caret line="96" column="74" lean-forward="false" selection-start-line="96" selection-start-column="74" selection-end-line="96" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ItemsEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="93" column="46" lean-forward="false" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/WeaponsEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/MasterState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2512">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/ExtraData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="203" column="2" lean-forward="false" selection-start-line="203" selection-start-column="2" selection-end-line="203" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/EventResponse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="32" column="29" lean-forward="false" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_objects.js">
+    <entry file="file://$PROJECT_DIR$/js/plugins/SkillLevel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="1958" column="0" lean-forward="false" selection-start-line="1958" selection-start-column="0" selection-end-line="1958" selection-end-column="0" />
+        <state relative-caret-position="535">
+          <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="106" column="25" lean-forward="false" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+        <state relative-caret-position="2508">
+          <caret line="132" column="31" lean-forward="false" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/libs/pixi-picture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="418" column="21" lean-forward="false" selection-start-line="418" selection-start-column="21" selection-end-line="418" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
+    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="64" column="11" lean-forward="false" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/Button.js" />
+    <entry file="file://$PROJECT_DIR$/js/plugins/typper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/EnemiesEX.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="136" column="28" lean-forward="false" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="2799" column="18" lean-forward="false" selection-start-line="2799" selection-start-column="13" selection-end-line="2799" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/Grow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/libs/pixi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5877">
+          <caret line="15249" column="4" lean-forward="false" selection-start-line="15249" selection-start-column="4" selection-end-line="15249" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_sprites.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="1968" column="32" lean-forward="false" selection-start-line="1968" selection-start-column="27" selection-end-line="1968" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1274" column="0" lean-forward="false" selection-start-line="1274" selection-start-column="0" selection-end-line="1274" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Actors.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_scenes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="282" column="13" lean-forward="true" selection-start-line="282" selection-start-column="13" selection-end-line="282" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/MOG_HPGauge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="416" column="64" lean-forward="false" selection-start-line="416" selection-start-column="50" selection-end-line="416" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/Icon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_managers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="2069" column="4" lean-forward="false" selection-start-line="2069" selection-start-column="4" selection-end-line="2074" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60135">
+          <caret line="3803" column="0" lean-forward="false" selection-start-line="3803" selection-start-column="0" selection-end-line="3803" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6140">
-          <caret line="507" column="11" lean-forward="false" selection-start-line="507" selection-start-column="11" selection-end-line="507" selection-end-column="11" />
+        <state relative-caret-position="445">
+          <caret line="597" column="20" lean-forward="false" selection-start-line="597" selection-start-column="9" selection-end-line="597" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="62" column="77" lean-forward="false" selection-start-line="62" selection-start-column="71" selection-end-line="62" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="1336" column="13" lean-forward="false" selection-start-line="1336" selection-start-column="13" selection-end-line="1336" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/WordWrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_windows.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="262" column="0" lean-forward="false" selection-start-line="262" selection-start-column="0" selection-end-line="275" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UI_SkillScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UI_PartyScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UI_MainMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UI_Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-973">
+          <caret line="160" column="6" lean-forward="true" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
           <folding />
         </state>
       </provider>

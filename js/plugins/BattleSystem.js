@@ -25,7 +25,7 @@ Game_BattlerBase.prototype.calcAtkPower = function(damage, target, skill) {
         value *= (this[damage.element + "_assist"] + 100) / 100;
     }
     //tokkou effect
-    if (damage.tokkou && target.tags.contains(damage.tokkou)) {
+    if (damage.tokkou && target.tags &&target.tags.contains(damage.tokkou)) {
         value *= (damage.tokkou_rate? damage.tokkou_rate : 1.5);
     }
 
@@ -34,25 +34,25 @@ Game_BattlerBase.prototype.calcAtkPower = function(damage, target, skill) {
 
 Game_BattlerBase.prototype.calcDefPower = function(damage, source, skill) {
     var armor_rate;
-    if(damage.type == 'phy') {
+    if(damage.type === 'phy') {
         armor_rate = Math.abs(this.pdf) / (Math.abs(this.pdf) + 500 + this._level * 25) * (this.pdf >= 0 ? 1 : -1);
-    } else if(damage.type == 'mag') {
+    } else if(damage.type === 'mag') {
         armor_rate = Math.abs(this.mdf) / (Math.abs(this.mdf) + 500 + this._level * 25) * (this.mdf >= 0 ? 1 : -1);
-    } else if(damage.type == 'heal') {
+    } else if(damage.type === 'heal') {
         armor_rate = 2;
     } else {
         armor_rate = 0;
     }
     
     var hittype_rate;
-    if (damage.hittype == null) {
+    if (damage.hittype === null) {
         hittype_rate = 1;
     } else {
         hittype_rate = (100 - this[damage.hittype + '_resist']) / 100;
     }
     
     var element_rate;
-    if (damage.element == null) {
+    if (damage.element === null) {
         element_rate = 1;
     } else {
         element_rate = (100 - this[damage.element + '_resist']) / 100;

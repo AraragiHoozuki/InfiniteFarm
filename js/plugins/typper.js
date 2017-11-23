@@ -1,7 +1,8 @@
 $gameTroop.turnCount()
 
-Eval user.hpRate()<=0.2: Skill 23, Highest hp
-Eval !user.isStateAffected(32,21): Skill 21
-Eval user.isStateAffected(32, 21)&&Math.random()<=0.5: Skill 20
-Eval user.isStateAffected(32, 21)&&Math.random()<=0.5: Skill 22, Highest mdm
-Always: Skill 24
+Eval $gameTroop.turnCount()%3 == 1: Skill 36
+Eval user.hpRate() <= 0.35: Skill 38
+Random 30%: Skill 40, Heighest pdm
+Random 40%: Skill 37
+Always: Skill 39
+

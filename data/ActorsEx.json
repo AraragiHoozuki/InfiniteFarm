@@ -1,7 +1,7 @@
 {
     "1":{
         "name": "托莉托",
-        "iname": "TORITO",
+        "iname": "TORITOH",
         "tags": ["human", "female"],
         "curve": "Normal",
         "params": {
@@ -53,6 +53,20 @@
             "INT": [15, 350],
             "WIL": [19, 375],
             "WIT": [22, 576]
+        }
+    },
+    "5":{
+        "name": "克罗艾",
+        "iname": "CHLOE",
+        "tags": ["human", "female"],
+        "curve": "Normal",
+        "params": {
+            "STR": [24, 655],
+            "FIN": [12, 340],
+            "CON": [35, 729],
+            "INT": [12, 280],
+            "WIL": [22, 350],
+            "WIT": [15, 432]
         }
     }
 }

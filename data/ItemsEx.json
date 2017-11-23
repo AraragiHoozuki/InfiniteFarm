@@ -70,5 +70,32 @@
         "type": "material",
         "soulSummon": "ROPHIA",
         "description": "罗菲娅加入队伍。"
+    },
+    "8": {
+        "name": "灵魂碎片：樱",
+        "iname": "IT_PIECE_SAKURA",
+        "icon": "it_pi_sakura",
+        "rarity": "silver",
+        "type": "material",
+        "piece": true,
+        "description": "集齐100个可以召唤樱。"
+    },
+    "9": {
+        "name": "灵魂召唤：樱",
+        "iname": "IT_SOUL_SUMMON_SAKURA",
+        "icon": "it_pi_sakura",
+        "rarity": "silver",
+        "type": "material",
+        "soulSummon": "SAKURA",
+        "description": "樱加入队伍。"
+    },
+    "10": {
+        "name": "千本樱碎片",
+        "iname": "IT_PIECE_KATANA_SENBONZAKURA",
+        "icon": "it_wp_senbonzakura",
+        "rarity": "golden",
+        "type": "material",
+        "piece": true,
+        "description": "合成千本樱的必要材料。"
     }
 }

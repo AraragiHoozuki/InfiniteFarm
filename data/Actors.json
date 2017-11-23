@@ -3,5 +3,6 @@ null,
 {"id":1,"battlerName":"Actor1_1","characterIndex":3,"characterName":"Actor1","classId":2,"equips":[1,1,2,3,0],"faceIndex":0,"faceName":"#toritoh","traits":[],"initialLevel":5,"maxLevel":99,"name":"Toritoh","nickname":"","note":"","profile":""},
 {"id":2,"battlerName":"Actor1_8","characterIndex":3,"characterName":"Actor2","classId":4,"equips":[2,1,2,3,0],"faceIndex":0,"faceName":"#serinu","traits":[],"initialLevel":5,"maxLevel":99,"name":"Serinu","nickname":"","note":"","profile":""},
 {"id":3,"battlerName":"Actor3_8","characterIndex":3,"characterName":"People3","classId":5,"equips":[3,0,2,3,4],"faceIndex":0,"faceName":"#rophia","traits":[],"initialLevel":5,"maxLevel":99,"name":"rophia","nickname":"","note":"","profile":""},
-{"id":4,"battlerName":"Actor2_7","characterIndex":1,"characterName":"Actor3","classId":6,"equips":[4,0,2,3,4],"faceIndex":0,"faceName":"#sakura","traits":[],"initialLevel":5,"maxLevel":99,"name":"sakura","nickname":"","note":"","profile":""}
+{"id":4,"battlerName":"Actor2_7","characterIndex":1,"characterName":"Actor3","classId":6,"equips":[4,0,2,3,4],"faceIndex":0,"faceName":"#sakura","traits":[],"initialLevel":5,"maxLevel":99,"name":"sakura","nickname":"","note":"","profile":""},
+{"id":5,"battlerName":"","characterIndex":3,"characterName":"Actor3","classId":3,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"#chloe","traits":[],"initialLevel":5,"maxLevel":99,"name":"chloe","nickname":"","note":"","profile":""}
 ]

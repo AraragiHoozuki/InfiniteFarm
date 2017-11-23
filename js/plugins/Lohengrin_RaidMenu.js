@@ -13,7 +13,9 @@ Lohengrin.RM.SkillRaidList = [
 ];
 
 Lohengrin.RM.UnitRaidList = [
-    {name:'罗菲娅（奇术师, lv 10,20,30,40）', troopId:4, levels:[[10],[20],[30],[40]]}
+    {name:'罗菲娅（奇术师, lv 10,20,30,40）', troopId:4, levels:[[10],[20],[30],[40]]},
+    {name:'樱（剑豪, lv 15,30,50,80）', troopId:5, levels:[[15],[30],[50],[80]]},
+    {name:'克罗艾（圣骑士, lv 15,30,50,80）', troopId:6, levels:[[15],[30],[50],[80]]}
 ];
 
 

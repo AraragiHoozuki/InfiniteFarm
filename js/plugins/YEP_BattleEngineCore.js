@@ -3050,10 +3050,6 @@ Sprite_Damage.prototype.setup = function(target) {
     var result = this._result;
     if (result.missed || result.evaded) {
       this.createMiss();
-    } else if (result.hpAffected) {
-      this.createDigits(0, result.hpDamage);
-    } else if (target.isAlive() && result.mpDamage !== 0) {
-      this.createDigits(2, result.mpDamage);
     }
     if (result.critical) {
       this.setupCriticalEffect();

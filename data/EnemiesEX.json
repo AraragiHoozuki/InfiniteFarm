@@ -35,6 +35,7 @@
             {"iname":"IT_HEAL_POTION", "type":"item", "amount":3, "bp":20, "mpl": 5},
             {"iname":"IT_MANA_POTION", "type":"item", "amount":3, "bp":20, "mpl": 5},
             {"iname":"STAFF_BASIC", "type":"weapon", "amount":1, "bp":10, "mpl": 10},
+            {"iname":"KATANA_KATANA", "type":"weapon", "amount":1, "bp":10, "mpl": 10},
             {"iname":"CAP_BASIC", "type":"armor", "amount":1, "bp":10, "mpl": 10},
             {"iname":"VEST_BASIC", "type":"armor", "amount":1, "bp":8, "mpl": 12}
         ]
@@ -85,5 +86,54 @@
             {"iname":"IT_PIECE_ROPHIA", "type":"item", "amount":2, "bp":5, "mpl": 80}
 
         ]
+    },
+    "5": {
+        "name": "樱",
+        "iname": "BOSS_SAKURA",
+        "tags": ["人类", "女性"],
+        "curve": "Normal",
+        "lv": 15,
+        "params": {
+            "STR": [21, 525],
+            "FIN": [31, 755],
+            "CON": [25, 682],
+            "INT": [12, 350],
+            "WIL": [20, 400],
+            "WIT": [27, 558],
+            "pdf": 12,
+            "mdf": 3
+        },
+        "formulas": {
+            "pdm": "this.STR * 1.4 + this.FIN * 0.8"
+        },
+        "drops": [
+            {"iname":"IT_PIECE_SAKURA", "type":"item", "amount":4, "bp":50, "mpl": 30},
+            {"iname":"IT_PIECE_SAKURA", "type":"item", "amount":3, "bp":20, "mpl": 50},
+            {"iname":"IT_PIECE_SAKURA", "type":"item", "amount":2, "bp":5, "mpl": 80},
+            {"iname":"IT_PIECE_KATANA_SENBONZAKURA", "type":"item", "amount":2, "bp":25, "mpl":30},
+            {"iname":"IT_PIECE_KATANA_SENBONZAKURA", "type":"item", "amount":2, "bp":10, "mpl":50},
+            {"iname":"IT_PIECE_KATANA_SENBONZAKURA", "type":"item", "amount":4, "bp":5, "mpl":80}
+        ],
+        "passives": [25, 26]
+    },
+    "6": {
+        "name": "克罗艾",
+        "iname": "BOSS_CHLOE",
+        "tags": ["人类", "女性"],
+        "curve": "Normal",
+        "lv": 15,
+        "params": {
+            "STR": [27, 692],
+            "FIN": [14, 317],
+            "CON": [45, 988],
+            "INT": [18, 475],
+            "WIL": [35, 466],
+            "WIT": [15, 392],
+            "pdf": 14,
+            "mdf": 16
+        },
+        "drops": [
+        ],
+        "passives": [34, 35]
     }
 }
