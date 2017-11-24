@@ -204,7 +204,7 @@ Window_ScrollObject.prototype.update = function() {
 Window_ScrollObject.prototype.updateVisiblePart = function () {
     if (!this.parent) return;
     var p = this.parent;
-    var p_rect = this.parent.visiblePart? this.parent.visiblePart() : new Rectangle(0, 0, p.width - 5, p.height - 5);
+    var p_rect = this.parent.visiblePart? this.parent.visiblePart() : new Rectangle(0, 0, p.width, p.height);
 
     this._visiblePart.x = Math.max(p_rect.x - this.x, 0);
     this._visiblePart.y = Math.max(p_rect.y - this.y, 0);
@@ -282,7 +282,7 @@ Window_ScrollObjectWindow.prototype.initialize = function(x, y, width, height) {
 };
 
 Window_ScrollObjectWindow.prototype.standardPadding = function() {
-    return 4;
+    return 0;
 };
 
 Window_ScrollObjectWindow.prototype._refreshContents = function() {

@@ -27,23 +27,6 @@ Game_Enemy.prototype.setup = function(enemyId, x, y, level) {
     this.recoverAll();
 };
 
-Game_Actor.prototype.setup = function(actorId) {
-    var actor = $dataActors[actorId];
-    this._actorId = actorId;
-    this._name = actor.name;
-    this._nickname = actor.nickname;
-    this._profile = actor.profile;
-    this._classId = actor.classId;
-    this._level = actor.initialLevel;
-
-    this.initImages();
-    this.initExp();
-    this.initSkills();
-    this.initEquips(actor.equips);
-    this.clearParamPlus();
-    this.recoverAll();
-};
-
 Game_Enemy.prototype.initialize = function(enemyId, x, y, level) {
     Game_Battler.prototype.initialize.call(this);
     this.setup(enemyId, x, y, level);

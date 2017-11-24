@@ -18,6 +18,9 @@
         "name": "神殿骑士",
         "iname": "TEMPLAR_KNIGHT",
         "icon": "jb_templar_knight",
+        "lockedAbility": "TEMPLAR_KNIGHT_UPPER",
+        "freeAbility": "TEMPLAR_KNIGHT_LOWER",
+        "passives": [],
         "paramRates": {
             "STR": 8,
             "FIN": 0,

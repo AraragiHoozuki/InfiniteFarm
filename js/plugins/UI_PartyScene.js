@@ -103,9 +103,9 @@ Window_PartyActor.prototype.refresh = function() {
     content.drawHpGauge(this._actor, 8, 514, 180);
     content.drawMpGauge(this._actor, 8, 542, 180);
 
-    this._equipBtn = new Image_Button('party_equip', 3, 570, 200, 68);
+    this._equipBtn = new Image_Button('party_equip', 3, 570, 190, 65);
     this.addChild(this._equipBtn);
 
-    this._skillBtn = new Image_Button('party_skill', 3, 638, 200, 68);
+    this._skillBtn = new Image_Button('party_skill', 3, 638, 190, 65);
     this.addChild(this._skillBtn);
 };

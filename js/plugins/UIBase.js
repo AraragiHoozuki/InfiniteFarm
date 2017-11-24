@@ -73,6 +73,17 @@ Window_Base.prototype.drawTextExWithWidth = function(text, x, y, width) {
     }
 };
 
+//Window_Gold
+Window_Gold.prototype.windowWidth = function() {
+    return 200;
+};
+
+Window_Gold.prototype.refresh = function() {
+    var x = this.textPadding();
+    this.contents.clear();
+    this.drawTextEx('\\I[gold]' + this.value(), 0, 0);
+};
+
 //========================================================================================================
 // Window_Selectable
 

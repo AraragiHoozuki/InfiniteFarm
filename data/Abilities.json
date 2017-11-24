@@ -1,0 +1,28 @@
+{
+  "TALENT": {
+    "name": "天赋",
+    "iname": "TALENT",
+    "locked": true,
+    "icon": "abi_talent"
+  },
+  "PASSIVE": {
+    "name": "被动",
+    "iname": "PASSIVE",
+    "locked": true,
+    "icon": "abi_talent"
+  },
+  "TEMPLAR_KNIGHT_UPPER": {
+    "name": "神殿剑",
+    "iname": "TEMPLAR_KNIGHT_UPPER",
+    "locked": true,
+    "icon": "jbe_templar_knight",
+    "skills": [3, 4, 5, 6]
+  },
+  "TEMPLAR_KNIGHT_LOWER": {
+    "name": "基本神殿剑",
+    "iname": "TEMPLAR_KNIGHT_LOWER",
+    "locked": false,
+    "icon": "jbe_templar_knight",
+    "skills": [5, 6, 7, 8]
+  }
+}

@@ -11,6 +11,7 @@ var $dataStatesEx = null;
 var $dataItemsEx = null;
 var $dataEnemiesEx = null;
 var $dataSkillsEx = null;
+var $dataAbilities = null;
 
 ExData.Files = [
 	{name: '$dataClassesEx', src: 'ClassesEx.json'},
@@ -20,7 +21,8 @@ ExData.Files = [
     {name: '$dataItemsEx', src: 'ItemsEx.json'},
     {name: '$dataEnemiesEx', src: 'EnemiesEx.json'},
     {name: '$dataSkillsEx', src: 'SkillsEx.json' },
-    {name: '$dataActorsEx', src: 'ActorsEx.json'}
+    {name: '$dataActorsEx', src: 'ActorsEx.json'},
+    {name: '$dataAbilities', src: 'Abilities.json'}
 ];
 DataManager._databaseFiles = DataManager._databaseFiles.concat(ExData.Files);
 

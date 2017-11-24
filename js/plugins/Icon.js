@@ -3,7 +3,7 @@
 
 Window_Base.prototype.drawIcon = function(iconName, x, y, w, h) {
     h = h||this.lineHeight();
-    w = h||this.lineHeight();
+    w = w||h||this.lineHeight();
     var bitmap = ImageManager.loadBitmap('img/icons/', iconName, 0, true);
     var pw = bitmap.width;
     var ph = bitmap.height;

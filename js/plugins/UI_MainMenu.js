@@ -4,7 +4,7 @@ var temp, temp2;
 Scene_Menu.prototype.create = function() {
     UI_MainMenu_temp_Scene_Menu_create.call(this);
     var w = 128;
-    this.addButton('items', 300, 700, this.commandParty.bind(this));
+    this.addButton('party', 300, 700, this.commandParty.bind(this));
     this.addButton('skills', 300 + w, 700, this.commandPersonal.bind(this));
     this.addButton('equips', 300 + 2 * w, 700, this.commandPersonal.bind(this));
     this.addButton('settings', 300 + 3 * w, 700, this.commandOptions.bind(this));
