@@ -152,7 +152,6 @@ Window_ScrollObject.prototype.initialize = function(x, y, width, height) {
     this._scrollable = true;
     this.createWindow();
     this._visiblePart = new Rectangle(0, 0, width, height);
-    //this.deactivate();
 };
 
 Object.defineProperty(Window_ScrollObject.prototype, 'width', {

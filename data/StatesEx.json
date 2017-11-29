@@ -34,6 +34,38 @@
       "negative": true,
       "obstinacy": 0
     },
+    "7": {
+        "name": "愤怒",
+        "iname": "RAGE",
+        "icon": "state_rage",
+        "rule": "unique",
+        "negative": true,
+        "obstinacy": 0
+    },
+    "8": {
+        "name": "麻痹",
+        "iname": "PARALYZED",
+        "icon": "state_paralyzed",
+        "rule": "unique",
+        "negative": true,
+        "obstinacy": 0
+    },
+    "9": {
+        "name": "睡眠",
+        "iname": "SLEEP",
+        "icon": "state_sleep",
+        "rule": "unique",
+        "negative": true,
+        "obstinacy": 0
+    },
+    "10": {
+        "name": "毒",
+        "iname": "POISON",
+        "icon": "state_poison",
+        "rule": "unique",
+        "negative": true,
+        "obstinacy": 0
+    },
     "21": {
         "name": "物理攻击+",
         "iname": "PDM_UP",
@@ -98,6 +130,13 @@
         "name": "斩击+",
         "iname": "SLASH_ASSIST_UP",
         "icon": "state_slash_assist_up",
+        "rule": "multi",
+        "obstinacy": 0
+    },
+    "45": {
+        "name": "力量+",
+        "iname": "STR_UP",
+        "icon": "state_str_up",
         "rule": "multi",
         "obstinacy": 0
     },

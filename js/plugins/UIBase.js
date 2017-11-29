@@ -264,6 +264,10 @@ Window_SkillList.prototype.spacing = function() {
     return 8;
 };
 
+Window_SkillList.prototype.includes = function(item) {
+    return item && !item.types.contains('passive');
+};
+
 Window_SkillList.prototype.selectLast = function() {
     var skill;
     if ($gameParty.inBattle()) {
@@ -314,7 +318,7 @@ Window_Help.prototype.setItem = function(item) {
     text = text + '\\C[' + Window_Base.prototype.RarityColors[rarity] + ']' + name + '\\C[0]' + '\n';
     
     if(DataManager.isSkill(item)&&this._actor) {
-        text = text + '技能等级: ' + this._actor.getSkillLevel(item.id) + '/' + (item.cap?item.cap:5) + '\n';
+        text = text + '技能等级: ' + this._actor.getSkillLevel(item.id) + '/' + (item.cap?item.cap:10) + '\n';
     }
     
     if(item._level) {
@@ -322,7 +326,7 @@ Window_Help.prototype.setItem = function(item) {
     }
     
     if(item.slot) {
-        text = text + '装备位置: ' + EquipSlotNames[item.slot] + '\n';
+        text = text + '装备位置: ' + $EquipSlotNames[item.slot] + '\n';
     }
     
     if(item.etype) {
@@ -357,7 +361,7 @@ Window_Help.prototype.setItem = function(item) {
     
     //equip jobs
     if(item.etype) {
-        text += '可用职业: '
+        text += '可用职业: ';
         var jobs = $dataClasses.filter(function(job) {
             return job&&job.equipables.contains(item.etype);
         });
@@ -579,14 +583,7 @@ Window_ActorCommand.prototype.makeCommandList = function() {
 };
 
 Window_ActorCommand.prototype.addSkillCommands = function() {
-    var skillTypes = this._actor.addedSkillTypes();
-    skillTypes.sort(function(a, b) {
-        return a - b;
-    });
-    skillTypes.forEach(function(stypeId) {
-        var name = $dataSystem.skillTypes[stypeId];
-        if (name !== '被动') this.addCommand(name, 'skill', true, stypeId);
-    }, this);
+     this.addCommand('技能', 'skill', true, 0);
 };
 
 //Scene_Skill ===============================================================================================================

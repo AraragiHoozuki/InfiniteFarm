@@ -112,7 +112,7 @@ Game_Battler.prototype.addState = function(stateId, param) {
 
 Game_BattlerBase.prototype.eraseState = function(stateId) {
     for (var i=0;i<this._states.length;i++) {
-    	if (this._states[i].id==stateId) {
+    	if (this._states[i].id===stateId) {
             this._states[i].onStateRemove();
     		this._states.splice(i,1)
     	}

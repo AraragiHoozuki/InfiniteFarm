@@ -85,7 +85,7 @@ Scene_ActorSkill.prototype.createAbilities = function() {
     this._abilityList.addChild(abilityObjWindow);
 
     this._currentAbility = $dataAbilities[abilities[0]];
-    this._abilityList.setScrollLimit(0, 0, 0, Math.min(900 - (abilities.length + 2) * 300 - 100, 0));
+    this._abilityList.setScrollLimit(0, 0, 0, Math.min(900 - (abilities.length + 2) * 150 - 100, 0));
 
 };
 
@@ -118,7 +118,7 @@ Scene_ActorSkill.prototype.createSkills = function() {
         this._skillList.addChild(skillObjWindow);
     }
 
-    this._skillList.setScrollLimit(0, 0, 0, Math.min(900 - skills.length * 130 - 100, 0));
+    this._skillList.setScrollLimit(0, 0, 0, Math.min(900 - skills.length * 150 - 100, 0));
 };
 
 Scene_ActorSkill.prototype.createButtons = function() {
@@ -231,6 +231,7 @@ Window_SkillObject.prototype.initialize = function(x, y, width, height) {
     this._skill = null;
     this._actor = null;
     this._levelUpBtn = null;
+    this._passiveButton = null;
 };
 
 Window_SkillObject.prototype.setActor = function(actor) {
@@ -256,9 +257,8 @@ Window_SkillObject.prototype.refresh = function() {
     content = this._window;
     content.contents.clear();
     if (this._levelUpBtn) this.removeChild(this._levelUpBtn);
+    if (this._levelUpBtn) this.removeChild(this._passiveButton);
     if (!(this.actor()&&this.skill())) return;
-
-    //content.drawIcon(this.skill().icon, 0, 0, 128, 128);
 
     var title = this.skill().name;
     title = '\\C[1]' + title + '\\C[0]';
@@ -275,6 +275,19 @@ Window_SkillObject.prototype.refresh = function() {
     this._levelUpBtn = new Image_Button('plus', 600, 42, 28, 28);
     this.addChild(this._levelUpBtn);
     this._levelUpBtn.setClickHandler(this.levelUp.bind(this));
+
+    var x = content.contents.measureTextWidth(this.skill().name) + 20;
+    if (this.skill().types.contains('passive')) {
+        if (this.actor().isPassiveEquipped(this.skill().id)) {
+            this._passiveButton = new Image_Button('passive_unequip', x, 0, 105, 36);
+            this.addChild(this._passiveButton);
+            this._passiveButton.setClickHandler(this.unequip.bind(this));
+        } else {
+            this._passiveButton = new Image_Button('passive_equip', x, 0, 105, 36);
+            this.addChild(this._passiveButton);
+            this._passiveButton.setClickHandler(this.equip.bind(this));
+        }
+    }
 };
 
 Window_SkillObject.prototype.levelUp = function() {
@@ -287,4 +300,14 @@ Window_SkillObject.prototype.levelUp = function() {
     } else {
         alert('金币不足或已达最大等级。')
     }
+};
+
+Window_SkillObject.prototype.equip = function() {
+    this.actor().equipPassive(this.skill().id);
+    SceneManager._scene.refreshSkills();
+};
+
+Window_SkillObject.prototype.unequip = function() {
+    this.actor().unequipPassive(this.skill().id);
+    SceneManager._scene.refreshSkills();
 };

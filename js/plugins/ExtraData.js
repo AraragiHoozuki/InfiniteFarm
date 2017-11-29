@@ -69,10 +69,12 @@ DataManager.isDatabaseLoaded = function() {
 // Status ===============================================================================================
 
 Object.defineProperties(Game_BattlerBase.prototype, {
+
+    //status
     STR: { get: function() { return this.getStatus("STR"); }, configurable: true }, //strength
     FIN: { get: function() { return this.getStatus("FIN"); }, configurable: true }, //finess
     CON: { get: function() { return this.getStatus("CON"); }, configurable: true }, //constitution
-    INT: { get: function() { return this.getStatus("INT"); }, configurable: true }, //inteligence
+    INT: { get: function() { return this.getStatus("INT"); }, configurable: true }, //intelligence
     WIL: { get: function() { return this.getStatus("WIL"); }, configurable: true }, //will
     WIT: { get: function() { return this.getStatus("WIT"); }, configurable: true }, //WIT
     
@@ -115,6 +117,7 @@ Object.defineProperties(Game_BattlerBase.prototype, {
     
     //states resist
     death_sentence_resist: { get: function() { return this.getExtraStatus("death_sentence_resist"); }, configurable: true },
+    POISON_resist: { get: function() { return this.getExtraStatus("POISON_resist"); }, configurable: true }
 });
 
 Game_Actor.prototype.calcGrowValue = function(status) {

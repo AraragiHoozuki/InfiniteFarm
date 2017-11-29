@@ -56,6 +56,7 @@ Scene_Party.prototype.createActors = function() {
         actorWindow.setActor(actor);
         this._scrollWindow.addChild(actorWindow);
         actorWindow._skillBtn.setClickHandler(this.toSkillScene.bind(this, actorWindow._actor));
+        actorWindow._equipBtn.setClickHandler(this.toEquipScene.bind(this, actorWindow._actor));
     }
 };
 
@@ -66,6 +67,14 @@ Scene_Party.prototype.back = function() {
 Scene_Party.prototype.toSkillScene = function(actor) {
     SceneManager._stack.push(SceneManager._scene.constructor);
     SceneManager._nextScene = new Scene_ActorSkill(actor);
+    if (SceneManager._scene) {
+        SceneManager._scene.stop();
+    }
+};
+
+Scene_Party.prototype.toEquipScene = function(actor) {
+    SceneManager._stack.push(SceneManager._scene.constructor);
+    SceneManager._nextScene = new Scene_ActorEquip(actor);
     if (SceneManager._scene) {
         SceneManager._scene.stop();
     }

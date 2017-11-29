@@ -3458,7 +3458,8 @@ Game_Actor.prototype.setup = function(actorId) {
     this._classId = actor.classId;
     this._level = actor.initialLevel;
     this.tags = actor.tags? actor.tags : [];
-    this.setClass(actor.classId);
+    this.jobs = actor.jobs;
+    this.setClass(actor.jobs[0]);
     this.initImages();
     this.initExp();
     this.initSkills();

@@ -4,6 +4,7 @@
         "iname": "TORITOH",
         "tags": ["human", "female"],
         "curve": "Normal",
+        "jobs": [2, 3, 7],
         "params": {
             "STR": [26, 612],
             "FIN": [25, 550],

@@ -16,13 +16,83 @@
     "iname": "TEMPLAR_KNIGHT_UPPER",
     "locked": true,
     "icon": "jbe_templar_knight",
-    "skills": [3, 4, 5, 6]
+    "skills": [5, 6, 7, 8]
   },
   "TEMPLAR_KNIGHT_LOWER": {
     "name": "基本神殿剑",
     "iname": "TEMPLAR_KNIGHT_LOWER",
     "locked": false,
     "icon": "jbe_templar_knight",
-    "skills": [5, 6, 7, 8]
+    "skills": [9, 10]
+  },
+  "BISHOP_UPPER": {
+    "name": "神圣术",
+    "iname": "BISHOP_UPPER",
+    "locked": true,
+    "icon": "jbe_bishop",
+    "skills": [14, 15, 16]
+  },
+  "BISHOP_LOWER": {
+    "name": "基本神圣术",
+    "iname": "BISHOP_LOWER",
+    "locked": false,
+    "icon": "jbe_bishop",
+    "skills": [17, 18]
+  },
+  "TRICKER_UPPER": {
+    "name": "奇术",
+    "iname": "TRICKER_UPPER",
+    "locked": true,
+    "icon": "jbe_tricker",
+    "skills": [20, 21, 22, 23]
+  },
+  "TRICKER_LOWER": {
+    "name": "基本奇术",
+    "iname": "TRICKER_UPPER",
+    "locked": false,
+    "icon": "jbe_tricker",
+    "skills": [24]
+  },
+  "KENGOU_UPPER": {
+    "name": "剑技",
+    "iname": "KENGOU_UPPER",
+    "locked": true,
+    "icon": "jbe_kengou",
+    "skills": [28, 29, 30, 33]
+  },
+  "KENGOU_LOWER": {
+    "name": "基本剑技",
+    "iname": "KENGOU_LOWER",
+    "locked": false,
+    "icon": "jbe_kengou",
+    "skills": [31, 32]
+  },
+  "HOLY_KNIGHT_UPPER": {
+    "name": "圣剑技",
+    "iname": "HOLY_KNIGHT_UPPER",
+    "locked": true,
+    "icon": "jbe_holy_knight",
+    "skills": [36, 37, 38, 41]
+  },
+  "HOLY_KNIGHT_LOWER": {
+    "name": "基本圣剑技",
+    "iname": "HOLY_KNIGHT_LOWER",
+    "locked": false,
+    "icon": "jbe_holy_knight",
+    "skills": [39, 40]
+  },
+  "PHARMACIST_UPPER": {
+    "name": "药法",
+    "iname": "PHARMACIST_UPPER",
+    "locked": true,
+    "icon": "jbe_pharmacist",
+    "skills": [44, 45, 46, 47, 48]
+  },
+  "PHARMACIST_LOWER": {
+    "name": "基本药法",
+    "iname": "PHARMACIST_LOWER",
+    "locked": false,
+    "icon": "jbe_pharmacist",
+    "skills": [49, 50, 51]
   }
 }

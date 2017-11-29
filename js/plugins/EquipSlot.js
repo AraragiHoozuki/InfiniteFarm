@@ -1,21 +1,17 @@
 //Equip Slot change
 
 Game_Actor.prototype.equipSlots = function() {
-    return ['weapon', 'head', 'body', 'foot', 'hand', 'ring', 'ring', 'neck'];
+    return ['weapon', 'armor', 'accessory', 'accessory'];
 };
 
-var EquipSlotNames = {
+var $EquipSlotNames = {
     weapon: '武器', 
-    head: '帽',
-    body: '衣',
-    foot: '鞋',
-    hand: '手套',
-    ring: '戒指',
-    neck: '项链'
+    armor: '护甲',
+    accessory: '饰品'
 };
 
 Window_EquipSlot.prototype.slotName = function(index) {
-    return this._actor ? EquipSlotNames[this._actor.equipSlots()[index]] : '';
+    return this._actor ? $EquipSlotNames[this._actor.equipSlots()[index]] : '';
 };
 
 Game_Actor.prototype.changeEquip = function(slotId, item) {

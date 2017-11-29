@@ -11,6 +11,8 @@ var $plugins =
 {"name":"UI_MainMenu","status":true,"description":"","parameters":{}},
 {"name":"UI_PartyScene","status":true,"description":"","parameters":{}},
 {"name":"UI_SkillScene","status":true,"description":"","parameters":{}},
+{"name":"UI_EquipScene","status":true,"description":"","parameters":{}},
+{"name":"UI_StatusScene","status":true,"description":"","parameters":{}},
 {"name":"Icon","status":true,"description":"","parameters":{}},
 {"name":"iconReserve","status":true,"description":"","parameters":{}},
 {"name":"ExtraData","status":true,"description":"","parameters":{}},

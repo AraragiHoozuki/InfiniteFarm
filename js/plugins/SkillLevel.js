@@ -53,6 +53,13 @@ Game_Actor.prototype.equipPassive = function(skillId) {
     }
 };
 
+Game_Actor.prototype.unequipPassive = function(skillId) {
+    var index = this._passiveSkills.indexOf(skillId);
+    if (index >= 0) {
+        this._passiveSkills.splice(index, 1);
+    }
+};
+
 Game_Actor.prototype.isPassiveEquipped = function(skillId) {
     if (typeof skillId === 'string') {
         skillId = DataManager.findSkill(skillId).id;
@@ -94,7 +101,7 @@ Game_Actor.prototype.getSkillLevel = function(skillId) {
 };
 
 Game_Actor.prototype.skillMaxLevel = function(skillId) {
-    return $dataSkills[skillId].cap ? $dataSkills[skillId].cap : 5;
+    return $dataSkills[skillId].cap ? $dataSkills[skillId].cap : 10;
 };
 
 Game_Actor.prototype.learnSkill = function(skillId) {
