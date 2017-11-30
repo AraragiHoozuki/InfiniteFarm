@@ -2,34 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f513348-3fa5-48f7-9b62-b7c8936df1bc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/buttons/button_template.psd" afterPath="$PROJECT_DIR$/img/buttons/button_template.psd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/buttons/icon_template.psd" afterPath="$PROJECT_DIR$/img/buttons/icon_template.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Rholin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Rholin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Abilities.json" afterPath="$PROJECT_DIR$/data/Abilities.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Actors.json" afterPath="$PROJECT_DIR$/data/Actors.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ActorsEx.json" afterPath="$PROJECT_DIR$/data/ActorsEx.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ArmorsEx.json" afterPath="$PROJECT_DIR$/data/ArmorsEx.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Classes.json" afterPath="$PROJECT_DIR$/data/Classes.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/ClassesEx.json" afterPath="$PROJECT_DIR$/data/ClassesEx.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Map001.json" afterPath="$PROJECT_DIR$/data/Map001.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Skills.json" afterPath="$PROJECT_DIR$/data/Skills.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SkillsEx.json" afterPath="$PROJECT_DIR$/data/SkillsEx.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/States.json" afterPath="$PROJECT_DIR$/data/States.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/StatesEx.json" afterPath="$PROJECT_DIR$/data/StatesEx.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/System.json" afterPath="$PROJECT_DIR$/data/System.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/buttons/makeButtonIcon.nb" afterPath="$PROJECT_DIR$/img/buttons/makeButtonIcon.nb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins.js" afterPath="$PROJECT_DIR$/js/plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/EquipSlot.js" afterPath="$PROJECT_DIR$/js/plugins/EquipSlot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/ExtraData.js" afterPath="$PROJECT_DIR$/js/plugins/ExtraData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/MasterState.js" afterPath="$PROJECT_DIR$/js/plugins/MasterState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/SkillLevel.js" afterPath="$PROJECT_DIR$/js/plugins/SkillLevel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/UIBase.js" afterPath="$PROJECT_DIR$/js/plugins/UIBase.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/UI_MainMenu.js" afterPath="$PROJECT_DIR$/js/plugins/UI_MainMenu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/UI_PartyScene.js" afterPath="$PROJECT_DIR$/js/plugins/UI_PartyScene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js" afterPath="$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/UI_SkillScene.js" afterPath="$PROJECT_DIR$/js/plugins/UI_SkillScene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/plugins/iconReserve.js" afterPath="$PROJECT_DIR$/js/plugins/iconReserve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/rpg_objects.js" afterPath="$PROJECT_DIR$/js/rpg_objects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/rpg_scenes.js" afterPath="$PROJECT_DIR$/js/rpg_scenes.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,27 +26,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UI_MainMenu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/UI_MainMenu.js">
+      <file leaf-file-name="BattleSystem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="372">
+              <caret line="190" column="5" lean-forward="false" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkillsEx.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SkillsEx.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="718" column="39" lean-forward="false" selection-start-line="718" selection-start-column="39" selection-end-line="718" selection-end-column="39" />
+            <state relative-caret-position="398">
+              <caret line="813" column="27" lean-forward="true" selection-start-line="813" selection-start-column="27" selection-end-line="813" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActorsEx.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActorsEx.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -79,7 +59,7 @@
       <file leaf-file-name="ClassesEx.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/ClassesEx.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
+            <state relative-caret-position="3477">
               <caret line="183" column="22" lean-forward="false" selection-start-line="183" selection-start-column="22" selection-end-line="183" selection-end-column="22" />
               <folding />
             </state>
@@ -89,8 +69,8 @@
       <file leaf-file-name="Abilities.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/Abilities.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+            <state relative-caret-position="1805">
+              <caret line="95" column="26" lean-forward="false" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -99,7 +79,7 @@
       <file leaf-file-name="StatesEx.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
+            <state relative-caret-position="1140">
               <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
               <folding />
             </state>
@@ -117,7 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>window.prototype.addC</find>
       <find>parent</find>
       <find>calculateBounds</find>
       <find>setFrame</find>
@@ -147,6 +126,7 @@
       <find>skilltype</find>
       <find>stype</find>
       <find>removeState</find>
+      <find>scene</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,7 +156,6 @@
         <option value="$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_Button.js" />
         <option value="$PROJECT_DIR$/js/plugins/Icon.js" />
-        <option value="$PROJECT_DIR$/js/rpg_windows.js" />
         <option value="$PROJECT_DIR$/js/rpg_core.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js" />
         <option value="$PROJECT_DIR$/js/plugins/EquipSlot.js" />
@@ -184,18 +163,20 @@
         <option value="$PROJECT_DIR$/data/ArmorsEx.json" />
         <option value="$PROJECT_DIR$/js/plugins/UI_SkillScene.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_EquipScene.js" />
-        <option value="$PROJECT_DIR$/js/plugins/UI_MainMenu.js" />
         <option value="$PROJECT_DIR$/js/rpg_objects.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_StatusScene.js" />
         <option value="$PROJECT_DIR$/js/plugins/SkillLevel.js" />
         <option value="$PROJECT_DIR$/js/plugins/UIBase.js" />
         <option value="$PROJECT_DIR$/js/plugins/ExtraData.js" />
         <option value="$PROJECT_DIR$/js/plugins/MasterState.js" />
-        <option value="$PROJECT_DIR$/data/SkillsEx.json" />
         <option value="$PROJECT_DIR$/data/StatesEx.json" />
         <option value="$PROJECT_DIR$/data/Abilities.json" />
         <option value="$PROJECT_DIR$/data/ActorsEx.json" />
         <option value="$PROJECT_DIR$/data/ClassesEx.json" />
+        <option value="$PROJECT_DIR$/js/rpg_scenes.js" />
+        <option value="$PROJECT_DIR$/js/rpg_windows.js" />
+        <option value="$PROJECT_DIR$/js/plugins/UI_MainMenu.js" />
+        <option value="$PROJECT_DIR$/data/SkillsEx.json" />
       </list>
     </option>
   </component>
@@ -206,10 +187,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="y" value="100" />
+    <option name="x" value="95" />
+    <option name="y" value="90" />
     <option name="width" value="1587" />
-    <option name="height" value="960" />
+    <option name="height" value="961" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -278,8 +259,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -372,11 +353,12 @@
       <workItem from="1511768183019" duration="18836000" />
       <workItem from="1511878686537" duration="8132000" />
       <workItem from="1511931327565" duration="20761000" />
+      <workItem from="1512058535096" duration="4416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323996000" />
+    <option name="totallyTimeSpent" value="328412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,13 +370,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="100" width="1587" height="960" extended-state="0" />
+    <frame x="95" y="90" width="1587" height="961" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16031028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32643119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17840983" sideWeight="0.4955947" order="1" side_tool="false" content_ui="tabs" />
@@ -406,6 +387,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32643119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -487,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/YEP_ItemSynthesis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1043">
-          <caret line="1364" column="31" lean-forward="false" selection-start-line="1364" selection-start-column="31" selection-end-line="1364" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -519,13 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1281">
           <caret line="418" column="21" lean-forward="false" selection-start-line="418" selection-start-column="21" selection-end-line="418" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -662,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_scenes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/UI_ScrollWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -711,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="341" column="0" lean-forward="false" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,27 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_windows.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="2591" column="60" lean-forward="false" selection-start-line="2591" selection-start-column="60" selection-end-line="2591" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="320" column="97" lean-forward="false" selection-start-line="320" selection-start-column="97" selection-end-line="320" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/SkillLevel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="109" column="5" lean-forward="false" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,14 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="866">
-          <caret line="132" column="31" lean-forward="false" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -775,23 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/UI_MainMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/ExtraData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="74" column="92" lean-forward="true" selection-start-line="74" selection-start-column="92" selection-end-line="74" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,21 +716,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="718" column="39" lean-forward="false" selection-start-line="718" selection-start-column="39" selection-end-line="718" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
+        <state relative-caret-position="1140">
           <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
           <folding />
         </state>
@@ -821,16 +729,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/Abilities.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+        <state relative-caret-position="1805">
+          <caret line="95" column="26" lean-forward="false" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ClassesEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
+        <state relative-caret-position="3477">
           <caret line="183" column="22" lean-forward="false" selection-start-line="183" selection-start-column="22" selection-end-line="183" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/YEP_ItemSynthesis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="1504" column="27" lean-forward="false" selection-start-line="1504" selection-start-column="11" selection-end-line="1504" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2504">
+          <caret line="320" column="97" lean-forward="false" selection-start-line="320" selection-start-column="97" selection-end-line="320" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/UI_MainMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="60" column="12" lean-forward="false" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -839,6 +779,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_windows.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="1580" column="0" lean-forward="false" selection-start-line="1580" selection-start-column="0" selection-end-line="1582" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_scenes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1745">
+          <caret line="999" column="2" lean-forward="true" selection-start-line="999" selection-start-column="2" selection-end-line="999" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="190" column="5" lean-forward="false" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/ExtraData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="813" column="27" lean-forward="true" selection-start-line="813" selection-start-column="27" selection-end-line="813" selection-end-column="27" />
           <folding />
         </state>
       </provider>

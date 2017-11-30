@@ -1,6 +1,5 @@
 // UI main menu
 var UI_MainMenu_temp_Scene_Menu_create = Scene_Menu.prototype.create;
-var temp, temp2;
 Scene_Menu.prototype.create = function() {
     UI_MainMenu_temp_Scene_Menu_create.call(this);
     var w = 128;
@@ -8,8 +7,10 @@ Scene_Menu.prototype.create = function() {
     this.addButton('formation', 300 + w, 700, this.commandFormation.bind(this));
     this.addButton('items', 300 + 2 * w, 700, this.commandItem.bind(this));
     this.addButton('status', 300 + 3 * w, 700, this.commandPersonal.bind(this));
-    this.addButton('settings', 300 + 4 * w, 700, this.commandOptions.bind(this));
-    this.addButton('exit', 300 + 5 * w, 700, this.commandGameEnd.bind(this));
+    this.addButton('synth', 300 + 4 * w, 700, this.commandSynthesis.bind(this));
+    this.addButton('raid', 300 + 5 * w, 700, this.commandRaid.bind(this));
+    this.addButton('settings', 300 + 6 * w, 700, this.commandOptions.bind(this));
+    this.addButton('exit', 300 + 7 * w, 700, this.commandGameEnd.bind(this));
 };
 
 Scene_Menu.prototype.addButton = function(image, x, y, method) {
@@ -45,4 +46,17 @@ Scene_Menu.prototype.onPersonalOk = function() {
         default:
             SceneManager.push(Scene_ActorStatus);
     }
+};
+
+//======================================================================================================================
+Window_MenuStatus.prototype.windowWidth = function() {
+    return Graphics.boxWidth;
+};
+
+Window_MenuStatus.prototype.windowHeight = function() {
+    return Graphics.boxHeight - 400;
+};
+
+Window_MenuCommand.prototype.windowWidth = function() {
+    return 0;
 };

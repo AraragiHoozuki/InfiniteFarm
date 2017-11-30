@@ -717,5 +717,109 @@
         "cap": 1,
         "types": ["heal"],
         "script": "target.removeState(9);"
+    },
+    "52": {
+        "name": "魔力提升",
+        "iname": "MAGE_PAS_1",
+        "icon": "jbe_mage",
+        "description": "魔攻提高10% ~ 20%",
+        "types": ["passive"],
+        "mults": {
+            "mdm": [10, 20]
+        }
+    },
+    "53": {
+        "name": "魔法反击",
+        "iname": "MAGE_PAS_2",
+        "icon": "jbe_mage",
+        "description": "受到伤害时20% ~ 40%几率反击，造成90%的魔法伤害。 ",
+        "types": ["passive"],
+        "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([20,40],53)) this.counter(action, 54);"
+    },
+    "54": {
+        "name": "魔法反击（反击）",
+        "iname": "MAGE_PAS_2_COUNTER",
+        "icon": "jbe_mage",
+        "description": "造成90%的魔法伤害。",
+        "types": ["magic"],
+        "Counter": true,
+        "cap": 1,
+        "damages": [{
+            "base": "this.mdm",
+            "rate": -10,
+            "type": "mag",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "55": {
+        "name": "戏法",
+        "iname": "MAGE_UPPER_1",
+        "icon": "jbe_mage",
+        "description": "指定敌方110% ~ 140%魔法伤害。",
+        "types": ["magic"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [10, 40],
+            "type": "mag",
+            "hittype": null,
+            "element": null
+        }]
+    },
+    "56": {
+        "name": "燃烧",
+        "iname": "MAGE_UPPER_2",
+        "icon": "jbe_mage",
+        "description": "敌方全体85% ~ 120%火属性魔法伤害。",
+        "types": ["magic", "pyros"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [-15, 20],
+            "type": "mag",
+            "hittype": null,
+            "element": "pyros"
+        }]
+    },
+    "57": {
+        "name": "暴雪",
+        "iname": "MAGE_UPPER_3",
+        "icon": "jbe_mage",
+        "description": "敌方全体85% ~ 120%水属性魔法伤害。",
+        "types": ["magic", "hydor"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [-15, 20],
+            "type": "mag",
+            "hittype": null,
+            "element": "hydor"
+        }]
+    },
+    "58": {
+        "name": "烈风",
+        "iname": "MAGE_UPPER_4",
+        "icon": "jbe_mage",
+        "description": "随机敌方90% ~ 130%风属性魔法伤害，重复2次。",
+        "types": ["magic", "anemos"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [-10, 30],
+            "type": "mag",
+            "hittype": null,
+            "element": "anemos"
+        }]
+    },
+    "59": {
+        "name": "地刺",
+        "iname": "MAGE_UPPER_5",
+        "icon": "jbe_mage",
+        "description": "指定敌方130% ~ 170%地属性刺击魔法伤害。",
+        "types": ["magic", "gee"],
+        "damages": [{
+            "base": "this.mdm",
+            "rate": [30, 70],
+            "type": "mag",
+            "hittype": null,
+            "element": "gee"
+        }]
     }
 }

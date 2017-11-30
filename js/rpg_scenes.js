@@ -970,7 +970,7 @@ Scene_Menu.prototype.initialize = function() {
 Scene_Menu.prototype.create = function() {
     Scene_MenuBase.prototype.create.call(this);
     this.createCommandWindow();
-    this.createGoldWindow();
+    //this.createGoldWindow();
     this.createStatusWindow();
 };
 
@@ -1000,7 +1000,7 @@ Scene_Menu.prototype.createGoldWindow = function() {
 };
 
 Scene_Menu.prototype.createStatusWindow = function() {
-    this._statusWindow = new Window_MenuStatus(this._commandWindow.width, 0);
+    this._statusWindow = new Window_MenuStatus(0, 0);
     this._statusWindow.reserveFaceImages();
     this.addWindow(this._statusWindow);
 };
