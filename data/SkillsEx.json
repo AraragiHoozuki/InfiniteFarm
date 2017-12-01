@@ -1,825 +1,881 @@
 {
-    "1": {
-        "name": "攻击",
-        "iname": "NORMAL_ATTACK",
-        "damages": [
-            {
-                "base": "this.pdm",
-                "rate": 0,
-                "type": "phy",
-                "hittype": "blow",
-                "element": null
-            }
-        ]
-    },
-    "3": {
-        "name": "测试技能",
-        "iname": "TEST_SKILL",
-        "description": "指定敌方造成20%~50%火属性打击物理伤害 + 20%~50%水属性打击物理伤害的混合伤害。",
-        "flavour": "测试用的技能，没啥背景故事。",
-        "types": ["physical", "blow", "pyros", "hydor"],
-        "damages": [
-            {
-                "base": "this.pdm",
-                "rate": [-80, -50],
-                "type": "phy",
-                "hittype": "blow",
-                "element": "pyros"
-            },
-            {
-                "base": "this.pdm",
-                "rate": [-80, -50],
-                "type": "phy",
-                "hittype": "blow",
-                "element": "hydor"
-            }
-        ]
-    },
-    "4": {
-        "name": "圣战福音",
-        "iname": "TEMPLAR_KNIGHT_PAS_1",
-        "icon": "jbe_templar_knight",
-        "description": "自身斩击伤害提高10% ~ 30%\n 暗属性抗性提高 10% ~ 30%",
-        "flavour": "每位神殿骑士就职时都会受到此祝福。",
-        "types": ["passive"],
-        "adds": {
-            "slash_assist": [10, 30],
-            "erebus_resist": [10, 30]
-        }
-    },
-    "5": {
-        "name": "阳炎剑",
-        "iname": "TEMPLAR_KNIGHT_UPPER_1",
-        "icon": "jbe_templar_knight",
-        "description": "指定敌人 115% ~ 140% 光属性斩击物理伤害、自身3回合物理攻击提高 20% ~ 30%。\n基础伤害受物理和魔法攻击加成。",
-        "flavour": "",
-        "types": ["physical","slash","phos"],
-        "damages": [
-            {
-                "base": "(this.pdm + this.mdm) * 0.7",
-                "rate": [15, 40],
-                "type": "phy",
-                "hittype": "slash",
-                "element": "phos"
-            }
-        ],
-        "enchants": [
-            {"iname": "PDM_UP", "self": true, "turns": 3, "param":{
-                "mults":{
-                    "pdm": [20, 30]
-                }
-            }}
-        ]
-    },
-    "6": {
-        "name": "治愈福音",
-        "iname": "TEMPLAR_KNIGHT_UPPER_2",
-        "icon": "jbe_templar_knight",
-        "description": "指定我方回复生命值 \n效果受魔法攻击加成。",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [100, 200],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }]
-    },
-    "7": {
-        "name": "魔法屏障",
-        "iname": "TEMPLAR_KNIGHT_UPPER_3",
-        "icon": "jbe_templar_knight",
-        "description": "指定我方4 ~ 6 回合魔法防御提高 2000，受到魔法伤害时会减少1回合持续时间。",
-        "cap": 3,
-        "types": ["statechange"],
-        "enchants": [
-            {"iname": "TEMPLAR_KNIGHT_ACT_3_BUFF", "param":{
-                "duration": [4, 6],
-                "adds":{
-                    "mdf": 2000
-                }
-            }}
-        ]
-    },
-    "8": {
-        "name": "圣战号角",
-        "iname": "TEMPLAR_KNIGHT_UPPER_4",
-        "icon": "jbe_templar_knight",
-        "description": "我方全员HP回复、自身4回合斩击伤害提高15% ~ 30%。",
-        "types": ["heal","statechange"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [80, 220],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "enchants": [
-            {"iname": "SLASH_ASSIST_UP", "self": true, "param":{
-                "duration": 4,
-                "adds":{
-                    "slash_assist": [15, 30]
-                }
-            }}
-        ]
-    },
-    "9": {
-        "name": "圣光一闪击",
-        "iname": "TEMPLAR_KNIGHT_LOWER_1",
-        "icon": "jbe_templar_knight",
-        "description": "指定敌人 150% ~ 200% 光属性魔法伤害。",
-        "flavour": "神殿骑士偶尔也会使用魔法。",
-        "types": ["magic", "phos"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [50, 100],
-            "type": "mag",
-            "hittype": null,
-            "element": null
-        }]
-    },
-	"10": {
-		"name": "新星",
-		"iname": "TEMPLAR_KNIGHT_LOWER_2",
-        "icon": "jbe_templar_knight",
-        "description": "全体敌人 135% ~ 170% 光属性斩击物理伤害。\n基础伤害受物理和魔法攻击加成。",
-        "types": ["physical", "slash", "phos"],
-        "damages": [{
-            "base": "(this.pdm + this.mdm) * 0.7",
-            "rate": [35, 70],
-            "type": "phy",
-            "hittype": "slash",
-            "element": "phos"
-        }]
-	},
-    "11": {
-        "name": "神谕",
-        "iname": "TEMPLAR_KNIGHT_PAS_2",
-        "icon": "jbe_templar_knight",
-        "description": "法力上限增加10%、受到物理伤害时，回复 30 ~ 80 点法力。",
-        "flavour": "每位神殿骑士就职时都会受到此祝福。",
-        "types": ["passive"],
-        "mults": {
-            "mmp": 10
-        },
-        "onDamage": "if(action.hasPhysicalDamage()) {this.gainMp(Math.floor(this.calcSkillLevelValue([30,80],11)));}"
-    },
-    "12": {
-        "name": "天使的祈祷",
-        "iname": "BISHOP_PAS_1",
-        "icon": "jbe_bishop",
-        "description": "生命上限增加15% ~ 30%\n 回合结束时回复4% ~ 8%的生命。",
-        "flavour": "主教其实并没有那么容易被秒。",
-        "types": ["passive"],
-        "mults": {
-            "mhp": [15, 30]
-        },
-        "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],12) / 100 );"
-    },
-    "13": {
-        "name": "魔法壁障",
-        "iname": "BISHOP_PAS_2",
-        "icon": "jbe_bishop",
-        "description": "受到魔法伤害时防御，减少伤害 50 ~ 150 点。",
-        "flavour": "主教其实真的并没有那么容易被秒。",
-        "types": ["passive"],
-        "cap": 3,
-        "onPreDamage": "if(dmg>0&&action.hasMagicDamage()) dmg = Math.max(0, dmg - this.calcSkillLevelValue([50,150],13));"
-    },
-    "14": {
-        "name": "大型治疗",
-        "iname": "BISHOP_UPPER_1",
-        "icon": "jbe_bishop",
-        "description": "我方全员生命值回复\n 效果受魔法攻击加成。",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [90, 220],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }]
-    },
-    "15": {
-        "name": "闪耀",
-        "iname": "BISHOP_UPPER_2",
-        "icon": "jbe_bishop",
-        "description": "指定敌人150% ~ 200%光属性魔法伤害、致盲3回合。",
-        "types": ["magic", "phos"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [50, 100],
-            "type": "mag",
-            "hittype": null,
-            "element": "phos"
-        }],
-        "enchants": [
-            {"iname": "BLIND"}
-        ]
-    },
-    "16": {
-        "name": "终极治愈",
-        "iname": "BISHOP_UPPER_3",
-        "icon": "jbe_bishop",
-        "description": "指定我方HP全回复, 解除全部负面状态（1级净化：可以净化所有1级或以下的负面状态，技能中无特殊说明则附加的状态为0级。）",
-        "flavour": "这已经是普通主教能习得的最高级的法术了。",
-        "types": ["heal"],
-        "cap": 1,
-        "damages": [{
-            "base": "target.mhp",
-            "rate": 0,
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "target.purge(true, 1);"
-    },
-    "17": {
-        "name": "治疗术",
-        "iname": "BISHOP_LOWER_1",
-        "icon": "jbe_bishop",
-        "description": "指定我方HP全回复, HP小回复。\n效果受魔攻加成。",
-        "types": ["heal"],
-        "cap": 5,
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [100, 250],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }]
-    },
-    "18": {
-        "name": "复活术",
-        "iname": "BISHOP_LOWER_2",
-        "icon": "jbe_bishop",
-        "description": "指定我方复活, HP小回复。\n回复效果受魔攻加成。",
-        "types": ["heal"],
-        "cap": 3,
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [-30, 50],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "target.removeState(1);"
-    },
-    "19": {
-        "name": "次元超越",
-        "iname": "TRICKER_PAS_1",
-        "icon": "jbe_tricker",
-        "description": "使用魔法攻击法术时，有 10% ~ 40% 的概率再次施放该法术，可重复触发",
-        "flavour": "穿越时空就为了放个法术……",
-        "types": ["passive"],
-        "cap": 8,
-        "onActionEnd": "if(action.hasMagicDamage() && Math.random()*100 <= this.calcSkillLevelValue([10,40],19) && this.mp >= acton.item().mpCost) {this.instantAction(action.item().id, target);}"
-    },
-    "20": {
-        "name": "魔能爆轰",
-        "iname": "TRICKER_UPPER_1",
-        "icon": "jbe_tricker",
-        "description": "指定敌方200% ~ 300% 暗属性魔法伤害。赋予3回合物理魔法攻击提高50%效果。",
-        "types": ["magic", "erebus"],
-        "cap": 5,
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [100, 200],
-            "type": "mag",
-            "hittype": null,
-            "element": "erebus"
-        }],
-        "enchants": [
-            {"iname": "PDM_UP", "param": {"mults": {"pdm": 50}}},
-            {"iname": "MDM_UP", "param": {"mults": {"mdm": 50}}}
-        ]
-    },
-    "21": {
-        "name": "超载",
-        "iname": "TRICKER_UPPER_2",
-        "icon": "jbe_tricker",
-        "description": "自身4回合魔法攻击提高 100% ~ 200%、物理与魔法防御下降 80%",
-        "types": ["statechange"],
-        "cap": 5,
-        "enchants": [
-            {"iname": "MDM_UP", "self": true, "turns": 4, "param": {"mults": {"mdm": [100, 200]}}},
-            {"iname": "PDF_DOWN", "self": true, "turns": 4, "param": {"mults": {"pdf": -80}}},
-            {"iname": "MDF_DOWN", "self": true, "turns": 4, "param": {"mults": {"mdf": -80}}}
-        ]
-    },
-    "22": {
-        "name": "反转",
-        "iname": "TRICKER_UPPER_3",
-        "icon": "jbe_tricker",
-        "description": "将自己的负面状态和目标的正面状态交换。（仅对1级以下的状态有效）",
-        "types": ["statechange"],
-        "cap": 1,
-        "script": "subject.statesExchange(target, 1);"
-    },
-    "23": {
-        "name": "强制转换",
-        "iname": "TRICKER__UPPER_4",
-        "icon": "jbe_tricker",
-        "description": "自身和目标当前生命值交换。（目标最少会留下20%生命。）",
-        "types": ["statechange"],
-        "cap": 1,
-        "script": "subject.hpExchange(target, 20);"
-    },
-    "24": {
-        "name": "黑洞",
-        "iname": "TRICKER_LOWER_1",
-        "icon": "jbe_tricker",
-        "description": "全体敌方180% ~ 240% 暗属性魔法伤害。",
-        "types": ["magic", "erebus"],
-        "cap": 5,
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [80, 140],
-            "type": "mag",
-            "hittype": null,
-            "element": "erebus"
-        }]
-    },
-    "25": {
-        "name": "拔刀",
-        "iname": "KENGOU_PAS_1",
-        "icon": "jbe_kengou",
-        "description": "战斗开始时，斩味等级 + 5 ~ 9。\n（每个斩味等级提高5%的斩击伤害，负数则效果变为下降。）",
-        "types": ["passive"],
-        "cap": 5,
-        "onBattleStart": "this.kireajiAdd(this.calcSkillLevelValue([5,9],25));"
-    },
-    "26": {
-        "name": "飞燕反",
-        "iname": "KENGOU_PAS_2",
-        "icon": "jbe_kengou",
-        "description": "受到伤害时有40% ~ 60%概率进行反击，反击造成77%斩击物理伤害、必中、并赋予治疗无效状态3回合。 ",
-        "types": ["passive"],
-        "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([40,60],26)) this.counter(action, 27);"
-    },
-    "27": {
-        "name": "飞燕反（反击）",
-        "iname": "KENGOU_PAS_2_COUNTER",
-        "icon": "jbe_kengou",
-        "description": "反击：77%斩击物理伤害、必中、并赋予治疗无效状态3回合。",
-        "types": ["physical", "slash"],
-        "Counter": true,
-        "cap": 1,
-        "damages": [{
-            "base": "this.pdm",
-            "rate": -23,
-            "type": "phy",
-            "hittype": "slash",
-            "element": null
-        }],
-        "enchants": [{"iname": "NO_HEAL"}]
-    },
-    "28": {
-        "name": "居合",
-        "iname": "KENGOU_UPPER_1",
-        "icon": "jbe_kengou",
-        "description": "自身斩味等级提高 4 ~ 12",
-        "types": ["statechange"],
-        "cap": 5,
-        "script": "subject.kireajiAdd(subject.calcSkillLevelValue([4,12],28));"
-    },
-    "29": {
-        "name": "金翅鸟王旋风",
-        "iname": "KENGOU_UPPER_2",
-        "icon": "jbe_kengou",
-        "description": "敌方全体风属性100%斩击物理伤害、每个斩味等级额外提高5~9%的伤害。\n使用后斩味等级 -8",
-        "types": ["physical", "slash"],
-        "damages": [{
-            "base": "this.pdm",
-            "rate": [0, 0, "this.kireaji() * this.calcSkillLevelValue([5,9],29)"],
-            "type": "phy",
-            "hittype": "slash",
-            "element": "anemos"
-        }],
-        "script": "subject.kireajiAdd(-8)"
-    },
-    "30": {
-        "name": "虎振",
-        "iname": "KENGOU_UPPER_3",
-        "icon": "jbe_kengou",
-        "description": "敌方单体140% ~ 180%斩击物理伤害、每个斩味等级额外提高7~13%的伤害。\n使用后斩味等级 -6",
-        "types": ["physical", "slash"],
-        "damages": [{
-            "base": "this.pdm",
-            "rate": [40, 80, "this.kireaji() * this.calcSkillLevelValue([7,13],30)"],
-            "type": "phy",
-            "hittype": "slash",
-            "element": null
-        }],
-        "script": "subject.kireajiAdd(-6)"
-    },
-    "31": {
-        "name": "夜曝",
-        "iname": "KENGOU_LOWER_1",
-        "icon": "jbe_kengou",
-        "description": "敌方单体70%暗属性斩击物理伤害、自身2回合物理攻击提高60% ~ 90%。\n使用后斩味等级 -2",
-        "types": ["physical", "slash"],
-        "cap": 5,
-        "damages": [{
-            "base": "this.pdm",
-            "rate": -30,
-            "type": "phy",
-            "hittype": "slash",
-            "element": "erebus"
-        }],
-        "script": "subject.kireajiAdd(-2)",
-        "enchants": [
-            {"iname": "PDM_UP", "self": true, "turns": 2, "param": {"mults": {"mdm": [60, 90]}}}
-        ]
-    },
-    "32": {
-        "name": "飞天斩",
-        "iname": "KENGOU_LOWER_2",
-        "icon": "jbe_kengou",
-        "description": "敌方单体120%~160%斩击物理伤害、飞行特攻。",
-        "types": ["physical", "slash"],
-        "damages": [{
-            "base": "this.pdm",
-            "rate": [20, 60],
-            "type": "phy",
-            "hittype": "slash",
-            "element": null,
-            "tokkou": "飞行"
-        }]
-    },
-    "33": {
-        "name": "天地切断",
-        "iname": "KENGOU_UPPER_6",
-        "icon": "jbe_kengou",
-        "description": "敌方单体150%斩击物理伤害、每个斩味等级提高15% ~ 25%的伤害。\n使用后斩味等级归0.",
-        "types": ["physical", "slash"],
-        "damages": [{
-            "base": "this.pdm",
-            "rate": [50, 50, "this.kireaji() * this.calcSkillLevelValue([15,25],33)"],
-            "type": "phy",
-            "hittype": "slash",
-            "element": null
-        }],
-        "script": "subject.kireajiAdd(-subject.kireaji())"
-    },
-    "34": {
-        "name": "举盾",
-        "iname": "HOLY_KNIGHT_PAS_1",
-        "icon": "jbe_holy_knight",
-        "description": "受到攻击/技能伤害时，35% ~ 45% 概率防御，减少 25% ~ 40% 的伤害。",
-        "types": ["passive"],
-        "onPreDamage": "if (Math.random()*100 <= this.calcSkillLevelValue([35,45],34)) dmg *= (100-this.calcSkillLevelValue([25,40],34))/100;"
-    },
-    "35": {
-        "name": "坚韧",
-        "iname": "HOLY_KNIGHT_PAS_2",
-        "icon": "jbe_holy_knight",
-        "description": "生命上限提高10% ~ 50%、每回合回复4% ~ 8%的生命。",
-        "types": ["passive"],
-        "mults": {
-            "mhp": [10, 50]
-        },
-        "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],35) / 100 );"
-    },
-    "36": {
-        "name": "迎击姿态",
-        "iname": "HOLY_KNIGHT_UPPER_1",
-        "icon": "jbe_holy_knight",
-        "description": "【最速】回复少量生命值，自身1回合物理魔法防御提高100% ~ 300%，闪避下降50%。回复生命值受物理攻击加成。",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.pdm",
-            "rate": [-60, -20],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "enchants":[
-            {"iname": "MDF_UP", "turns": 1, "param":{"mults":{"mdf": [100, 300]}}},
-            {"iname": "PDF_UP",  "turns": 1, "param":{"mults":{"pdf": [100, 300]}}},
-            {"iname": "EVA_DOWN", "turns": 1, "param":{"mults":{"eva": -50}}}
-        ]
-    },
-    "37": {
-        "name": "冲撞",
-        "iname": "HOLY_KNIGHT_UPPER_2",
-        "icon": "jbe_holy_knight",
-        "description": "指定敌人80%~120%打击物理伤害、2回合眩晕效果。伤害基于自身物理防御。",
-        "types": ["physical", "blow"],
-        "damages": [{
-            "base": "this.pdf",
-            "rate": [-20, 20],
-            "type": "phy",
-            "hittype": "blow",
-            "element": null
-        }],
-        "enchants": [
-            {"iname": "STUN", "turns": 2}
-        ]
-    },
-    "38": {
-        "name": "神圣祈祷",
-        "iname": "HOLY_KNIGHT_UPPER_3",
-        "icon": "jbe_holy_knight",
-        "description": "受到致命伤害时，若自身法力值高于 70% ~ 60% 且高于 100，消耗全部法力，使那次伤害无效并解除自身所有负面状态（2级净化）、回复等同于消耗法力值的生命。\n此技能也可以主动使用。",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mp",
-            "rate": 0,
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "subject.purge(true,2); subject._mp = 0;",
-        "onPreDamage": "if (this.mp>=100&&this.mpRate()>=this.calcSkillLevelValue([70,60],38)) {dmg=0; this.instantAction(38,this);}"
-    },
-    "39": {
-        "name": "圣剑斩",
-        "iname": "HOLY_KNIGHT_LOWER_1",
-        "icon": "jbe_holy_knight",
-        "description": "指定敌人混合伤害（75% ~ 100%斩击物理伤害 + 120% ~ 200%光属性魔法伤害），死灵特攻（+50%）",
-        "types": ["physical", "blow"],
-        "damages": [
-            {
-                "base": "this.pdm",
-                "rate": [-25, 0],
-                "type": "phy",
-                "hittype": "slash",
-                "element": null,
-                "tokkou": "死灵"
-            },
-            {
-                "base": "this.mdm",
-                "rate": [20, 100],
-                "type": "mag",
-                "hittype": null,
-                "element": "phos",
-                "tokkou": "死灵"
-            }
-        ]
-    },
-    "40": {
-        "name": "缴械",
-        "iname": "HOLY_KNIGHT_LOWER_2",
-        "icon": "jbe_holy_knight",
-        "description": "指定敌方90%斩击物理伤害、3回合物理攻击下降40% ~ 60%。",
-        "types": ["physical", "slash"],
-        "damages": [{
-            "base": "this.pdm",
-            "rate": -10,
-            "type": "phy",
-            "hittype": "slash",
-            "element": null
-        }],
-        "enchants": [
-            {"iname": "PDM_DOWN", "turns": 3, "param":{"mults":{"pdm":[-40, -60]}}}
-        ]
-    },
-    "41": {
-        "name": "神圣之盾",
-        "iname": "HOLY_KNIGHT_UPPER_4",
-        "icon": "jbe_holy_knight",
-        "description": "【最速】我方全员1回合物理魔法防御上升900%、自身眩晕4回合（3级负面状态）。",
-        "types": ["statechange"],
-        "cap": 1,
-        "enchants": [
-            {"iname": "PDF_UP", "turns": 1, "param":{"mults":{"pdf": 900}}},
-            {"iname": "MDF_UP", "turns": 1, "param":{"mults":{"mdf": 900}}},
-            {"iname": "STUN", "turns": 4, "self": true, "param":{"obstinacy": 4}}
-        ]
-    },
-    "42": {
-        "name": "毒药知识",
-        "iname": "PHARMACIST_PAS_1",
-        "icon": "jbe_pharmacist",
-        "description": "毒耐性提高40 ~ 90",
-        "types": ["passive"],
-        "add": {
-            "POISON_resist": [40, 90]
-        }
-    },
-    "43": {
-        "name": "试药体",
-        "iname": "PHARMACIST_PAS_2",
-        "icon": "jbe_pharmacist",
-        "description": "体质提高10% ~ 30%",
-        "types": ["passive"],
-        "mults": {
-            "CON": [10, 30]
-        }
-    },
-    "44": {
-        "name": "镇静药",
-        "iname": "PHARMACIST_UPPER_1",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方解除愤怒状态、回复HP（回复效果随魔攻增加）",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [20, 80],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "target.removeState(7);"
-    },
-    "45": {
-        "name": "苏醒药",
-        "iname": "PHARMACIST_UPPER_2",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方解除麻痹状态、回复HP（回复效果随魔攻增加）",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [20, 80],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "target.removeState(8);"
-    },
-    "46": {
-        "name": "活性药",
-        "iname": "PHARMACIST_UPPER_3",
-        "icon": "jbe_pharmacist",
-        "description": "我方单体，所有状态推进1回合",
-        "types": ["statechange"],
-        "cap": 1,
-        "script": "target._states.forEach(function(state) { state.turnProgress(); });"
-    },
-    "47": {
-        "name": "解毒药",
-        "iname": "PHARMACIST_UPPER_4",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方解除毒状态、回复HP（回复效果随魔攻增加）",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [20, 80],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "target.removeState(10);"
-    },
-    "48": {
-        "name": "试验药",
-        "iname": "PHARMACIST_UPPER_5",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方HP大回复（回复效果受魔攻加成）、3回合力量提高30%；40% ~ 20%概率附加麻痹状态",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [200, 400],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "enchants": [
-            {"iname": "STR_UP", "turns": 3, "param":{"mults":{"STR": 30}}}
-        ],
-        "script": "if (Math.random()*100 <= subject.calcSkillLevelValue([40,20],48)) target.addState(8);"
-    },
-    "49": {
-        "name": "回复药",
-        "iname": "PHARMACIST_LOWER_1",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方HP回复（回复效果受魔攻加成）",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [40, 105],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }]
-    },
-    "50": {
-        "name": "眼药",
-        "iname": "PHARMACIST_LOWER_2",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方解除失明状态、回复HP（回复效果随魔攻增加）",
-        "types": ["heal"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [20, 80],
-            "type": "heal",
-            "hittype": null,
-            "element": null
-        }],
-        "script": "target.removeState(4);"
-    },
-    "51": {
-        "name": "尖叫药",
-        "iname": "PHARMACIST_LOWER_3",
-        "icon": "jbe_pharmacist",
-        "description": "指定我方解除睡眠状态",
-        "cap": 1,
-        "types": ["heal"],
-        "script": "target.removeState(9);"
-    },
-    "52": {
-        "name": "魔力提升",
-        "iname": "MAGE_PAS_1",
-        "icon": "jbe_mage",
-        "description": "魔攻提高10% ~ 20%",
-        "types": ["passive"],
-        "mults": {
-            "mdm": [10, 20]
-        }
-    },
-    "53": {
-        "name": "魔法反击",
-        "iname": "MAGE_PAS_2",
-        "icon": "jbe_mage",
-        "description": "受到伤害时20% ~ 40%几率反击，造成90%的魔法伤害。 ",
-        "types": ["passive"],
-        "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([20,40],53)) this.counter(action, 54);"
-    },
-    "54": {
-        "name": "魔法反击（反击）",
-        "iname": "MAGE_PAS_2_COUNTER",
-        "icon": "jbe_mage",
-        "description": "造成90%的魔法伤害。",
-        "types": ["magic"],
-        "Counter": true,
-        "cap": 1,
-        "damages": [{
-            "base": "this.mdm",
-            "rate": -10,
-            "type": "mag",
-            "hittype": null,
-            "element": null
-        }]
-    },
-    "55": {
-        "name": "戏法",
-        "iname": "MAGE_UPPER_1",
-        "icon": "jbe_mage",
-        "description": "指定敌方110% ~ 140%魔法伤害。",
-        "types": ["magic"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [10, 40],
-            "type": "mag",
-            "hittype": null,
-            "element": null
-        }]
-    },
-    "56": {
-        "name": "燃烧",
-        "iname": "MAGE_UPPER_2",
-        "icon": "jbe_mage",
-        "description": "敌方全体85% ~ 120%火属性魔法伤害。",
-        "types": ["magic", "pyros"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [-15, 20],
-            "type": "mag",
-            "hittype": null,
-            "element": "pyros"
-        }]
-    },
-    "57": {
-        "name": "暴雪",
-        "iname": "MAGE_UPPER_3",
-        "icon": "jbe_mage",
-        "description": "敌方全体85% ~ 120%水属性魔法伤害。",
-        "types": ["magic", "hydor"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [-15, 20],
-            "type": "mag",
-            "hittype": null,
-            "element": "hydor"
-        }]
-    },
-    "58": {
-        "name": "烈风",
-        "iname": "MAGE_UPPER_4",
-        "icon": "jbe_mage",
-        "description": "随机敌方90% ~ 130%风属性魔法伤害，重复2次。",
-        "types": ["magic", "anemos"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [-10, 30],
-            "type": "mag",
-            "hittype": null,
-            "element": "anemos"
-        }]
-    },
-    "59": {
-        "name": "地刺",
-        "iname": "MAGE_UPPER_5",
-        "icon": "jbe_mage",
-        "description": "指定敌方130% ~ 170%地属性刺击魔法伤害。",
-        "types": ["magic", "gee"],
-        "damages": [{
-            "base": "this.mdm",
-            "rate": [30, 70],
-            "type": "mag",
-            "hittype": null,
-            "element": "gee"
-        }]
+  "1": {
+    "name": "攻击",
+    "iname": "NORMAL_ATTACK",
+    "damages": [
+      {
+        "base": "this.pdm",
+        "rate": 0,
+        "type": "phy",
+        "hittype": "blow",
+        "element": null
+      }
+    ]
+  },
+  "3": {
+    "name": "测试技能",
+    "iname": "TEST_SKILL",
+    "description": "指定敌方造成20%~50%火属性打击物理伤害 + 20%~50%水属性打击物理伤害的混合伤害。",
+    "flavour": "测试用的技能，没啥背景故事。",
+    "types": ["physical", "blow", "pyros", "hydor"],
+    "damages": [
+      {
+        "base": "this.pdm",
+        "rate": [-80, -50],
+        "type": "phy",
+        "hittype": "blow",
+        "element": "pyros"
+      },
+      {
+        "base": "this.pdm",
+        "rate": [-80, -50],
+        "type": "phy",
+        "hittype": "blow",
+        "element": "hydor"
+      }
+    ]
+  },
+  "4": {
+    "name": "圣战福音",
+    "iname": "TEMPLAR_KNIGHT_PAS_1",
+    "icon": "jbe_templar_knight",
+    "description": "自身斩击伤害提高10% ~ 30%\n 暗属性抗性提高 10% ~ 30%",
+    "flavour": "每位神殿骑士就职时都会受到此祝福。",
+    "types": ["passive"],
+    "adds": {
+      "slash_assist": [10, 30],
+      "erebus_resist": [10, 30]
     }
+  },
+  "5": {
+    "name": "阳炎剑",
+    "iname": "TEMPLAR_KNIGHT_UPPER_1",
+    "icon": "jbe_templar_knight",
+    "description": "指定敌人 115% ~ 140% 光属性斩击物理伤害、自身3回合物理攻击提高 20% ~ 30%。\n基础伤害受物理和魔法攻击加成。",
+    "flavour": "",
+    "types": ["physical","slash","phos"],
+    "damages": [
+      {
+        "base": "(this.pdm + this.mdm) * 0.7",
+        "rate": [15, 40],
+        "type": "phy",
+        "hittype": "slash",
+        "element": "phos"
+      }
+    ],
+    "enchants": [
+      {"iname": "PDM_UP", "self": true, "turns": 3, "param":{
+        "mults":{
+          "pdm": [20, 30]
+        }
+      }}
+    ]
+  },
+  "6": {
+    "name": "治愈福音",
+    "iname": "TEMPLAR_KNIGHT_UPPER_2",
+    "icon": "jbe_templar_knight",
+    "description": "指定我方回复生命值 \n效果受魔法攻击加成。",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [100, 200],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "7": {
+    "name": "魔法屏障",
+    "iname": "TEMPLAR_KNIGHT_UPPER_3",
+    "icon": "jbe_templar_knight",
+    "description": "指定我方4 ~ 6 回合魔法防御提高 2000，受到魔法伤害时会减少1回合持续时间。",
+    "cap": 3,
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "TEMPLAR_KNIGHT_ACT_3_BUFF", "param":{
+        "duration": [4, 6],
+        "adds":{
+          "mdf": 2000
+        }
+      }}
+    ]
+  },
+  "8": {
+    "name": "圣战号角",
+    "iname": "TEMPLAR_KNIGHT_UPPER_4",
+    "icon": "jbe_templar_knight",
+    "description": "我方全员HP回复、自身4回合斩击伤害提高15% ~ 30%。",
+    "types": ["heal","statechange"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [80, 220],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "SLASH_ASSIST_UP", "self": true, "param":{
+        "duration": 4,
+        "adds":{
+          "slash_assist": [15, 30]
+        }
+      }}
+    ]
+  },
+  "9": {
+    "name": "圣光一闪击",
+    "iname": "TEMPLAR_KNIGHT_LOWER_1",
+    "icon": "jbe_templar_knight",
+    "description": "指定敌人 150% ~ 200% 光属性魔法伤害。",
+    "flavour": "神殿骑士偶尔也会使用魔法。",
+    "types": ["magic", "phos"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [50, 100],
+      "type": "mag",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "10": {
+    "name": "新星",
+    "iname": "TEMPLAR_KNIGHT_LOWER_2",
+    "icon": "jbe_templar_knight",
+    "description": "全体敌人 135% ~ 170% 光属性斩击物理伤害。\n基础伤害受物理和魔法攻击加成。",
+    "types": ["physical", "slash", "phos"],
+    "damages": [{
+      "base": "(this.pdm + this.mdm) * 0.7",
+      "rate": [35, 70],
+      "type": "phy",
+      "hittype": "slash",
+      "element": "phos"
+    }]
+  },
+  "11": {
+    "name": "神谕",
+    "iname": "TEMPLAR_KNIGHT_PAS_2",
+    "icon": "jbe_templar_knight",
+    "description": "法力上限增加10%、受到物理伤害时，回复 30 ~ 80 点法力。",
+    "flavour": "每位神殿骑士就职时都会受到此祝福。",
+    "types": ["passive"],
+    "mults": {
+      "mmp": 10
+    },
+    "onDamage": "if(action.hasPhysicalDamage()) {this.gainMp(Math.floor(this.calcSkillLevelValue([30,80],11)));}"
+  },
+  "12": {
+    "name": "天使的祈祷",
+    "iname": "BISHOP_PAS_1",
+    "icon": "jbe_bishop",
+    "description": "生命上限增加15% ~ 30%\n 回合结束时回复4% ~ 8%的生命。",
+    "flavour": "主教其实并没有那么容易被秒。",
+    "types": ["passive"],
+    "mults": {
+      "mhp": [15, 30]
+    },
+    "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],12) / 100 );"
+  },
+  "13": {
+    "name": "魔法壁障",
+    "iname": "BISHOP_PAS_2",
+    "icon": "jbe_bishop",
+    "description": "受到魔法伤害时防御，减少伤害 50 ~ 150 点。",
+    "flavour": "主教其实真的并没有那么容易被秒。",
+    "types": ["passive"],
+    "cap": 3,
+    "onPreDamage": "if(dmg>0&&action.hasMagicDamage()) dmg = Math.max(0, dmg - this.calcSkillLevelValue([50,150],13));"
+  },
+  "14": {
+    "name": "大型治疗",
+    "iname": "BISHOP_UPPER_1",
+    "icon": "jbe_bishop",
+    "description": "我方全员生命值回复\n 效果受魔法攻击加成。",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [90, 220],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "15": {
+    "name": "闪耀",
+    "iname": "BISHOP_UPPER_2",
+    "icon": "jbe_bishop",
+    "description": "指定敌人150% ~ 200%光属性魔法伤害、致盲3回合。",
+    "types": ["magic", "phos"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [50, 100],
+      "type": "mag",
+      "hittype": null,
+      "element": "phos"
+    }],
+    "enchants": [
+      {"iname": "BLIND"}
+    ]
+  },
+  "16": {
+    "name": "终极治愈",
+    "iname": "BISHOP_UPPER_3",
+    "icon": "jbe_bishop",
+    "description": "指定我方HP全回复, 解除全部负面状态（1级净化：可以净化所有1级或以下的负面状态，技能中无特殊说明则附加的状态为0级。）",
+    "flavour": "这已经是普通主教能习得的最高级的法术了。",
+    "types": ["heal"],
+    "cap": 1,
+    "damages": [{
+      "base": "target.mhp",
+      "rate": 0,
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "target.purge(true, 1);"
+  },
+  "17": {
+    "name": "治疗术",
+    "iname": "BISHOP_LOWER_1",
+    "icon": "jbe_bishop",
+    "description": "指定我方HP全回复, HP小回复。\n效果受魔攻加成。",
+    "types": ["heal"],
+    "cap": 5,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [100, 250],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "18": {
+    "name": "复活术",
+    "iname": "BISHOP_LOWER_2",
+    "icon": "jbe_bishop",
+    "description": "指定我方复活, HP小回复。\n回复效果受魔攻加成。",
+    "types": ["heal"],
+    "cap": 3,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-30, 50],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "target.removeState(1);"
+  },
+  "19": {
+    "name": "次元超越",
+    "iname": "TRICKER_PAS_1",
+    "icon": "jbe_tricker",
+    "description": "使用魔法攻击法术时，有 10% ~ 40% 的概率再次施放该法术，可重复触发",
+    "flavour": "穿越时空就为了放个法术……",
+    "types": ["passive"],
+    "cap": 8,
+    "onActionEnd": "if(action.hasMagicDamage() && Math.random()*100 <= this.calcSkillLevelValue([10,40],19) && this.mp >= acton.item().mpCost) {this.instantAction(action.item().id, target);}"
+  },
+  "20": {
+    "name": "魔能爆轰",
+    "iname": "TRICKER_UPPER_1",
+    "icon": "jbe_tricker",
+    "description": "指定敌方200% ~ 300% 暗属性魔法伤害。赋予3回合物理魔法攻击提高50%效果。",
+    "types": ["magic", "erebus"],
+    "cap": 5,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [100, 200],
+      "type": "mag",
+      "hittype": null,
+      "element": "erebus"
+    }],
+    "enchants": [
+      {"iname": "PDM_UP", "param": {"mults": {"pdm": 50}}},
+      {"iname": "MDM_UP", "param": {"mults": {"mdm": 50}}}
+    ]
+  },
+  "21": {
+    "name": "超载",
+    "iname": "TRICKER_UPPER_2",
+    "icon": "jbe_tricker",
+    "description": "自身4回合魔法攻击提高 100% ~ 200%、物理与魔法防御下降 80%",
+    "types": ["statechange"],
+    "cap": 5,
+    "enchants": [
+      {"iname": "MDM_UP", "self": true, "turns": 4, "param": {"mults": {"mdm": [100, 200]}}},
+      {"iname": "PDF_DOWN", "self": true, "turns": 4, "param": {"mults": {"pdf": -80}}},
+      {"iname": "MDF_DOWN", "self": true, "turns": 4, "param": {"mults": {"mdf": -80}}}
+    ]
+  },
+  "22": {
+    "name": "反转",
+    "iname": "TRICKER_UPPER_3",
+    "icon": "jbe_tricker",
+    "description": "将自己的负面状态和目标的正面状态交换。（仅对1级以下的状态有效）",
+    "types": ["statechange"],
+    "cap": 1,
+    "script": "subject.statesExchange(target, 1);"
+  },
+  "23": {
+    "name": "强制转换",
+    "iname": "TRICKER__UPPER_4",
+    "icon": "jbe_tricker",
+    "description": "自身和目标当前生命值交换。（目标最少会留下20%生命。）",
+    "types": ["statechange"],
+    "cap": 1,
+    "script": "subject.hpExchange(target, 20);"
+  },
+  "24": {
+    "name": "黑洞",
+    "iname": "TRICKER_LOWER_1",
+    "icon": "jbe_tricker",
+    "description": "全体敌方180% ~ 240% 暗属性魔法伤害。",
+    "types": ["magic", "erebus"],
+    "cap": 5,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [80, 140],
+      "type": "mag",
+      "hittype": null,
+      "element": "erebus"
+    }]
+  },
+  "25": {
+    "name": "拔刀",
+    "iname": "KENGOU_PAS_1",
+    "icon": "jbe_kengou",
+    "description": "战斗开始时，斩味等级 + 5 ~ 9。\n（每个斩味等级提高5%的斩击伤害，负数则效果变为下降。）",
+    "types": ["passive"],
+    "cap": 5,
+    "onBattleStart": "this.kireajiAdd(this.calcSkillLevelValue([5,9],25));"
+  },
+  "26": {
+    "name": "飞燕反",
+    "iname": "KENGOU_PAS_2",
+    "icon": "jbe_kengou",
+    "description": "受到伤害时有40% ~ 60%概率进行反击，反击造成77%斩击物理伤害、必中、并赋予治疗无效状态3回合。 ",
+    "types": ["passive"],
+    "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([40,60],26)) this.counter(action, 27);"
+  },
+  "27": {
+    "name": "飞燕反（反击）",
+    "iname": "KENGOU_PAS_2_COUNTER",
+    "icon": "jbe_kengou",
+    "description": "反击：77%斩击物理伤害、必中、并赋予治疗无效状态3回合。",
+    "types": ["physical", "slash"],
+    "Counter": true,
+    "cap": 1,
+    "damages": [{
+      "base": "this.pdm",
+      "rate": -23,
+      "type": "phy",
+      "hittype": "slash",
+      "element": null
+    }],
+    "enchants": [{"iname": "NO_HEAL"}]
+  },
+  "28": {
+    "name": "居合",
+    "iname": "KENGOU_UPPER_1",
+    "icon": "jbe_kengou",
+    "description": "自身斩味等级提高 4 ~ 12",
+    "types": ["statechange"],
+    "cap": 5,
+    "script": "subject.kireajiAdd(subject.calcSkillLevelValue([4,12],28));"
+  },
+  "29": {
+    "name": "金翅鸟王旋风",
+    "iname": "KENGOU_UPPER_2",
+    "icon": "jbe_kengou",
+    "description": "敌方全体风属性100%斩击物理伤害、每个斩味等级额外提高5~9%的伤害。\n使用后斩味等级 -8",
+    "types": ["physical", "slash"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [0, 0, "this.kireaji() * this.calcSkillLevelValue([5,9],29)"],
+      "type": "phy",
+      "hittype": "slash",
+      "element": "anemos"
+    }],
+    "script": "subject.kireajiAdd(-8)"
+  },
+  "30": {
+    "name": "虎振",
+    "iname": "KENGOU_UPPER_3",
+    "icon": "jbe_kengou",
+    "description": "敌方单体140% ~ 180%斩击物理伤害、每个斩味等级额外提高7~13%的伤害。\n使用后斩味等级 -6",
+    "types": ["physical", "slash"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [40, 80, "this.kireaji() * this.calcSkillLevelValue([7,13],30)"],
+      "type": "phy",
+      "hittype": "slash",
+      "element": null
+    }],
+    "script": "subject.kireajiAdd(-6)"
+  },
+  "31": {
+    "name": "夜曝",
+    "iname": "KENGOU_LOWER_1",
+    "icon": "jbe_kengou",
+    "description": "敌方单体70%暗属性斩击物理伤害、自身2回合物理攻击提高60% ~ 90%。\n使用后斩味等级 -2",
+    "types": ["physical", "slash"],
+    "cap": 5,
+    "damages": [{
+      "base": "this.pdm",
+      "rate": -30,
+      "type": "phy",
+      "hittype": "slash",
+      "element": "erebus"
+    }],
+    "script": "subject.kireajiAdd(-2)",
+    "enchants": [
+      {"iname": "PDM_UP", "self": true, "turns": 2, "param": {"mults": {"mdm": [60, 90]}}}
+    ]
+  },
+  "32": {
+    "name": "飞天斩",
+    "iname": "KENGOU_LOWER_2",
+    "icon": "jbe_kengou",
+    "description": "敌方单体120%~160%斩击物理伤害、飞行特攻。",
+    "types": ["physical", "slash"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [20, 60],
+      "type": "phy",
+      "hittype": "slash",
+      "element": null,
+      "tokkou": "飞行"
+    }]
+  },
+  "33": {
+    "name": "天地切断",
+    "iname": "KENGOU_UPPER_6",
+    "icon": "jbe_kengou",
+    "description": "敌方单体150%斩击物理伤害、每个斩味等级提高15% ~ 25%的伤害。\n使用后斩味等级归0.",
+    "types": ["physical", "slash"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [50, 50, "this.kireaji() * this.calcSkillLevelValue([15,25],33)"],
+      "type": "phy",
+      "hittype": "slash",
+      "element": null
+    }],
+    "script": "subject.kireajiAdd(-subject.kireaji())"
+  },
+  "34": {
+    "name": "举盾",
+    "iname": "HOLY_KNIGHT_PAS_1",
+    "icon": "jbe_holy_knight",
+    "description": "受到攻击/技能伤害时，35% ~ 45% 概率防御，减少 25% ~ 40% 的伤害。",
+    "types": ["passive"],
+    "onPreDamage": "if (Math.random()*100 <= this.calcSkillLevelValue([35,45],34)) dmg *= (100-this.calcSkillLevelValue([25,40],34))/100;"
+  },
+  "35": {
+    "name": "坚韧",
+    "iname": "HOLY_KNIGHT_PAS_2",
+    "icon": "jbe_holy_knight",
+    "description": "生命上限提高10% ~ 50%、每回合回复4% ~ 8%的生命。",
+    "types": ["passive"],
+    "mults": {
+      "mhp": [10, 50]
+    },
+    "onTurnEnd": "if(!this.isDead()) this.gainHp(this.mhp * this.calcSkillLevelValue([4,8],35) / 100 );"
+  },
+  "36": {
+    "name": "迎击姿态",
+    "iname": "HOLY_KNIGHT_UPPER_1",
+    "icon": "jbe_holy_knight",
+    "description": "【最速】回复少量生命值，自身1回合物理魔法防御提高100% ~ 300%，闪避下降50%。回复生命值受物理攻击加成。",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-60, -20],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "enchants":[
+      {"iname": "MDF_UP", "turns": 1, "param":{"mults":{"mdf": [100, 300]}}},
+      {"iname": "PDF_UP",  "turns": 1, "param":{"mults":{"pdf": [100, 300]}}},
+      {"iname": "EVA_DOWN", "turns": 1, "param":{"mults":{"eva": -50}}}
+    ]
+  },
+  "37": {
+    "name": "冲撞",
+    "iname": "HOLY_KNIGHT_UPPER_2",
+    "icon": "jbe_holy_knight",
+    "description": "指定敌人80%~120%打击物理伤害、2回合眩晕效果。伤害基于自身物理防御。",
+    "types": ["physical", "blow"],
+    "damages": [{
+      "base": "this.pdf",
+      "rate": [-20, 20],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "STUN", "turns": 2}
+    ]
+  },
+  "38": {
+    "name": "神圣祈祷",
+    "iname": "HOLY_KNIGHT_UPPER_3",
+    "icon": "jbe_holy_knight",
+    "description": "受到致命伤害时，若自身法力值高于 70% ~ 60% 且高于 100，消耗全部法力，使那次伤害无效并解除自身所有负面状态（2级净化）、回复等同于消耗法力值的生命。\n此技能也可以主动使用。",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mp",
+      "rate": 0,
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "subject.purge(true,2); subject._mp = 0;",
+    "onPreDamage": "if (this.mp>=100&&this.mpRate()>=this.calcSkillLevelValue([70,60],38)) {dmg=0; this.instantAction(38,this);}"
+  },
+  "39": {
+    "name": "圣剑斩",
+    "iname": "HOLY_KNIGHT_LOWER_1",
+    "icon": "jbe_holy_knight",
+    "description": "指定敌人混合伤害（75% ~ 100%斩击物理伤害 + 120% ~ 200%光属性魔法伤害），死灵特攻（+50%）",
+    "types": ["physical", "blow"],
+    "damages": [
+      {
+        "base": "this.pdm",
+        "rate": [-25, 0],
+        "type": "phy",
+        "hittype": "slash",
+        "element": null,
+        "tokkou": "死灵"
+      },
+      {
+        "base": "this.mdm",
+        "rate": [20, 100],
+        "type": "mag",
+        "hittype": null,
+        "element": "phos",
+        "tokkou": "死灵"
+      }
+    ]
+  },
+  "40": {
+    "name": "缴械",
+    "iname": "HOLY_KNIGHT_LOWER_2",
+    "icon": "jbe_holy_knight",
+    "description": "指定敌方90%斩击物理伤害、3回合物理攻击下降40% ~ 60%。",
+    "types": ["physical", "slash"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": -10,
+      "type": "phy",
+      "hittype": "slash",
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "PDM_DOWN", "turns": 3, "param":{"mults":{"pdm":[-40, -60]}}}
+    ]
+  },
+  "41": {
+    "name": "神圣之盾",
+    "iname": "HOLY_KNIGHT_UPPER_4",
+    "icon": "jbe_holy_knight",
+    "description": "【最速】我方全员1回合物理魔法防御上升900%、自身眩晕4回合（3级负面状态）。",
+    "types": ["statechange"],
+    "cap": 1,
+    "enchants": [
+      {"iname": "PDF_UP", "turns": 1, "param":{"mults":{"pdf": 900}}},
+      {"iname": "MDF_UP", "turns": 1, "param":{"mults":{"mdf": 900}}},
+      {"iname": "STUN", "turns": 4, "self": true, "param":{"obstinacy": 4}}
+    ]
+  },
+  "42": {
+    "name": "毒药知识",
+    "iname": "PHARMACIST_PAS_1",
+    "icon": "jbe_pharmacist",
+    "description": "毒耐性提高40 ~ 90",
+    "types": ["passive"],
+    "add": {
+      "POISON_resist": [40, 90]
+    }
+  },
+  "43": {
+    "name": "试药体",
+    "iname": "PHARMACIST_PAS_2",
+    "icon": "jbe_pharmacist",
+    "description": "体质提高10% ~ 30%",
+    "types": ["passive"],
+    "mults": {
+      "CON": [10, 30]
+    }
+  },
+  "44": {
+    "name": "镇静药",
+    "iname": "PHARMACIST_UPPER_1",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方解除愤怒状态、回复HP（回复效果随魔攻增加）",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [20, 80],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "target.removeState(7);"
+  },
+  "45": {
+    "name": "苏醒药",
+    "iname": "PHARMACIST_UPPER_2",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方解除麻痹状态、回复HP（回复效果随魔攻增加）",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [20, 80],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "target.removeState(8);"
+  },
+  "46": {
+    "name": "活性药",
+    "iname": "PHARMACIST_UPPER_3",
+    "icon": "jbe_pharmacist",
+    "description": "我方单体，所有状态推进1回合",
+    "types": ["statechange"],
+    "cap": 1,
+    "script": "target._states.forEach(function(state) { state.turnProgress(); });"
+  },
+  "47": {
+    "name": "解毒药",
+    "iname": "PHARMACIST_UPPER_4",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方解除毒状态、回复HP（回复效果随魔攻增加）",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [20, 80],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "target.removeState(10);"
+  },
+  "48": {
+    "name": "试验药",
+    "iname": "PHARMACIST_UPPER_5",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方HP大回复（回复效果受魔攻加成）、3回合力量提高30%；40% ~ 20%概率附加麻痹状态",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [200, 400],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "STR_UP", "turns": 3, "param":{"mults":{"STR": 30}}}
+    ],
+    "script": "if (Math.random()*100 <= subject.calcSkillLevelValue([40,20],48)) target.addState(8);"
+  },
+  "49": {
+    "name": "回复药",
+    "iname": "PHARMACIST_LOWER_1",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方HP回复（回复效果受魔攻加成）",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [40, 105],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "50": {
+    "name": "眼药",
+    "iname": "PHARMACIST_LOWER_2",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方解除失明状态、回复HP（回复效果随魔攻增加）",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [20, 80],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "script": "target.removeState(4);"
+  },
+  "51": {
+    "name": "尖叫药",
+    "iname": "PHARMACIST_LOWER_3",
+    "icon": "jbe_pharmacist",
+    "description": "指定我方解除睡眠状态",
+    "cap": 1,
+    "types": ["heal"],
+    "script": "target.removeState(9);"
+  },
+  "52": {
+    "name": "魔力提升",
+    "iname": "MAGE_PAS_1",
+    "icon": "jbe_mage",
+    "description": "魔攻提高10% ~ 20%",
+    "types": ["passive"],
+    "mults": {
+      "mdm": [10, 20]
+    }
+  },
+  "53": {
+    "name": "魔法反击",
+    "iname": "MAGE_PAS_2",
+    "icon": "jbe_mage",
+    "description": "受到伤害时20% ~ 40%几率反击，造成90%的魔法伤害。 ",
+    "types": ["passive"],
+    "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([20,40],53)) this.counter(action, 54);"
+  },
+  "54": {
+    "name": "魔法反击（反击）",
+    "iname": "MAGE_PAS_2_COUNTER",
+    "icon": "jbe_mage",
+    "description": "造成90%的魔法伤害。",
+    "types": ["magic"],
+    "Counter": true,
+    "cap": 1,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": -10,
+      "type": "mag",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "55": {
+    "name": "戏法",
+    "iname": "MAGE_UPPER_1",
+    "icon": "jbe_mage",
+    "description": "指定敌方110% ~ 140%魔法伤害。",
+    "types": ["magic"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [10, 40],
+      "type": "mag",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "56": {
+    "name": "燃烧",
+    "iname": "MAGE_UPPER_2",
+    "icon": "jbe_mage",
+    "description": "敌方全体85% ~ 120%火属性魔法伤害。",
+    "types": ["magic", "pyros"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-15, 20],
+      "type": "mag",
+      "hittype": null,
+      "element": "pyros"
+    }]
+  },
+  "57": {
+    "name": "暴雪",
+    "iname": "MAGE_UPPER_3",
+    "icon": "jbe_mage",
+    "description": "敌方全体85% ~ 120%水属性魔法伤害。",
+    "types": ["magic", "hydor"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-15, 20],
+      "type": "mag",
+      "hittype": null,
+      "element": "hydor"
+    }]
+  },
+  "58": {
+    "name": "烈风",
+    "iname": "MAGE_UPPER_4",
+    "icon": "jbe_mage",
+    "description": "随机敌方90% ~ 130%风属性魔法伤害，重复2次。",
+    "types": ["magic", "anemos"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-10, 30],
+      "type": "mag",
+      "hittype": null,
+      "element": "anemos"
+    }]
+  },
+  "59": {
+    "name": "岩棘",
+    "iname": "MAGE_UPPER_5",
+    "icon": "jbe_mage",
+    "description": "指定敌方130% ~ 170%地属性刺击魔法伤害。",
+    "types": ["magic", "gee"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [30, 70],
+      "type": "mag",
+      "hittype": null,
+      "element": "gee"
+    }]
+  },
+  "60": {
+    "name": "火球",
+    "iname": "MAGE_LOWER_1",
+    "icon": "jbe_mage",
+    "description": "指定敌方100% ~ 120%火属性魔法伤害。",
+    "types": ["magic", "pyros"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [0, 20],
+      "type": "mag",
+      "hittype": null,
+      "element": "pyros"
+    }]
+  },
+  "61": {
+    "name": "冰锥",
+    "iname": "MAGE_LOWER_2",
+    "icon": "jbe_mage",
+    "description": "指定敌方100% ~ 120%水属性魔法伤害。",
+    "types": ["magic", "hydor"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [0, 20],
+      "type": "mag",
+      "hittype": null,
+      "element": "hydor"
+    }]
+  },
+  "62": {
+    "name": "龙卷",
+    "iname": "MAGE_LOWER_3",
+    "icon": "jbe_mage",
+    "description": "指定敌方100% ~ 120%风属性魔法伤害。",
+    "types": ["magic", "anemos"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [0, 20],
+      "type": "mag",
+      "hittype": null,
+      "element": "anemos"
+    }]
+  },
+  "63": {
+    "name": "地刺",
+    "iname": "MAGE_LOWER_4",
+    "icon": "jbe_mage",
+    "description": "敌方全体70% ~ 90%地属性魔法伤害。",
+    "types": ["magic", "gee"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-30, -10],
+      "type": "mag",
+      "hittype": null,
+      "element": "gee"
+    }]
+  }
 }

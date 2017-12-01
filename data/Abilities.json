@@ -94,5 +94,19 @@
     "locked": false,
     "icon": "jbe_pharmacist",
     "skills": [49, 50, 51]
+  },
+  "MAGE_UPPER": {
+    "name": "魔术",
+    "iname": "MAGE_UPPER",
+    "locked": true,
+    "icon": "jbe_mage",
+    "skills": [55, 56, 57, 58, 59]
+  },
+  "MAGE_LOWER": {
+    "name": "基本魔术",
+    "iname": "MAGE_LOWER",
+    "locked": false,
+    "icon": "jbe_mage",
+    "skills": [60, 61, 62, 63]
   }
 }

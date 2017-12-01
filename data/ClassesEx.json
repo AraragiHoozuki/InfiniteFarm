@@ -193,5 +193,31 @@
                 "element": null
             }
         ]
+    },
+    "8": {
+        "name": "魔法师",
+        "iname": "MAGE",
+        "icon": "jb_mage",
+        "lockedAbility": "MAGE_UPPER",
+        "freeAbility": "MAGE_LOWER",
+        "passives": [52, 53],
+        "paramRates": {
+            "STR": -40,
+            "FIN": -40,
+            "CON": -20,
+            "INT": 25,
+            "WIL": 10,
+            "WIT": 0
+        },
+        "equipables": ["杖", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.mdm",
+                "rate": 0,
+                "type": "mag",
+                "hittype": null,
+                "element": null
+            }
+        ]
     }
 }
