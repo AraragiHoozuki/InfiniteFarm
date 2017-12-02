@@ -103,3 +103,15 @@ Game_Enemy.prototype.makeDropItems = function() {
         return r;
     }.bind(this), []);
 };
+
+// =========================================================================
+
+BattleManager.displayDropItems = function() {
+    var items = this._rewards.items;
+    if (items.length > 0) {
+        $gameMessage.newPage();
+        items.forEach(function(item) {
+            $gameMessage.add(TextManager.obtainItem.format(item.name));
+        });
+    }
+};

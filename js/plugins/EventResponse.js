@@ -31,6 +31,7 @@ Game_Battler.prototype.onDamage = function(action, value) {
    
     
     var a = action.subject();
+    var source = a;
     var b = this;
     var states = this._states;
     var dmg = value;

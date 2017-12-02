@@ -39,13 +39,13 @@ Window_Base.prototype.drawItemName = function(item, x, y, width, withText) {
 		this.resetTextColor();
         var rarity = item.rarity || 'bronze';
         var prefix = item.piece ? 'piece_' : 'item_';
-		this.drawIcon(prefix + 'frame_' + rarity, x+3, y+6, h, h);
-		this.drawIcon(item.icon || 'default_unknown', x+3, y +6, h, h);
+		this.drawIcon(prefix + 'frame_' + rarity, x + 3, y + 3, h, h);
+		this.drawIcon(item.icon || 'default_unknown', x + 3, y + 3, h, h);
 		if (withText) {
 			if (DataManager.isItem(item)||DataManager.isWeapon(item)||DataManager.isArmor(item)) {
 				this.changeTextColor(this.textColor(Window_Base.prototype.RarityColors[rarity]));
 			}
-            if(!(this instanceof Window_Selectable)) {
+            if((!this instanceof Window_Selectable)||(this instanceof Window_SkillList)) {
                 this.drawText(item.name, x + h + 24, y, width - h);
             }
 			

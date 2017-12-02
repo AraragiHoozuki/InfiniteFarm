@@ -182,6 +182,7 @@ Window_Selectable.prototype.activate = function() {
 };
 
 //Window_ItemList ==================================================================================
+
 Window_ItemList.prototype.itemWidth = function() {
     return 105;
 };
@@ -197,6 +198,7 @@ Window_ItemList.prototype.spacing = function() {
 Window_ItemList.prototype.maxCols = function() {
     return Math.floor(this._width / (this.itemWidth() + this.spacing()));
 };
+
 
 Window_ItemList.prototype.includes = function(item) {
     switch (this._category) {
@@ -248,7 +250,7 @@ Window_ItemCategory.prototype.makeCommandList = function() {
 };
 
 //Window_SkillList ==========================================================================================
-Window_SkillList.prototype.itemWidth = function() {
+/*Window_SkillList.prototype.itemWidth = function() {
     return 105;
 };
 
@@ -262,7 +264,7 @@ Window_SkillList.prototype.maxCols = function() {
 
 Window_SkillList.prototype.spacing = function() {
     return 8;
-};
+};*/
 
 Window_SkillList.prototype.includes = function(item) {
     return item && !item.types.contains('passive');
@@ -279,7 +281,7 @@ Window_SkillList.prototype.selectLast = function() {
     this.select(index >= 0 ? index : 0);
 };
 
-Window_SkillList.prototype.drawItem = function(index) {
+/*Window_SkillList.prototype.drawItem = function(index) {
     var skill = this._data[index];
     if (skill) {
         var costWidth = this.costWidth();
@@ -290,7 +292,7 @@ Window_SkillList.prototype.drawItem = function(index) {
         this.drawSkillCost(skill, rect.x, rect.y + 75, rect.width);
         this.changePaintOpacity(1);
     }
-};
+};*/
 
 Window_SkillList.prototype.setHelpWindowItem = function(item) {
     Window_Selectable.prototype.setHelpWindowItem.call(this, item);

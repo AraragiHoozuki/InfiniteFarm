@@ -108,5 +108,33 @@
     "locked": false,
     "icon": "jbe_mage",
     "skills": [60, 61, 62, 63]
+  },
+  "ENHANCER_UPPER": {
+    "name": "附术",
+    "iname": "ENHANCER_UPPER",
+    "locked": true,
+    "icon": "jbe_enhancer",
+    "skills": [66, 67, 68, 69, 70, 71, 72]
+  },
+  "ENHANCER_LOWER": {
+    "name": "基本附术",
+    "iname": "ENHANCER_LOWER",
+    "locked": false,
+    "icon": "jbe_enhancer",
+    "skills": [73, 74, 75]
+  },
+  "MONK_UPPER": {
+    "name": "斗技",
+    "iname": "MONK_UPPER",
+    "locked": false,
+    "icon": "jbe_monk",
+    "skills": [78, 79, 80, 81]
+  },
+  "MONK_LOWER": {
+    "name": "基本斗技",
+    "iname": "MONK_LOWER",
+    "locked": true,
+    "icon": "jbe_monk",
+    "skills": [82, 83, 84]
   }
 }

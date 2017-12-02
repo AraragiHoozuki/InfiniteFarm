@@ -219,5 +219,61 @@
                 "element": null
             }
         ]
+    },
+    "9": {
+        "name": "赋予师",
+        "iname": "ENHANCER",
+        "icon": "jb_enhancer",
+        "lockedAbility": "ENHANCER_UPPER",
+        "freeAbility": "ENHANCER_LOWER",
+        "passives": [64, 65],
+        "paramRates": {
+            "STR": -35,
+            "FIN": -30,
+            "CON": 0,
+            "INT": 10,
+            "WIL": 20,
+            "WIT": 5
+        },
+        "equipables": ["杖", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.mdm",
+                "rate": -15,
+                "type": "mag",
+                "hittype": null,
+                "element": null
+            }
+        ]
+    },
+    "10": {
+        "name": "武斗家",
+        "iname": "MONK",
+        "icon": "jb_monk",
+        "lockedAbility": "MONK_UPPER",
+        "freeAbility": "MONK_LOWER",
+        "passives": [76, 77],
+        "paramRates": {
+            "STR": 15,
+            "FIN": 15,
+            "CON": 15,
+            "INT": -30,
+            "WIL": 0,
+            "WIT": 5,
+            "mmp": -70
+        },
+        "formulas": {
+            "pdm": "this.STR * 1.2 + this.FIN * 0.7 + this.WIT * 0.3"
+        },
+        "equipables": ["拳套", "中甲", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.pdm",
+                "rate": 0,
+                "type": "phy",
+                "hittype": "blow",
+                "element": null
+            }
+        ]
     }
 }

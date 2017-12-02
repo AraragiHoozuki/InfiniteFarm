@@ -26,7 +26,7 @@ Game_BattlerBase.prototype.calcAtkPower = function(damage, target, skill) {
     }
     //tokkou effect
     if (damage.tokkou && target.tags &&target.tags.contains(damage.tokkou)) {
-        value *= (damage.tokkou_rate? damage.tokkou_rate : 1.5);
+        value *= (damage.tokkou_rate? (100 + damage.tokkou_rate) / 100 : 1.5);
     }
 
     return value;
@@ -34,10 +34,23 @@ Game_BattlerBase.prototype.calcAtkPower = function(damage, target, skill) {
 
 Game_BattlerBase.prototype.calcDefPower = function(damage, source, skill) {
     var armor_rate;
-    if(damage.type === 'phy') {
-        armor_rate = Math.abs(this.pdf) / (Math.abs(this.pdf) + 500 + this._level * 25) * (this.pdf >= 0 ? 1 : -1);
-    } else if(damage.type === 'mag') {
-        armor_rate = Math.abs(this.mdf) / (Math.abs(this.mdf) + 500 + this._level * 25) * (this.mdf >= 0 ? 1 : -1);
+    var armor;
+
+    if (damage.type === 'phy') {
+        armor = this.pdf;
+    } else {
+        armor = this.mdf;
+    }
+
+    if (skill.idr) {
+        if (skill.idr instanceof Array) {
+            armor *= ((100 - source.calcSkillLevelValue(skill.idr, skill.id))/100);
+        } else {
+            armor *= ((100 - skill.idr) / 100);
+        }
+    }
+    if(damage.type === 'phy' || damage.type === 'mag') {
+        armor_rate = Math.abs(armor) / (Math.abs(armor) + 500 + this._level * 25) * (armor >= 0 ? 1 : -1);
     } else if(damage.type === 'heal') {
         armor_rate = 2;
     } else {
@@ -128,6 +141,7 @@ Game_Action.prototype.apply = function(target) {
 };
 
 Game_Action.prototype.applyEnchant = function(skill, enchant, source, target) {
+    if (enchant.prob && Math.randomInt(100) >= enchant.prob) { return; }
     var state = DataManager.findState(enchant.iname);
     var param = enchant.param ? enchant.param : {};
     param = source.calcEnchantLevelValue(param, skill.id);
@@ -148,7 +162,7 @@ Game_Action.prototype.makeDamageValue = function(target, critical) {
     var baseValue = 0;
     
     //check normal attack
-    if (subject.isActor()&&subject.currentClass().attack&&item.id == 1) {
+    if (subject.isActor()&&subject.currentClass().attack&&item.id === 1) {
         var damages = subject.currentClass().attack;
     } else {
         var damages = item.damages;

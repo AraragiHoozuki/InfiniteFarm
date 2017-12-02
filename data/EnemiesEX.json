@@ -135,5 +135,25 @@
         "drops": [
         ],
         "passives": [34, 35]
+    },
+    "7": {
+        "name": "尤娜",
+        "iname": "GROW_EXP_1_YUNA",
+        "tags": ["人类", "女性"],
+        "curve": "Normal",
+        "lv": 10,
+        "params": {
+            "STR": [19, 310],
+            "FIN": [19, 340],
+            "CON": [26, 567],
+            "INT": [29, 675],
+            "WIL": [30, 575],
+            "WIT": [16, 370],
+            "pdf": 2,
+            "mdf": 3
+        },
+        "drops": [
+        ],
+        "passives": [43]
     }
 }

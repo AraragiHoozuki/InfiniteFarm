@@ -7,9 +7,8 @@ Lohengrin.RM.TestRaidList = [
     {name:'托莉托（lv10）', troopId:3, levels:[[10],[30],[50],[100]]}
 ];
 
-Lohengrin.RM.SkillRaidList = [
-	{name:'初级祈祷、凯魔道（无难度区别）', troopId:16, levels:[[20],[20],[20],[20]]},
-    {name:'高级祈祷、凯魔道（无难度区别）', troopId:22, levels:[[30],[30],[30],[30]]}
+Lohengrin.RM.GrowRaidList = [
+	{name:'经验本A', troopId:7, levels:[[10],[10],[10],[10]]}
 ];
 
 Lohengrin.RM.UnitRaidList = [
@@ -65,7 +64,7 @@ Window_RaidEventSelect.prototype.makeCommandList = function() {
 
 Window_RaidEventSelect.prototype.addEventsCommands = function() {
 	this.addCommand('测试BOSS', 'test', true);
-	this.addCommand('技能传承', 'skill', true);
+	this.addCommand('角色培养', 'grow', true);
     this.addCommand('灵魂碎片', 'unit', true);
 };
 
@@ -182,7 +181,7 @@ Scene_Raid.prototype.createCommandWindow = function() {
     this._commandWindow = new Window_RaidEventSelect();
     this._commandWindow.setHandler('cancel', this.onCancelOk.bind(this));
     this._commandWindow.setHandler('test', this.showBosses.bind(this, Lohengrin.RM.TestRaidList));
-    this._commandWindow.setHandler('skill', this.showBosses.bind(this, Lohengrin.RM.SkillRaidList));
+    this._commandWindow.setHandler('grow', this.showBosses.bind(this, Lohengrin.RM.GrowRaidList));
     this._commandWindow.setHandler('unit', this.showBosses.bind(this, Lohengrin.RM.UnitRaidList));
     this.addWindow(this._commandWindow);
 };

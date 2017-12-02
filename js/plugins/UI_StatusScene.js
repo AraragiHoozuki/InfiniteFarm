@@ -9,13 +9,13 @@ Scene_ActorStatus.prototype = Object.create(Scene_Base.prototype);
 Scene_ActorStatus.prototype.constructor = Scene_ActorStatus;
 
 Scene_ActorStatus.prototype.initialize = function() {
-    this._actor = $gameParty.menuActor();
     this._window = null;
     Scene_Base.prototype.initialize.call(this);
 };
 
 Scene_ActorStatus.prototype.create = function() {
     Scene_Base.prototype.create.call(this);
+    this._actor = $gameParty.menuActor();
     this.createBackground();
     this.createWindowLayer();
     this.createWindow();

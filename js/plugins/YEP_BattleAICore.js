@@ -1166,9 +1166,10 @@ AIManager.passAIConditions = function(line) {
     }
     // PARAM EVAL
     if (line.match(/(.*)[ ]PARAM[ ](.*)/i)) {
-      var paramId = this.getParamId(String(RegExp.$1));
+      //var paramId = this.getParamId(String(RegExp.$1));
+      var param = String(RegExp.$1);
       var condition = String(RegExp.$2);
-      return this.conditionParamEval(paramId, condition);
+      return this.conditionParamEvalAdjusted(param, condition);
     }
     // PARTY LEVEL
     if (line.match(/(.*)[ ]PARTY[ ]LEVEL[ ](.*)/i)) {
@@ -1349,6 +1350,35 @@ AIManager.conditionParamEval = function(paramId, condition) {
       var target = group[i];
       if (!target) continue;
       if (eval(condition)) validTargets.push(target);
+    }
+    if (validTargets.length <= 0) return false;
+    this.setProperTarget(validTargets);
+    return true;
+};
+
+AIManager.conditionParamEvalAdjusted = function(param, condition) {
+    var action = this.action();
+    var item = action.item();
+    var user = this.battler();
+    var s = $gameSwitches._data;
+    var v = $gameVariables._data;
+    condition = condition.replace(/(\d+)([%％])/g, function() {
+        return this.convertIntegerPercent(parseInt(arguments[1]));
+    }.bind(this));
+    if (!param) return false;
+    if (param === 'hp%') {
+        condition = 'target.hp / target.mhp ' + condition;
+    } else if (param === 'mp%') {
+        condition = 'target.mp / target.mmp ' + condition;
+    } else {
+        condition = 'target[param]' + condition;
+    }
+    var group = this.getActionGroup();
+    var validTargets = [];
+    for (var i = 0; i < group.length; ++i) {
+        var target = group[i];
+        if (!target) continue;
+        if (eval(condition)) validTargets.push(target);
     }
     if (validTargets.length <= 0) return false;
     this.setProperTarget(validTargets);

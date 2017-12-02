@@ -83,6 +83,7 @@ Moghunter.v_enemy_skill = [];
 // ACTOR - BATTLE START
 // -----------------------------------------------------------------------
 Moghunter.v_actor_start[1] = ["v_toritoh_start"];
+Moghunter.v_actor_start[2] = ["v_serinu_start"];
 // -----------------------------------------------------------------------
 // ACTOR - BATTLE TURN
 // -----------------------------------------------------------------------
@@ -92,6 +93,7 @@ Moghunter.v_actor_turn[1] = [];
 // ACTOR - DEFAULT ACTION (Skill/ITEM)
 // -----------------------------------------------------------------------
 Moghunter.v_actor_default_action[1] = ["v_toritoh_atk_1","v_toritoh_atk_2"];
+Moghunter.v_actor_default_action[2] = ["v_serinu_atk_1","v_serinu_atk_2"];
 // -----------------------------------------------------------------------
 // ACTOR - SKILL
 // -----------------------------------------------------------------------
@@ -108,16 +110,18 @@ Moghunter.v_actor_skill[1] = {
 // ACTOR - DAMAGE
 // -----------------------------------------------------------------------
 Moghunter.v_actor_damage[1] = ["v_toritoh_damaged_1", "v_toritoh_damaged_2"];
-
+Moghunter.v_actor_damage[2] = ["v_serinu_damaged_1", "v_serinu_damaged_2", "v_serinu_damaged_3"];
 // -----------------------------------------------------------------------
 // ACTOR - DEAD
 // -----------------------------------------------------------------------
 Moghunter.v_actor_dead[1] = ["v_toritoh_dead"];
+Moghunter.v_actor_dead[2] = ["v_serinu_dead"];
 
 // -----------------------------------------------------------------------
 // ACTOR - VICTORY
 // -----------------------------------------------------------------------
 Moghunter.v_actor_victory[1] = ["v_toritoh_win"];
+Moghunter.v_actor_victory[2] = ["v_serinu_win"];
 
 
 // -----------------------------------------------------------------------

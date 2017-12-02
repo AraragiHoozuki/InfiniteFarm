@@ -877,5 +877,259 @@
       "hittype": null,
       "element": "gee"
     }]
+  },
+  "64": {
+    "name": "魔力消除",
+    "iname": "ENHANCER_PAS_1",
+    "icon": "jbe_enhancer",
+    "description": "受到伤害时20% ~ 40%概率使伤害源正面状态推进1回合",
+    "types": ["passive"],
+    "onDamage": "if(Math.random()*100 <= this.calcSkillLevelValue([20,40],53)) { source._states.forEach(function(state) { state.turnProgress(); }); }"
+  },
+  "65": {
+    "name": "魔力抵抗",
+    "iname": "ENHANCER_PAS_2",
+    "icon": "jbe_enhancer",
+    "description": "魔法防御提高15% ~ 30%",
+    "types": ["passive"],
+    "mults": {
+      "mdf": [15, 30]
+    }
+  },
+  "66": {
+    "name": "火附术",
+    "iname": "ENHANCER_UPPER_1",
+    "icon": "jbe_enhancer",
+    "description": "指定我方3回合火耐性提高15 ~ 30",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "PYROS_RESIST_UP", "turns": 3, "param":{"adds":{"pyros_resist": [15, 30]}}}
+    ]
+  },
+  "67": {
+    "name": "水附术",
+    "iname": "ENHANCER_UPPER_2",
+    "icon": "jbe_enhancer",
+    "description": "指定我方3回合水耐性提高15 ~ 30",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "HYDOR_RESIST_UP", "turns": 3, "param":{"adds":{"hydor_resist": [15, 30]}}}
+    ]
+  },
+  "68": {
+    "name": "风附术",
+    "iname": "ENHANCER_UPPER_3",
+    "icon": "jbe_enhancer",
+    "description": "指定我方3回合风耐性提高15 ~ 30",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "ANEMOS_RESIST_UP", "turns": 3, "param":{"adds":{"anemos_resist": [15, 30]}}}
+    ]
+  },
+  "69": {
+    "name": "地附术",
+    "iname": "ENHANCER_UPPER_4",
+    "icon": "jbe_enhancer",
+    "description": "指定我方3回合地耐性提高15 ~ 30",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "GEE_RESIST_UP", "turns": 3, "param":{"adds":{"gee_resist": [15, 30]}}}
+    ]
+  },
+  "70": {
+    "name": "光附术",
+    "iname": "ENHANCER_UPPER_5",
+    "icon": "jbe_enhancer",
+    "description": "指定我方3回合光耐性提高15 ~ 30",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "PHOS_RESIST_UP", "turns": 3, "param":{"adds":{"phos_resist": [15, 30]}}}
+    ]
+  },
+  "71": {
+    "name": "暗附术",
+    "iname": "ENHANCER_UPPER_6",
+    "icon": "jbe_enhancer",
+    "description": "指定我方3回合暗耐性提高15 ~ 30",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "EREBUS_RESIST_UP", "turns": 3, "param":{"adds":{"erebus_resist": [15, 30]}}}
+    ]
+  },
+  "72": {
+    "name": "命附术",
+    "iname": "ENHANCER_UPPER_7",
+    "icon": "jbe_enhancer",
+    "description": "消耗自身50%最大生命，指定我方HP回复（受消耗生命值加成）、3回合物理和魔法防御提高80% ~ 120%",
+    "types": ["heal", "statechange"],
+    "damages": [{
+      "base": "this.mhp / 2",
+      "rate": [0, 100],
+      "type": "heal",
+      "hittype": null,
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "PDF_UP", "turns": 3, "param":{"mults":{"pdf": [80, 120]}}},
+      {"iname": "MDF_UP", "turns": 3, "param":{"mults":{"mdf": [80, 120]}}}
+    ],
+    "script": "subject.gainHp(subject.mhp / 2);"
+  },
+  "73": {
+    "name": "力附术",
+    "iname": "ENHANCER_LOWER_1",
+    "icon": "jbe_enhancer",
+    "description": "指定我方2回合物理攻击提高30% ~ 60%",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "PDM_UP", "turns": 2, "param":{"mults":{"pdm": [30, 60]}}}
+    ]
+  },
+  "74": {
+    "name": "魔附术",
+    "iname": "ENHANCER_LOWER_2",
+    "icon": "jbe_enhancer",
+    "description": "指定我方2回合魔法攻击提高30% ~ 60%",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "MDM_UP", "turns": 2, "param":{"mults":{"mdm": [30, 60]}}}
+    ]
+  },
+  "75": {
+    "name": "鹰附术",
+    "iname": "ENHANCER_LOWER_3",
+    "icon": "jbe_enhancer",
+    "description": "指定我方2回合命中和闪避提高15% ~ 30%",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "HIT_UP", "turns": 2, "param":{"mults":{"hit": [15, 30]}}},
+      {"iname": "EVA_UP", "turns": 2, "param":{"mults":{"eva": [15, 30]}}}
+    ]
+  },
+  "76": {
+    "name": "打击达人",
+    "iname": "MONK_PAS_1",
+    "icon": "jbe_monk",
+    "description": "打击伤害提高10% ~ 20%",
+    "types": ["passive"],
+    "adds": {
+      "blow_assist": [10, 20]
+    }
+  },
+  "77": {
+    "name": "刚体",
+    "iname": "MONK_PAS_2",
+    "icon": "jbe_monk",
+    "description": "体质提高10% ~ 20%",
+    "types": ["passive"],
+    "mults": {
+      "CON": [10, 20]
+    }
+  },
+  "78": {
+    "name": "气功掌",
+    "iname": "MONK_UPPER_1",
+    "icon": "jbe_monk",
+    "description": "指定敌方90% ~ 120%打击物理伤害，50%概率附加2回合麻痹效果。",
+    "types": ["physical", "blow"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-10, 20],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "PARALYZED", "turns": 2}
+    ]
+  },
+  "79": {
+    "name": "乱拳",
+    "iname": "MONK_UPPER_2",
+    "icon": "jbe_monk",
+    "description": "随机敌方50% ~ 65%打击物理伤害，重复3次",
+    "types": ["physical", "blow"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-50, -35],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null
+    }]
+  },
+  "80": {
+    "name": "穿掌",
+    "iname": "MONK_UPPER_3",
+    "icon": "jbe_monk",
+    "description": "指定敌方90% ~ 120%打击物理伤害，无视50% ~ 80%的防御",
+    "types": ["physical", "blow"],
+    "idr": [50, 80],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-10, 25],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null
+    }]
+  },
+  "81": {
+    "name": "无双斗舞",
+    "iname": "MONK_UPPER_4",
+    "icon": "jbe_monk",
+    "description": "指定敌方160% ~ 200%打击物理伤害，人类特攻（+80%）",
+    "types": ["physical", "blow"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [60, 100],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null,
+      "tokkou": "人类",
+      "tokkou_rate": 80
+    }]
+  },
+  "82": {
+    "name": "蓄力",
+    "iname": "MONK_LOWER_1",
+    "icon": "jbe_monk",
+    "description": "自身2回合物理攻击提高100% ~ 150%",
+    "types": ["statechange"],
+    "enchants":[{
+      "iname": "PDM_UP", "turns": 2, "params": { "mults": { "pdm": [100, 150] }}
+    }]
+  },
+  "83": {
+    "name": "回旋踢",
+    "iname": "MONK_LOWER_2",
+    "icon": "jbe_monk",
+    "description": "敌方全体50% ~ 70%打击物理伤害、3回合闪避下降25%。",
+    "types": ["physical", "blow"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-50, -30],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null
+    }],
+    "enchants":[{
+      "iname": "EVA_DOWN", "turns": 3, "params": { "mults": { "eva": -25 }}
+    }]
+  },
+  "84": {
+    "name": "正拳",
+    "iname": "MONK_LOWER_3",
+    "icon": "jbe_monk",
+    "description": "指定敌方60% ~ 70%打击物理伤害，50%眩晕2回合",
+    "types": ["physical", "blow"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-40, -30],
+      "type": "phy",
+      "hittype": "blow",
+      "element": null
+    }],
+    "enchants":[{
+      "iname": "STUN", "turns": 2
+    }]
   }
 }
