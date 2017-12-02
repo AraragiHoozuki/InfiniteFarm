@@ -265,6 +265,9 @@ Window_SkillList.prototype.maxCols = function() {
 Window_SkillList.prototype.spacing = function() {
     return 8;
 };*/
+Window_SkillList.prototype.maxCols = function() {
+	return 3;
+};
 
 Window_SkillList.prototype.includes = function(item) {
     return item && !item.types.contains('passive');

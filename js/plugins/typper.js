@@ -17,3 +17,9 @@ state === state 4: Skill 50
 Random 50%: Skill 61
 party alive members >= 3: Skill 63
 Always: Skill 60
+
+
+Random 25%: Skill 55
+Random 40%: Skill 56
+Random 60%: Skill 58
+Random 90%: Skill 59

@@ -188,6 +188,16 @@ Game_Action.prototype.applyCritical = function(damage) {
     return damage * (150 + this.item().criBonus) / 100;
 };
 
+Game_Action.prototype.gainDrainedHp = function(value) {
+	if (this.item().drain) {
+		var gainTarget = this.subject();
+		if (this._reflectionTarget !== undefined) {
+			gainTarget = this._reflectionTarget;
+		}
+		gainTarget.gainHp(value * this.item().drain / 100);
+	}
+};
+
 //Game_BattlerBase action and counter ==================================================================================
 Game_BattlerBase.prototype.instantAction = function(skillId, target) {
     var index;

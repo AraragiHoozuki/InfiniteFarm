@@ -97,5 +97,13 @@
         "type": "material",
         "piece": true,
         "description": "合成千本樱的必要材料。"
+    },
+    "11": {
+        "name": "经验宝石（小）",
+        "iname": "IT_EXP_GEM_S",
+        "icon": "it_exp_gem",
+        "rarity": "silver",
+        "description": "目标获得1000点经验。",
+        "script": "target.gainExp(1000);"
     }
 }

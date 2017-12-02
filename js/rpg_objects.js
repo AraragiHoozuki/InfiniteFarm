@@ -3165,8 +3165,10 @@ Game_Battler.prototype.removeCurrentAction = function() {
 Game_Battler.prototype.setLastTarget = function(target) {
     if (target) {
         this._lastTargetIndex = target.index();
+        this._lastTarget = target;
     } else {
         this._lastTargetIndex = 0;
+        this._lastTarget = null;
     }
 };
 

@@ -273,7 +273,7 @@
     "flavour": "穿越时空就为了放个法术……",
     "types": ["passive"],
     "cap": 8,
-    "onActionEnd": "if(action.hasMagicDamage() && Math.random()*100 <= this.calcSkillLevelValue([10,40],19) && this.mp >= acton.item().mpCost) {this.instantAction(action.item().id, target);}"
+    "onActionEnd": "if(action.hasMagicDamage() && Math.randomInt(100) <= this.calcSkillLevelValue([10,40],19) && this.mp >= action.item().mpCost) { this.instantAction(action.item().id, target);}"
   },
   "20": {
     "name": "魔能爆轰",
@@ -1130,6 +1130,68 @@
     }],
     "enchants":[{
       "iname": "STUN", "turns": 2
+    }]
+  },
+  "85": {
+    "name": "超载",
+    "iname": "DARK_KNIGHT_PAS_1",
+    "icon": "jbe_dark_knight",
+    "description": "物理魔法攻击提高30% ~ 50%，物理魔法防御下降80% ~ 60%",
+    "types": ["passive"],
+    "mults":{
+      "pdm": [30, 50],
+      "mdm":[30, 50],
+      "pdf":[-80, -60],
+      "mdf":[-80, -60]
+    }
+  },
+  "86": {
+    "name": "黑暗复仇",
+    "iname": "DARK_KNIGHT_PAS_2",
+    "icon": "jbe_dark_knight",
+    "description": "受到伤害时20% ~ 30%概率反击，并使自己进入3回合愤怒状态",
+    "types": ["passive"],
+    "onDamage": "if (Math.randomInt(100) <= this.calcSkillLevelValue([20,30],86)) { this.counter(action, 87); } "
+  },
+  "87": {
+    "name": "黑暗复仇（反击）",
+    "iname": "DARK_KNIGHT_PAS_2_COUNTER",
+    "icon": "jbe_dark_knight",
+    "description": "",
+    "types": ["physical", "slash"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": 0,
+      "type": "phy",
+      "hittype": "slash",
+      "element": null
+    }],
+    "enchants":[{
+      "iname": "RAGE", "self": true, "turns": 3
+    }]
+  },
+  "88": {
+    "name": "黑暗血統",
+    "iname": "DARK_KNIGHT_PAS_3",
+    "icon": "jbe_dark_knight",
+    "description": "生命上限提高10% ~ 20%",
+    "types": ["passive"],
+    "mults":{
+      "mhp": [10, 20]
+    }
+  },
+  "89": {
+    "name": "黑暗使者",
+    "iname": "DARK_KNIGHT_UPPER_1",
+    "icon": "jbe_dark_knight",
+    "description": "敌方全体90% ~ 110%暗属性物理伤害",
+    "types": ["physical", "erebus"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [-10, 10],
+      "type": "phy",
+      "hittype": null,
+      "element": "erebus"
     }]
   }
 }

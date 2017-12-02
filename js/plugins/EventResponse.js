@@ -172,7 +172,7 @@ BattleManager.updateAction = function() {
 EventResponse.BattleManager_endAction = BattleManager.endAction;
 BattleManager.endAction = function() {
     EventResponse.BattleManager_endAction.call(this);
-    this._subject.onActionEnd(this._action, this._subject._lastTargetIndex);
+    this._subject.onActionEnd(this._action, this._subject._lastTarget);
 };
 
 Game_Battler.prototype.onActionEnd = function(action, target) {

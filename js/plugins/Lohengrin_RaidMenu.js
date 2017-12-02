@@ -8,7 +8,7 @@ Lohengrin.RM.TestRaidList = [
 ];
 
 Lohengrin.RM.GrowRaidList = [
-	{name:'经验本A', troopId:7, levels:[[10],[10],[10],[10]]}
+	{name:'经验本A', troopId:7, levels:[[10,10,10],[20,20,20],[30,30,30],[40,40,40]]}
 ];
 
 Lohengrin.RM.UnitRaidList = [

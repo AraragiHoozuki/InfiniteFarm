@@ -40,7 +40,11 @@
         "icon": "state_rage",
         "rule": "unique",
         "negative": true,
-        "obstinacy": 0
+        "obstinacy": 0,
+        "mults": {
+            "pdm": 50,
+            "mdm": 50
+        }
     },
     "8": {
         "name": "麻痹",

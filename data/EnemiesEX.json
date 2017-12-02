@@ -78,6 +78,7 @@
             "pdf": 3,
             "mdf": 9
         },
+        "passives": [19],
         "drops": [
             {"iname":"IT_HEAL_POTION", "type":"item", "amount":2, "bp":20, "mpl": 20},
             {"iname":"IT_MANA_POTION", "type":"item", "amount":3, "bp":20, "mpl": 20},
@@ -153,7 +154,30 @@
             "mdf": 3
         },
         "drops": [
+            {"iname":"IT_EXP_GEM_S", "type":"item", "amount":3, "bp":50, "mpl": 20},
+            {"iname":"IT_EXP_GEM_S", "type":"item", "amount":2, "bp":10, "mpl": 50},
+            {"iname":"IT_EXP_GEM_S", "type":"item", "amount":1, "bp":-5, "mpl": 70}
         ],
         "passives": [43]
+    },
+    "8": {
+        "name": "安妮洛丝",
+        "iname": "GROW_EXP_1_ANEOROZ",
+        "tags": ["人类", "女性"],
+        "curve": "Normal",
+        "lv": 10,
+        "params": {
+            "STR": [12, 291],
+            "FIN": [22, 400],
+            "CON": [35, 622],
+            "INT": [32, 718],
+            "WIL": [30, 575],
+            "WIT": [16, 370],
+            "pdf": 1,
+            "mdf": 3
+        },
+        "drops": [
+        ],
+        "passives": [19, 52, 53]
     }
 }
