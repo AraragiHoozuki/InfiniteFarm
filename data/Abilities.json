@@ -126,15 +126,29 @@
   "MONK_UPPER": {
     "name": "斗技",
     "iname": "MONK_UPPER",
-    "locked": false,
+    "locked": true,
     "icon": "jbe_monk",
     "skills": [78, 79, 80, 81]
   },
   "MONK_LOWER": {
     "name": "基本斗技",
     "iname": "MONK_LOWER",
-    "locked": true,
+    "locked": false,
     "icon": "jbe_monk",
     "skills": [82, 83, 84]
+  },
+  "DARK_KNIGHT_UPPER": {
+    "name": "漆黑剑",
+    "iname": "DARK_KNIGHT_UPPER",
+    "locked": true,
+    "icon": "jbe_dark_knight",
+    "skills": [89, 90, 91, 92]
+  },
+  "DARK_KNIGHT_LOWER": {
+    "name": "基本漆黑剑",
+    "iname": "DARK_KNIGHT_LOWER",
+    "locked": false,
+    "icon": "jbe_dark_knight",
+    "skills": [93, 94, 95]
   }
 }

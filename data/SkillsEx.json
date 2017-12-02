@@ -1095,7 +1095,7 @@
     "description": "自身2回合物理攻击提高100% ~ 150%",
     "types": ["statechange"],
     "enchants":[{
-      "iname": "PDM_UP", "turns": 2, "params": { "mults": { "pdm": [100, 150] }}
+      "iname": "PDM_UP", "turns": 2, "param": { "mults": { "pdm": [100, 150] }}
     }]
   },
   "83": {
@@ -1112,7 +1112,7 @@
       "element": null
     }],
     "enchants":[{
-      "iname": "EVA_DOWN", "turns": 3, "params": { "mults": { "eva": -25 }}
+      "iname": "EVA_DOWN", "turns": 3, "param": { "mults": { "eva": -25 }}
     }]
   },
   "84": {
@@ -1174,10 +1174,13 @@
     "name": "黑暗血統",
     "iname": "DARK_KNIGHT_PAS_3",
     "icon": "jbe_dark_knight",
-    "description": "生命上限提高10% ~ 20%",
+    "description": "生命上限提高10% ~ 20%, 技能生命消耗减少10% ~ 20%",
     "types": ["passive"],
-    "mults":{
+    "mults": {
       "mhp": [10, 20]
+    },
+    "adds": {
+      "hp_cost_rate": [-10, -20]
     }
   },
   "89": {
@@ -1193,5 +1196,108 @@
       "hittype": null,
       "element": "erebus"
     }]
+  },
+  "90": {
+    "name": "恶魔斩",
+    "iname": "DARK_KNIGHT_UPPER_2",
+    "icon": "jbe_dark_knight",
+    "description": "消耗20%生命，敌方全体120% ~ 160%暗属性斩击物理伤害",
+    "types": ["physical", "erebus"],
+    "hpCost": 20,
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [20, 60],
+      "type": "phy",
+      "hittype": "slash",
+      "element": "erebus"
+    }]
+  },
+  "91": {
+    "name": "灵魂献祭",
+    "iname": "DARK_KNIGHT_UPPER_3",
+    "icon": "jbe_dark_knight",
+    "description": "消耗30%生命，指定敌方160% ~ 220%暗属性斩击物理伤害、每个死亡的友方增加20%的基础伤害",
+    "types": ["physical", "erebus"],
+    "hpCost": 30,
+    "damages": [{
+      "base": "this.pdm * (1 + (this.isActor()?$gameParty:$gameTroop).deadMembers.length * 0.2)",
+      "rate": [60, 120],
+      "type": "phy",
+      "hittype": "slash",
+      "element": "erebus"
+    }]
+  },
+  "92": {
+    "name": "猛兽之力",
+    "iname": "DARK_KNIGHT_UPPER_4",
+    "icon": "jbe_dark_knight",
+    "description": "指定敌方100% ~ 150%斩击物理伤害，自身3回合物理魔法攻击提高20% ~ 30%，防御下降20%。",
+    "types": ["physical"],
+    "damages": [{
+      "base": "this.pdm",
+      "rate": [0, 50],
+      "type": "phy",
+      "hittype": "slash",
+      "element": null
+    }],
+    "enchants": [
+      {"iname": "PDM_UP", "self": true, "turns": 3, "param": {"mults": {"pdm": [20, 30]}}},
+      {"iname": "MDM_UP", "self": true, "turns": 3, "param": {"mults": {"mdm": [20, 30]}}},
+      {"iname": "PDF_DOWN", "self": true, "turns": 3, "param": {"mults": {"pdf": -20}}},
+      {"iname": "MDF_DOWN", "self": true, "turns": 3, "param": {"mults": {"mdf": -20}}}
+    ]
+  },
+  "93": {
+    "name": "生命侵蚀",
+    "iname": "DARK_KNIGHT_LOWER_1",
+    "icon": "jbe_dark_knight",
+    "description": "指定敌方50% ~ 80%暗属性魔法伤害，100%吸血",
+    "types": ["magic"],
+    "drain": 100,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-50, -20],
+      "type": "mag",
+      "hittype": null,
+      "element": "erebus"
+    }]
+  },
+  "94": {
+    "name": "魔力侵蚀",
+    "iname": "DARK_KNIGHT_LOWER_2",
+    "icon": "jbe_dark_knight",
+    "description": "指定敌方20% ~ 30%魔攻MP伤害，吸魔",
+    "types": ["magic"],
+    "drain": 100,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-80, -70],
+      "type": "mag",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "95": {
+    "name": "报复之刃",
+    "iname": "DARK_KNIGHT_LOWER_3",
+    "icon": "jbe_dark_knight",
+    "description": "指定敌方100% ~ 140%斩击物理伤害，伤害附加自身缺失生命的50% ~ 85%",
+    "types": ["physical", "slash"],
+    "damages": [
+      {
+        "base": "this.pdm",
+        "rate": [0, 40],
+        "type": "phy",
+        "hittype": "slash",
+        "element": null
+      },
+      {
+        "base": "this.mhp - this.hp",
+        "rate": [-50, -15],
+        "type": "phy",
+        "hittype": "slash",
+        "element": null
+      }
+    ]
   }
 }

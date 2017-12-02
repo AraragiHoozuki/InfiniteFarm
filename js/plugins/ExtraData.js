@@ -49,6 +49,7 @@ DataManager.isDatabaseLoaded = function() {
         }
     }
     // combine extra data
+    var  name;
     for (var i = 0; i < this._databaseFiles.length; i++) {
         name = this._databaseFiles[i].name;
         if (window[name+"Ex"]) {
@@ -117,7 +118,12 @@ Object.defineProperties(Game_BattlerBase.prototype, {
     
     //states resist
     death_sentence_resist: { get: function() { return this.getExtraStatus("death_sentence_resist"); }, configurable: true },
-    POISON_resist: { get: function() { return this.getExtraStatus("POISON_resist"); }, configurable: true }
+    POISON_resist: { get: function() { return this.getExtraStatus("POISON_resist"); }, configurable: true },
+
+
+    // other params
+    //技能hp消耗倍率
+    hp_cost_rate: { get: function() { return (100 + this.getExtraStatus("hp_cost_rate")) / 100; }, configurable: true }
 });
 
 Game_Actor.prototype.calcGrowValue = function(status) {

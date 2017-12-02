@@ -3,22 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="9f513348-3fa5-48f7-9b62-b7c8936df1bc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/data/Enemies.json" afterPath="$PROJECT_DIR$/data/Enemies.json" />
-      <change beforePath="$PROJECT_DIR$/data/EnemiesEX.json" afterPath="$PROJECT_DIR$/data/EnemiesEX.json" />
-      <change beforePath="$PROJECT_DIR$/data/Items.json" afterPath="$PROJECT_DIR$/data/Items.json" />
-      <change beforePath="$PROJECT_DIR$/data/ItemsEx.json" afterPath="$PROJECT_DIR$/data/ItemsEx.json" />
+      <change beforePath="$PROJECT_DIR$/data/Abilities.json" afterPath="$PROJECT_DIR$/data/Abilities.json" />
+      <change beforePath="$PROJECT_DIR$/data/ActorsEx.json" afterPath="$PROJECT_DIR$/data/ActorsEx.json" />
+      <change beforePath="$PROJECT_DIR$/data/Animations.json" afterPath="$PROJECT_DIR$/data/Animations.json" />
+      <change beforePath="$PROJECT_DIR$/data/Classes.json" afterPath="$PROJECT_DIR$/data/Classes.json" />
+      <change beforePath="$PROJECT_DIR$/data/ClassesEx.json" afterPath="$PROJECT_DIR$/data/ClassesEx.json" />
       <change beforePath="$PROJECT_DIR$/data/Skills.json" afterPath="$PROJECT_DIR$/data/Skills.json" />
       <change beforePath="$PROJECT_DIR$/data/SkillsEx.json" afterPath="$PROJECT_DIR$/data/SkillsEx.json" />
-      <change beforePath="$PROJECT_DIR$/data/StatesEx.json" afterPath="$PROJECT_DIR$/data/StatesEx.json" />
       <change beforePath="$PROJECT_DIR$/data/System.json" afterPath="$PROJECT_DIR$/data/System.json" />
-      <change beforePath="$PROJECT_DIR$/data/Troops.json" afterPath="$PROJECT_DIR$/data/Troops.json" />
+      <change beforePath="$PROJECT_DIR$/img/icons/iconmake.psd" afterPath="$PROJECT_DIR$/img/icons/iconmake.psd" />
       <change beforePath="$PROJECT_DIR$/js/plugins/BattleSystem.js" afterPath="$PROJECT_DIR$/js/plugins/BattleSystem.js" />
       <change beforePath="$PROJECT_DIR$/js/plugins/EventResponse.js" afterPath="$PROJECT_DIR$/js/plugins/EventResponse.js" />
-      <change beforePath="$PROJECT_DIR$/js/plugins/Icon.js" afterPath="$PROJECT_DIR$/js/plugins/Icon.js" />
-      <change beforePath="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" afterPath="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" />
-      <change beforePath="$PROJECT_DIR$/js/plugins/UIBase.js" afterPath="$PROJECT_DIR$/js/plugins/UIBase.js" />
-      <change beforePath="$PROJECT_DIR$/js/plugins/typper.js" afterPath="$PROJECT_DIR$/js/plugins/typper.js" />
+      <change beforePath="$PROJECT_DIR$/js/plugins/ExtraData.js" afterPath="$PROJECT_DIR$/js/plugins/ExtraData.js" />
       <change beforePath="$PROJECT_DIR$/js/rpg_objects.js" afterPath="$PROJECT_DIR$/js/rpg_objects.js" />
+      <change beforePath="$PROJECT_DIR$/save/file1.rpgsave" afterPath="$PROJECT_DIR$/save/file1.rpgsave" />
+      <change beforePath="$PROJECT_DIR$/save/global.rpgsave" afterPath="$PROJECT_DIR$/save/global.rpgsave" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="BattleSystem.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+            <state relative-caret-position="562">
+              <caret line="207" column="5" lean-forward="false" selection-start-line="207" selection-start-column="5" selection-end-line="207" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -48,18 +47,8 @@
       <file leaf-file-name="EventResponse.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/plugins/EventResponse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lohengrin_RaidMenu.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="477">
+              <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -68,18 +57,18 @@
       <file leaf-file-name="typper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/plugins/typper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="437">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SkillsEx.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SkillsEx.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="1183" column="19" lean-forward="true" selection-start-line="1183" selection-start-column="19" selection-end-line="1183" selection-end-column="19" />
+            <state relative-caret-position="469">
+              <caret line="1044" column="4" lean-forward="false" selection-start-line="1044" selection-start-column="4" selection-end-line="1044" selection-end-column="4" />
               <folding>
                 <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
                 <element signature="e#74#218#0" expanded="false" />
@@ -298,32 +287,36 @@
                 <element signature="e#27813#27988#0" expanded="false" />
                 <element signature="e#27814#27987#0" expanded="false" />
                 <element signature="n#!!block;n#82#0;n#!!top" expanded="false" />
-                <element signature="e#28165#28255#0" expanded="false" />
-                <element signature="e#28166#28254#0" expanded="false" />
+                <element signature="e#28165#28254#0" expanded="false" />
                 <element signature="n#!!block;n#83#0;n#!!top" expanded="false" />
-                <element signature="e#28447#28576#0" expanded="false" />
-                <element signature="e#28448#28575#0" expanded="false" />
-                <element signature="e#28593#28678#0" expanded="false" />
-                <element signature="e#28594#28677#0" expanded="false" />
+                <element signature="e#28446#28575#0" expanded="false" />
+                <element signature="e#28447#28574#0" expanded="false" />
                 <element signature="n#!!block;n#84#0;n#!!top" expanded="false" />
-                <element signature="e#28866#28995#0" expanded="false" />
-                <element signature="e#28867#28994#0" expanded="false" />
-                <element signature="e#29012#29055#0" expanded="false" />
-                <element signature="e#29013#29054#0" expanded="false" />
+                <element signature="e#28864#28993#0" expanded="false" />
+                <element signature="e#28865#28992#0" expanded="false" />
+                <element signature="e#29010#29053#0" expanded="false" />
+                <element signature="e#29011#29052#0" expanded="false" />
                 <element signature="n#!!block;n#85#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#86#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#87#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#88#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#89#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#90#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#91#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#92#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#93#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#94#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#95#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abilities.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Abilities.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/Abilities.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+            <state relative-caret-position="171">
+              <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
               <folding>
                 <element signature="n#!!block;n#TALENT#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#PASSIVE#0;n#!!top" expanded="false" />
@@ -345,6 +338,29 @@
                 <element signature="n#!!block;n#ENHANCER_LOWER#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#MONK_UPPER#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#MONK_LOWER#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#DARK_KNIGHT_UPPER#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#DARK_KNIGHT_LOWER#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActorsEx.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding>
+                <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#params#0;n#!!block;n#1#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#2#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#params#0;n#!!block;n#2#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#3#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#params#0;n#!!block;n#3#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#4#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#params#0;n#!!block;n#4#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#5#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#params#0;n#!!block;n#5#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -353,8 +369,8 @@
       <file leaf-file-name="ClassesEx.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/ClassesEx.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="277" column="5" lean-forward="false" selection-start-line="277" selection-start-column="5" selection-end-line="277" selection-end-column="5" />
+            <state relative-caret-position="228">
+              <caret line="305" column="1" lean-forward="false" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#paramRates#0;n#!!block;n#1#0;n#!!top" expanded="false" />
@@ -396,6 +412,7 @@
                 <element signature="n#!!block;n#formulas#0;n#!!block;n#10#0;n#!!top" expanded="false" />
                 <element signature="e#6599#6799#0" expanded="false" />
                 <element signature="e#6613#6789#0" expanded="false" />
+                <element signature="n#!!block;n#11#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -443,8 +460,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.content</find>
-      <find>drawText</find>
       <find>_windowSpriteContainer</find>
       <find>.move</find>
       <find>Window.move</find>
@@ -473,6 +488,8 @@
       <find>tokkou</find>
       <find>gainExp</find>
       <find>gain</find>
+      <find>statesExchange</find>
+      <find>paySkillCost</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -500,28 +517,28 @@
         <option value="$PROJECT_DIR$/js/plugins/UI_SkillScene.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_EquipScene.js" />
         <option value="$PROJECT_DIR$/js/plugins/SkillLevel.js" />
-        <option value="$PROJECT_DIR$/js/plugins/ExtraData.js" />
         <option value="$PROJECT_DIR$/js/plugins/MasterState.js" />
         <option value="$PROJECT_DIR$/js/rpg_scenes.js" />
-        <option value="$PROJECT_DIR$/data/ActorsEx.json" />
         <option value="$PROJECT_DIR$/js/plugins/MOG_BattleCry.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_MainMenu.js" />
         <option value="$PROJECT_DIR$/js/plugins/UI_StatusScene.js" />
         <option value="$PROJECT_DIR$/js/plugins/Lohengrin_MasterEnemy.js" />
         <option value="$PROJECT_DIR$/js/plugins/YEP_BattleAICore.js" />
-        <option value="$PROJECT_DIR$/data/Abilities.json" />
-        <option value="$PROJECT_DIR$/data/ClassesEx.json" />
         <option value="$PROJECT_DIR$/js/rpg_windows.js" />
         <option value="$PROJECT_DIR$/js/plugins/UIBase.js" />
         <option value="$PROJECT_DIR$/js/plugins/Icon.js" />
-        <option value="$PROJECT_DIR$/js/plugins/BattleSystem.js" />
-        <option value="$PROJECT_DIR$/js/plugins/EventResponse.js" />
-        <option value="$PROJECT_DIR$/js/rpg_objects.js" />
         <option value="$PROJECT_DIR$/js/plugins/typper.js" />
         <option value="$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js" />
         <option value="$PROJECT_DIR$/data/ItemsEx.json" />
         <option value="$PROJECT_DIR$/data/EnemiesEX.json" />
         <option value="$PROJECT_DIR$/data/StatesEx.json" />
+        <option value="$PROJECT_DIR$/js/plugins/ExtraData.js" />
+        <option value="$PROJECT_DIR$/js/plugins/EventResponse.js" />
+        <option value="$PROJECT_DIR$/js/rpg_objects.js" />
+        <option value="$PROJECT_DIR$/js/plugins/BattleSystem.js" />
+        <option value="$PROJECT_DIR$/data/ClassesEx.json" />
+        <option value="$PROJECT_DIR$/data/Abilities.json" />
+        <option value="$PROJECT_DIR$/data/ActorsEx.json" />
         <option value="$PROJECT_DIR$/data/SkillsEx.json" />
       </list>
     </option>
@@ -533,10 +550,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="295" />
-    <option name="y" value="88" />
+    <option name="x" value="271" />
+    <option name="y" value="75" />
     <option name="width" value="1610" />
-    <option name="height" value="961" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -706,12 +723,12 @@
       <workItem from="1512058535096" duration="4416000" />
       <workItem from="1512107932984" duration="18912000" />
       <workItem from="1512147387805" duration="1748000" />
-      <workItem from="1512182529756" duration="17073000" />
+      <workItem from="1512182529756" duration="26455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366145000" />
+    <option name="totallyTimeSpent" value="375527000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,7 +740,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="295" y="88" width="1610" height="961" extended-state="0" />
+    <frame x="271" y="75" width="1610" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15772669" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -733,9 +750,9 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630274" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17840983" sideWeight="0.4955947" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17816092" sideWeight="0.4955947" order="2" side_tool="false" content_ui="tabs" x="316" y="191" width="279" height="793" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986793" sideWeight="0.50440526" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986793" sideWeight="0.50440526" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -939,25 +956,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/MasterState.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/YEP_ItemSynthesis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="1504" column="27" lean-forward="false" selection-start-line="1504" selection-start-column="11" selection-end-line="1504" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/ExtraData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1014,14 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/UIBase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1064,38 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/rpg_objects.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="3170" column="32" lean-forward="false" selection-start-line="3170" selection-start-column="32" selection-end-line="3170" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="1871" column="32" lean-forward="true" selection-start-line="1871" selection-start-column="32" selection-end-line="1871" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/EventResponse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="191" column="29" lean-forward="false" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/Items.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1112,10 +1075,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/ItemsEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#2#0;n#!!top" expanded="false" />
+            <element signature="e#400#548#0" expanded="false" />
+            <element signature="e#401#547#0" expanded="false" />
+            <element signature="n#!!block;n#3#0;n#!!top" expanded="false" />
+            <element signature="e#744#892#0" expanded="false" />
+            <element signature="e#745#891#0" expanded="false" />
+            <element signature="n#!!block;n#4#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#5#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#6#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#7#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#8#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#9#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#10#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#11#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/MasterState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/YEP_BattleEngineCore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="3445" column="32" lean-forward="false" selection-start-line="3445" selection-start-column="32" selection-end-line="3445" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/ExtraData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="125" column="94" lean-forward="false" selection-start-line="125" selection-start-column="94" selection-end-line="125" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/rpg_objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="1782" column="0" lean-forward="false" selection-start-line="1782" selection-start-column="0" selection-end-line="1790" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/BattleSystem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="207" column="5" lean-forward="false" selection-start-line="207" selection-start-column="5" selection-end-line="207" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/EnemiesEX.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="182" column="1" lean-forward="false" selection-start-line="182" selection-start-column="1" selection-end-line="182" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#1#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#2#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#2#0;n#!!top" expanded="false" />
+            <element signature="e#794#1316#0" expanded="false" />
+            <element signature="n#!!block;n#3#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#3#0;n#!!top" expanded="false" />
+            <element signature="e#1737#2024#0" expanded="false" />
+            <element signature="n#!!block;n#4#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#4#0;n#!!top" expanded="false" />
+            <element signature="e#2470#2918#0" expanded="false" />
+            <element signature="n#!!block;n#5#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#5#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#formulas#0;n#!!block;n#5#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#6#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#6#0;n#!!top" expanded="false" />
+            <element signature="e#4446#4457#0" expanded="false" />
+            <element signature="n#!!block;n#7#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#7#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#8#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins/EventResponse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ActorsEx.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#1#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#2#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#2#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#3#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#3#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#4#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#4#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#5#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#params#0;n#!!block;n#5#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/ClassesEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="277" column="5" lean-forward="false" selection-start-line="277" selection-start-column="5" selection-end-line="277" selection-end-column="5" />
+        <state relative-caret-position="228">
+          <caret line="305" column="1" lean-forward="false" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#paramRates#0;n#!!block;n#1#0;n#!!top" expanded="false" />
@@ -1157,120 +1256,23 @@
             <element signature="n#!!block;n#formulas#0;n#!!block;n#10#0;n#!!top" expanded="false" />
             <element signature="e#6599#6799#0" expanded="false" />
             <element signature="e#6613#6789#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ItemsEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#2#0;n#!!top" expanded="false" />
-            <element signature="e#400#548#0" expanded="false" />
-            <element signature="e#401#547#0" expanded="false" />
-            <element signature="n#!!block;n#3#0;n#!!top" expanded="false" />
-            <element signature="e#744#892#0" expanded="false" />
-            <element signature="e#745#891#0" expanded="false" />
-            <element signature="n#!!block;n#4#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#5#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#6#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#7#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#8#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#9#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#10#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#11#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/EnemiesEX.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="182" column="1" lean-forward="false" selection-start-line="182" selection-start-column="1" selection-end-line="182" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#1#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#2#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#2#0;n#!!top" expanded="false" />
-            <element signature="e#794#1316#0" expanded="false" />
-            <element signature="n#!!block;n#3#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#3#0;n#!!top" expanded="false" />
-            <element signature="e#1737#2024#0" expanded="false" />
-            <element signature="n#!!block;n#4#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#4#0;n#!!top" expanded="false" />
-            <element signature="e#2470#2918#0" expanded="false" />
-            <element signature="n#!!block;n#5#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#5#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#formulas#0;n#!!block;n#5#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#6#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#6#0;n#!!top" expanded="false" />
-            <element signature="e#4446#4457#0" expanded="false" />
-            <element signature="n#!!block;n#7#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#params#0;n#!!block;n#7#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#8#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/StatesEx.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins/typper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="437">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins/Lohengrin_RaidMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Abilities.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#TALENT#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#PASSIVE#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#TEMPLAR_KNIGHT_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#TEMPLAR_KNIGHT_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#BISHOP_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#BISHOP_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#TRICKER_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#TRICKER_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#KENGOU_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#KENGOU_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#HOLY_KNIGHT_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#HOLY_KNIGHT_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#PHARMACIST_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#PHARMACIST_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#MAGE_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#MAGE_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#ENHANCER_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#ENHANCER_LOWER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#MONK_UPPER#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#MONK_LOWER#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/SkillsEx.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="1183" column="19" lean-forward="true" selection-start-line="1183" selection-start-column="19" selection-end-line="1183" selection-end-column="19" />
+        <state relative-caret-position="469">
+          <caret line="1044" column="4" lean-forward="false" selection-start-line="1044" selection-start-column="4" selection-end-line="1044" selection-end-column="4" />
           <folding>
             <element signature="n#!!block;n#1#0;n#!!top" expanded="false" />
             <element signature="e#74#218#0" expanded="false" />
@@ -1489,22 +1491,57 @@
             <element signature="e#27813#27988#0" expanded="false" />
             <element signature="e#27814#27987#0" expanded="false" />
             <element signature="n#!!block;n#82#0;n#!!top" expanded="false" />
-            <element signature="e#28165#28255#0" expanded="false" />
-            <element signature="e#28166#28254#0" expanded="false" />
+            <element signature="e#28165#28254#0" expanded="false" />
             <element signature="n#!!block;n#83#0;n#!!top" expanded="false" />
-            <element signature="e#28447#28576#0" expanded="false" />
-            <element signature="e#28448#28575#0" expanded="false" />
-            <element signature="e#28593#28678#0" expanded="false" />
-            <element signature="e#28594#28677#0" expanded="false" />
+            <element signature="e#28446#28575#0" expanded="false" />
+            <element signature="e#28447#28574#0" expanded="false" />
             <element signature="n#!!block;n#84#0;n#!!top" expanded="false" />
-            <element signature="e#28866#28995#0" expanded="false" />
-            <element signature="e#28867#28994#0" expanded="false" />
-            <element signature="e#29012#29055#0" expanded="false" />
-            <element signature="e#29013#29054#0" expanded="false" />
+            <element signature="e#28864#28993#0" expanded="false" />
+            <element signature="e#28865#28992#0" expanded="false" />
+            <element signature="e#29010#29053#0" expanded="false" />
+            <element signature="e#29011#29052#0" expanded="false" />
             <element signature="n#!!block;n#85#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#86#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#87#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#88#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#89#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#90#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#91#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#92#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#93#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#94#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#95#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Abilities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!block;n#TALENT#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#PASSIVE#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#TEMPLAR_KNIGHT_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#TEMPLAR_KNIGHT_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#BISHOP_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#BISHOP_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#TRICKER_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#TRICKER_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#KENGOU_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#KENGOU_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#HOLY_KNIGHT_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#HOLY_KNIGHT_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#PHARMACIST_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#PHARMACIST_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#MAGE_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#MAGE_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#ENHANCER_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#ENHANCER_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#MONK_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#MONK_LOWER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#DARK_KNIGHT_UPPER#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#DARK_KNIGHT_LOWER#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

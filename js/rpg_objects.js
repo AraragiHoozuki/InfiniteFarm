@@ -1760,9 +1760,9 @@ Game_Action.prototype.executeHpDamage = function(target, value) {
 };
 
 Game_Action.prototype.executeMpDamage = function(target, value) {
-    if (!this.isMpRecover()) {
+    /*if (!this.isMpRecover()) {
         value = Math.min(target.mp, value);
-    }
+    }*/
     if (value !== 0) {
         this.makeSuccess(target);
     }
@@ -2754,6 +2754,11 @@ Game_BattlerBase.prototype.isSkillWtypeOk = function(skill) {
     return true;
 };
 
+Game_BattlerBase.prototype.skillHpCost = function(skill) {
+    if (!skill.hpCost) return 0;
+	return Math.floor(this.mhp * skill.hpCost / 100 * this.hp_cost_rate);
+};
+
 Game_BattlerBase.prototype.skillMpCost = function(skill) {
     return Math.floor(skill.mpCost * this.mcr);
 };
@@ -2768,7 +2773,8 @@ Game_BattlerBase.prototype.canPaySkillCost = function(skill) {
 };
 
 Game_BattlerBase.prototype.paySkillCost = function(skill) {
-    if (!this.isActor()) return;
+    this._hp -= this.skillHpCost(skill);
+	if (!this.isActor()) return;
     this._mp -= this.skillMpCost(skill);
     this._tp -= this.skillTpCost(skill);
 };

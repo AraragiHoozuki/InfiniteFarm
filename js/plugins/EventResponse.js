@@ -55,9 +55,9 @@ Game_Battler.prototype.onDamage = function(action, value) {
 
 
 Game_Action.prototype.executeHpDamage = function(target, value) {
-    if (this.isDrain()) {
+    /*if (this.isDrain()) {
         value = Math.min(target.hp, value);
-    }
+    }*/
     this.makeSuccess(target);
     if (value > 0) {
         target.onDamage(this, value);

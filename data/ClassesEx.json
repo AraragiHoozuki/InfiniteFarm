@@ -275,5 +275,32 @@
                 "element": null
             }
         ]
+    },
+    "11": {
+        "name": "黑暗骑士",
+        "iname": "DARK_KNIGHT",
+        "icon": "jb_dark_knight",
+        "lockedAbility": "DARK_KNIGHT_UPPER",
+        "freeAbility": "DARK_KNIGHT_LOWER",
+        "passives": [85, 86, 88],
+        "paramRates": {
+            "STR": 10,
+            "FIN": -20,
+            "CON": 0,
+            "INT": 10,
+            "WIL": -10,
+            "WIT": 5,
+            "mmp": -50
+        },
+        "equipables": ["剑", "重甲", "中甲", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.pdm",
+                "rate": 0,
+                "type": "phy",
+                "hittype": "slash",
+                "element": null
+            }
+        ]
     }
 }

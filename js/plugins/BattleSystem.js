@@ -198,6 +198,16 @@ Game_Action.prototype.gainDrainedHp = function(value) {
 	}
 };
 
+Game_Action.prototype.gainDrainedMp = function(value) {
+	if (this.item().drain) {
+		var gainTarget = this.subject();
+		if (this._reflectionTarget !== undefined) {
+			gainTarget = this._reflectionTarget;
+		}
+		gainTarget.gainMp(value * this.item().drain / 100);
+	}
+};
+
 //Game_BattlerBase action and counter ==================================================================================
 Game_BattlerBase.prototype.instantAction = function(skillId, target) {
     var index;
