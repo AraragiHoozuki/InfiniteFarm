@@ -1076,7 +1076,7 @@
     "name": "无双斗舞",
     "iname": "MONK_UPPER_4",
     "icon": "jbe_monk",
-    "description": "指定敌方160% ~ 200%打击物理伤害，人类特攻（+80%）",
+    "description": "指定敌方160% ~ 200%打击物理伤害，人形特攻（+80%）",
     "types": ["physical", "blow"],
     "damages": [{
       "base": "this.pdm",
@@ -1084,7 +1084,7 @@
       "type": "phy",
       "hittype": "blow",
       "element": null,
-      "tokkou": "人类",
+      "tokkou": "人形",
       "tokkou_rate": 80
     }]
   },
@@ -1298,6 +1298,140 @@
         "hittype": "slash",
         "element": null
       }
+    ]
+  },
+  "96": {
+    "name": "烈火之鼓舞",
+    "iname": "ENEMY_FLAME_BOOST",
+    "icon": "jbe_warrior",
+    "description": "我方全员5回合物理与魔法攻击提高50%",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "PDM_UP", "turns": 5, "param": {"mults": { "pdm": 50}}},
+      {"iname": "MDM_UP", "turns": 5, "param": {"mults": { "mdm": 50}}}
+    ]
+  },
+  "97": {
+    "name": "返咒",
+    "iname": "CONJURER_PAS_1",
+    "icon": "jbe_conjurer",
+    "description": "受到伤害时20% ~ 50%概率回复50%魔攻的生命",
+    "types": ["passive"],
+    "onDamage": "if (Math.randomInt(100) <= this.calcSkillLevelValue([20,50], 97)) { this.gainHp(this.mdm / 2); }"
+  },
+  "98": {
+    "name": "咒愿",
+    "iname": "CONJURER_PAS_2",
+    "icon": "jbe_conjurer",
+    "description": "魔法攻击提高9% ~ 26%、火耐性提高10 ~ 20、火属性伤害提高10% ~ 20%",
+    "types": ["passive"],
+    "adds": {
+      "pyros_resist": [10, 20],
+      "pyros_assist": [10, 20]
+    },
+    "mults": {
+      "mdm": [9, 26]
+    }
+  },
+  "99": {
+    "name": "烛咒",
+    "iname": "CONJURER_UPPER_1",
+    "icon": "jbe_conjurer",
+    "description": "敌方全体120% ~ 180%火属性魔法伤害",
+    "types": ["magic", "pyros"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [20, 80],
+      "type": "mag",
+      "hittype": null,
+      "element": "pyros"
+    }]
+  },
+  "100": {
+    "name": "吸收",
+    "iname": "CONJURER_UPPER_2",
+    "icon": "jbe_conjurer",
+    "description": "敌方全体20% ~ 40%魔力吸收（魔攻系数）",
+    "types": ["magic"],
+    "drain": 100,
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [-80, -60],
+      "type": "mag",
+      "hittype": null,
+      "element": null
+    }]
+  },
+  "101": {
+    "name": "炎咒【火炮】",
+    "iname": "CONJURER_UPPER_3",
+    "icon": "jbe_conjurer",
+    "description": "指定敌方140% ~ 200%火属性魔法伤害，无视70%防御。",
+    "idr": 70,
+    "types": ["magic", "pyros"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [40, 100],
+      "type": "mag",
+      "hittype": null,
+      "element": "pyros"
+    }]
+  },
+  "102": {
+    "name": "炎咒【焦土】",
+    "iname": "CONJURER_UPPER_4",
+    "icon": "jbe_conjurer",
+    "description": "全体敌方4回合火耐性下降30 ~ 60",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "PYROS_RESIST_DOWN", "turn": 4, "param": {"adds": {"pyros_resist": [-30, -60]}}}
+    ]
+  },
+  "103": {
+    "name": "灭咒【毁天灭地】",
+    "iname": "CONJURER_UPPER_5",
+    "icon": "jbe_conjurer",
+    "description": "随机敌方100% ~ 150%火属性魔法伤害，4回合火耐性下降10 ~ 20（可叠加）",
+    "types": ["magic", "pyros"],
+    "enchants": [
+      {"iname": "BUFF_CONJURER_UPPER_5", "turn": 4, "param": {"adds": {"pyros_resist": [-10, -20]}}}
+    ]
+  },
+  "104": {
+    "name": "灯咒【回复】",
+    "iname": "CONJURER_LOWER_1",
+    "icon": "jbe_conjurer",
+    "description": "指定我方生命回复，效果受魔攻及火属性加成（也会被火耐性减免）、2回合水耐性提高5 ~ 15",
+    "types": ["heal"],
+    "damages": [{
+      "base": "this.mdm",
+      "rate": [35, 95],
+      "type": "heal",
+      "hittype": null,
+      "element": "pyros"
+    }],
+    "enchants": [
+      {"iname": "HYDOR_RESIST_UP", "turn": 2, "param": {"adds": {"hydor_resist": [5, 15]}}}
+    ]
+  },
+  "105": {
+    "name": "秘咒【冥想】",
+    "iname": "CONJURER_LOWER_2",
+    "icon": "jbe_conjurer",
+    "description": "自身2回合魔法攻击提高100% ~ 160%",
+    "types": ["heal"],
+    "enchants": [
+      {"iname": "MDM_UP", "turn": 2, "param": {"mults": {"mdm": [100, 160]}}}
+    ]
+  },
+  "106": {
+    "name": "灼咒【专注】",
+    "iname": "CONJURER_LOWER_2",
+    "icon": "jbe_conjurer",
+    "description": "我方全员3回合命中提高 500 ~ 1500",
+    "types": ["statechange"],
+    "enchants": [
+      {"iname": "HIT_UP", "turn": 3, "param": {"adds": {"hit": [500, 1500]}}}
     ]
   }
 }

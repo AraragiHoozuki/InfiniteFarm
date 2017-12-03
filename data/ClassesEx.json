@@ -302,5 +302,32 @@
                 "element": null
             }
         ]
+    },
+    "12": {
+        "name": "咒术师",
+        "iname": "CONJURER",
+        "icon": "jb_conjurer",
+        "lockedAbility": "CONJURER_UPPER",
+        "freeAbility": "CONJURER_LOWER",
+        "passives": [97, 98],
+        "paramRates": {
+            "STR": -40,
+            "FIN": -30,
+            "CON": 15,
+            "INT": 20,
+            "WIL": 20,
+            "WIT": -5,
+            "mmp": -10
+        },
+        "equipables": ["杖", "轻甲", "饰品"],
+        "attack": [
+            {
+                "base": "this.mdm",
+                "rate": 0,
+                "type": "mag",
+                "hittype": null,
+                "element": null
+            }
+        ]
     }
 }

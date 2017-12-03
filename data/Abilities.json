@@ -150,5 +150,19 @@
     "locked": false,
     "icon": "jbe_dark_knight",
     "skills": [93, 94, 95]
+  },
+  "CONJURER_UPPER": {
+    "name": "咒术",
+    "iname": "CONJURER_UPPER",
+    "locked": true,
+    "icon": "jbe_conjurer",
+    "skills": [99, 100, 101, 102, 103]
+  },
+  "CONJURER_LOWER": {
+    "name": "基本咒术",
+    "iname": "CONJURER_LOWER",
+    "locked": false,
+    "icon": "jbe_conjurer",
+    "skills": [104, 105, 106]
   }
 }

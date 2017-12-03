@@ -2,7 +2,7 @@
     "1":{
         "name": "托莉托",
         "iname": "TORITOH",
-        "tags": ["人类", "女性"],
+        "tags": ["人形", "女性"],
         "curve": "Normal",
         "jobs": [2, 4, 3],
         "params": {
@@ -17,7 +17,7 @@
     "2":{
         "name": "赛丽奴",
         "iname": "SERINU",
-        "tags": ["人类", "女性"],
+        "tags": ["人形", "女性"],
         "curve": "Normal",
         "jobs": [4, 7, 8],
         "params": {
@@ -32,7 +32,7 @@
     "3":{
         "name": "罗菲娅",
         "iname": "ROPHIA",
-        "tags": ["人类", "女性"],
+        "tags": ["人形", "女性"],
         "curve": "Normal",
         "params": {
             "STR": [15, 399],
@@ -46,7 +46,7 @@
     "4":{
         "name": "樱",
         "iname": "SAKURA",
-        "tags": ["人类", "女性"],
+        "tags": ["人形", "女性"],
         "curve": "Normal",
         "jobs": [6, 10, 11],
         "params": {
@@ -61,7 +61,7 @@
     "5":{
         "name": "克罗艾",
         "iname": "CHLOE",
-        "tags": ["人类", "女性"],
+        "tags": ["人形", "女性"],
         "curve": "Normal",
         "params": {
             "STR": [24, 655],

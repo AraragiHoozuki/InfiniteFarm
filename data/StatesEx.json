@@ -200,6 +200,13 @@
         "rule": "multi",
         "obstinacy": 0
     },
+    "63": {
+        "name": "火耐-",
+        "iname": "PYROS_RESIST_DOWN",
+        "icon": "state_pyros_resist_down",
+        "rule": "multi",
+        "obstinacy": 0
+    },
     "121": {
         "name": "魔法屏障",
         "iname": "TEMPLAR_KNIGHT_ACT_3_BUFF",
@@ -233,5 +240,12 @@
         "obstinacy": 4,
         "spGauge": true,
         "adds": {"slash_assist": "this.kireaji() * 5"}
+    },
+    "125": {
+        "name": "火耐性下降（毁天灭地）",
+        "iname": "BUFF_CONJURER_UPPER_5",
+        "icon": "state_pyros_resist_down",
+        "rule": "repeat",
+        "obstinacy": 0
     }
 }
